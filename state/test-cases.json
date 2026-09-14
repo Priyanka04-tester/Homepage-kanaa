@@ -1,0 +1,2030 @@
+[
+  {
+    "id": "TC-HOME-001",
+    "requirementId": "REQ-HOME-001",
+    "sectionId": "HOME-SEC-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-001",
+    "feature": "Header / Topbar (above first heading) — links",
+    "scenario": "For each link in section HOME-SEC-001, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-001].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-001 (\"Header / Topbar (above first heading)\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 27 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0147",
+    "evidencePath": "evidence/homepage/TC-HOME-001/"
+  },
+  {
+    "id": "TC-HOME-002",
+    "requirementId": "REQ-HOME-002",
+    "sectionId": "HOME-SEC-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-002",
+    "feature": "Header / Topbar (above first heading) — buttons",
+    "scenario": "For each button in section HOME-SEC-001, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-001].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-001 (\"Header / Topbar (above first heading)\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0134",
+    "evidencePath": "evidence/homepage/TC-HOME-002/"
+  },
+  {
+    "id": "TC-HOME-003",
+    "requirementId": "REQ-HOME-003",
+    "sectionId": "HOME-SEC-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-003",
+    "feature": "Header / Topbar (above first heading) — carousel",
+    "scenario": "Exercise Next repeatedly to the last slide and confirm it loops or stops correctly; exercise Previous back to the first slide; rapid-click Next/Previous; click any slide CTA/link.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; carousel visible in viewport.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-001].elements.sliders",
+    "steps": [
+      "Load the homepage and scroll the carousel into view.",
+      "Click Next N times (N = detected slide/link count) and screenshot each slide.",
+      "Click Previous back to the first slide.",
+      "Rapid-click Next 5x in quick succession; confirm the carousel settles on a valid, non-blank slide.",
+      "Click each pagination indicator (if any) and confirm the matching slide shows.",
+      "Click a slide CTA/link where present and confirm navigation (flag any href=\"#\" placeholder as a finding rather than a pass)."
+    ],
+    "expectedResult": "No blank/duplicate slides, no stuck navigation, pagination indicators (if present) reflect the active slide, and CTAs navigate to real destinations.",
+    "actualResult": "Carousel navigated cleanly with no stuck/blank state.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0178",
+    "evidencePath": "evidence/homepage/TC-HOME-003/"
+  },
+  {
+    "id": "TC-HOME-004",
+    "requirementId": "REQ-HOME-004",
+    "sectionId": "HOME-SEC-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-004",
+    "feature": "Header / Topbar (above first heading) — images",
+    "scenario": "Assert every image in section HOME-SEC-001 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-001].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0180",
+    "evidencePath": "evidence/homepage/TC-HOME-004/"
+  },
+  {
+    "id": "TC-HOME-005",
+    "requirementId": "REQ-HOME-005",
+    "sectionId": "HOME-SEC-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-005",
+    "feature": "Header / Topbar (above first heading) — inputs",
+    "scenario": "Enter typical, empty, very long, and special-character values; confirm no crash, no console error, and reasonable UI feedback.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-001].elements.inputs",
+    "steps": [
+      "Locate each input in the section.",
+      "Type a typical query/value and confirm expected behavior (e.g. search suggestions).",
+      "Clear and submit empty; confirm no crash.",
+      "Type a very long string (200+ chars) and Unicode/Arabic text; confirm no overflow/crash."
+    ],
+    "expectedResult": "Inputs handle all cases gracefully with no console errors or broken layout.",
+    "actualResult": "input #0: introduced console error(s): Access to fetch at 'https://thekanaa.com/en-sa/pooloutdoor/' (redirected from 'https://dev-nx.thekanaa.com/en-sa/sports-outdoor.html?_rsc=2511f') from | input #1: introduced console error(s): Failed to load resource: the server responded with a status of 404 (Not Found) | Error fetching suggestions: {name: ApiError, message: Index magento2_",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0209",
+    "evidencePath": "evidence/homepage/TC-HOME-005/"
+  },
+  {
+    "id": "TC-HOME-006",
+    "requirementId": "REQ-HOME-006",
+    "sectionId": "HOME-SEC-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-006",
+    "feature": "Welcome To Biggest Toys and Game Store of KSA — links",
+    "scenario": "For each link in section HOME-SEC-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-002].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-002 (\"Welcome To Biggest Toys and Game Store of KSA\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 29 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0148",
+    "evidencePath": "evidence/homepage/TC-HOME-006/"
+  },
+  {
+    "id": "TC-HOME-007",
+    "requirementId": "REQ-HOME-007",
+    "sectionId": "HOME-SEC-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-007",
+    "feature": "Welcome To Biggest Toys and Game Store of KSA — buttons",
+    "scenario": "For each button in section HOME-SEC-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-002].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-002 (\"Welcome To Biggest Toys and Game Store of KSA\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0135",
+    "evidencePath": "evidence/homepage/TC-HOME-007/"
+  },
+  {
+    "id": "TC-HOME-008",
+    "requirementId": "REQ-HOME-008",
+    "sectionId": "HOME-SEC-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-008",
+    "feature": "Welcome To Biggest Toys and Game Store of KSA — carousel",
+    "scenario": "Exercise Next repeatedly to the last slide and confirm it loops or stops correctly; exercise Previous back to the first slide; rapid-click Next/Previous; click any slide CTA/link.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; carousel visible in viewport.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-002].elements.sliders",
+    "steps": [
+      "Load the homepage and scroll the carousel into view.",
+      "Click Next N times (N = detected slide/link count) and screenshot each slide.",
+      "Click Previous back to the first slide.",
+      "Rapid-click Next 5x in quick succession; confirm the carousel settles on a valid, non-blank slide.",
+      "Click each pagination indicator (if any) and confirm the matching slide shows.",
+      "Click a slide CTA/link where present and confirm navigation (flag any href=\"#\" placeholder as a finding rather than a pass)."
+    ],
+    "expectedResult": "No blank/duplicate slides, no stuck navigation, pagination indicators (if present) reflect the active slide, and CTAs navigate to real destinations.",
+    "actualResult": "Carousel navigated cleanly with no stuck/blank state.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0179",
+    "evidencePath": "evidence/homepage/TC-HOME-008/"
+  },
+  {
+    "id": "TC-HOME-009",
+    "requirementId": "REQ-HOME-009",
+    "sectionId": "HOME-SEC-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-009",
+    "feature": "Welcome To Biggest Toys and Game Store of KSA — images",
+    "scenario": "Assert every image in section HOME-SEC-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-002].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0181",
+    "evidencePath": "evidence/homepage/TC-HOME-009/"
+  },
+  {
+    "id": "TC-HOME-010",
+    "requirementId": "REQ-HOME-010",
+    "sectionId": "HOME-SEC-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-010",
+    "feature": "Best Price Guarante — links",
+    "scenario": "For each link in section HOME-SEC-003, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-003].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-003 (\"Best Price Guarante\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 15 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0149",
+    "evidencePath": "evidence/homepage/TC-HOME-010/"
+  },
+  {
+    "id": "TC-HOME-011",
+    "requirementId": "REQ-HOME-011",
+    "sectionId": "HOME-SEC-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-011",
+    "feature": "Best Price Guarante — buttons",
+    "scenario": "For each button in section HOME-SEC-003, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-003].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-003 (\"Best Price Guarante\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0136",
+    "evidencePath": "evidence/homepage/TC-HOME-011/"
+  },
+  {
+    "id": "TC-HOME-012",
+    "requirementId": "REQ-HOME-012",
+    "sectionId": "HOME-SEC-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-012",
+    "feature": "Best Price Guarante — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-003].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "smoke Add to Cart (sample #0) failed: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: 'Add to Cart' }).first()\u001b[22m\n\u001b[2m    - locator reso — see README \"Known site quirks\" re: throttling before filing as a bug",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0163",
+    "evidencePath": "evidence/homepage/TC-HOME-012/"
+  },
+  {
+    "id": "TC-HOME-013",
+    "requirementId": "REQ-HOME-013",
+    "sectionId": "HOME-SEC-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-013",
+    "feature": "Best Price Guarante — images",
+    "scenario": "Assert every image in section HOME-SEC-003 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-003].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0182",
+    "evidencePath": "evidence/homepage/TC-HOME-013/"
+  },
+  {
+    "id": "TC-HOME-014",
+    "requirementId": "REQ-HOME-014",
+    "sectionId": "HOME-SEC-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-014",
+    "feature": "Toys Best Select — links",
+    "scenario": "For each link in section HOME-SEC-004, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-004].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-004 (\"Toys Best Select\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0150",
+    "evidencePath": "evidence/homepage/TC-HOME-014/"
+  },
+  {
+    "id": "TC-HOME-015",
+    "requirementId": "REQ-HOME-015",
+    "sectionId": "HOME-SEC-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-015",
+    "feature": "Toys Best Select — buttons",
+    "scenario": "For each button in section HOME-SEC-004, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-004].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-004 (\"Toys Best Select\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0137",
+    "evidencePath": "evidence/homepage/TC-HOME-015/"
+  },
+  {
+    "id": "TC-HOME-016",
+    "requirementId": "REQ-HOME-016",
+    "sectionId": "HOME-SEC-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-016",
+    "feature": "Toys Best Select — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-004].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "sample #3: product image broken (naturalWidth=0 after load completed) | sample #5: product image broken (naturalWidth=0 after load completed)",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0164",
+    "evidencePath": "evidence/homepage/TC-HOME-016/"
+  },
+  {
+    "id": "TC-HOME-017",
+    "requirementId": "REQ-HOME-017",
+    "sectionId": "HOME-SEC-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-017",
+    "feature": "Toys Best Select — images",
+    "scenario": "Assert every image in section HOME-SEC-004 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-004].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0183",
+    "evidencePath": "evidence/homepage/TC-HOME-017/"
+  },
+  {
+    "id": "TC-HOME-018",
+    "requirementId": "REQ-HOME-018",
+    "sectionId": "HOME-SEC-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-018",
+    "feature": "Outdoor Best Seller — links",
+    "scenario": "For each link in section HOME-SEC-005, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-005].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-005 (\"Outdoor Best Seller\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0151",
+    "evidencePath": "evidence/homepage/TC-HOME-018/"
+  },
+  {
+    "id": "TC-HOME-019",
+    "requirementId": "REQ-HOME-019",
+    "sectionId": "HOME-SEC-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-019",
+    "feature": "Outdoor Best Seller — buttons",
+    "scenario": "For each button in section HOME-SEC-005, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-005].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-005 (\"Outdoor Best Seller\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0138",
+    "evidencePath": "evidence/homepage/TC-HOME-019/"
+  },
+  {
+    "id": "TC-HOME-020",
+    "requirementId": "REQ-HOME-020",
+    "sectionId": "HOME-SEC-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-020",
+    "feature": "Outdoor Best Seller — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-005].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "sample #0: product image broken (naturalWidth=0 after load completed) | sample #5: product image broken (naturalWidth=0 after load completed) | sample #9: product image broken (naturalWidth=0 after load completed)",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0165",
+    "evidencePath": "evidence/homepage/TC-HOME-020/"
+  },
+  {
+    "id": "TC-HOME-021",
+    "requirementId": "REQ-HOME-021",
+    "sectionId": "HOME-SEC-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-021",
+    "feature": "Outdoor Best Seller — images",
+    "scenario": "Assert every image in section HOME-SEC-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-005].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0184",
+    "evidencePath": "evidence/homepage/TC-HOME-021/"
+  },
+  {
+    "id": "TC-HOME-022",
+    "requirementId": "REQ-HOME-022",
+    "sectionId": "HOME-SEC-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-022",
+    "feature": "Happy Kids Pre-Order — links",
+    "scenario": "For each link in section HOME-SEC-006, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-006].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-006 (\"Happy Kids Pre-Order\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0152",
+    "evidencePath": "evidence/homepage/TC-HOME-022/"
+  },
+  {
+    "id": "TC-HOME-023",
+    "requirementId": "REQ-HOME-023",
+    "sectionId": "HOME-SEC-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-023",
+    "feature": "Happy Kids Pre-Order — buttons",
+    "scenario": "For each button in section HOME-SEC-006, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-006].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-006 (\"Happy Kids Pre-Order\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0139",
+    "evidencePath": "evidence/homepage/TC-HOME-023/"
+  },
+  {
+    "id": "TC-HOME-024",
+    "requirementId": "REQ-HOME-024",
+    "sectionId": "HOME-SEC-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-024",
+    "feature": "Happy Kids Pre-Order — images",
+    "scenario": "Assert every image in section HOME-SEC-006 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-006].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0185",
+    "evidencePath": "evidence/homepage/TC-HOME-024/"
+  },
+  {
+    "id": "TC-HOME-025",
+    "requirementId": "REQ-HOME-025",
+    "sectionId": "HOME-SEC-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-025",
+    "feature": "Deals Of The Week — links",
+    "scenario": "For each link in section HOME-SEC-007, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-007].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-007 (\"Deals Of The Week\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 13 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0153",
+    "evidencePath": "evidence/homepage/TC-HOME-025/"
+  },
+  {
+    "id": "TC-HOME-026",
+    "requirementId": "REQ-HOME-026",
+    "sectionId": "HOME-SEC-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-026",
+    "feature": "Deals Of The Week — buttons",
+    "scenario": "For each button in section HOME-SEC-007, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-007].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-007 (\"Deals Of The Week\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0140",
+    "evidencePath": "evidence/homepage/TC-HOME-026/"
+  },
+  {
+    "id": "TC-HOME-027",
+    "requirementId": "REQ-HOME-027",
+    "sectionId": "HOME-SEC-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-027",
+    "feature": "Deals Of The Week — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-007].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "sample #2: product image broken (naturalWidth=0 after load completed) | sample #4: product image broken (naturalWidth=0 after load completed)",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0166",
+    "evidencePath": "evidence/homepage/TC-HOME-027/"
+  },
+  {
+    "id": "TC-HOME-028",
+    "requirementId": "REQ-HOME-028",
+    "sectionId": "HOME-SEC-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-028",
+    "feature": "Deals Of The Week — images",
+    "scenario": "Assert every image in section HOME-SEC-007 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-007].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0186",
+    "evidencePath": "evidence/homepage/TC-HOME-028/"
+  },
+  {
+    "id": "TC-HOME-029",
+    "requirementId": "REQ-HOME-029",
+    "sectionId": "HOME-SEC-008",
+    "elementId": null,
+    "scenarioId": "SC-HOME-029",
+    "feature": "Most Popular Products — links",
+    "scenario": "For each link in section HOME-SEC-008, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-008].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-008 (\"Most Popular Products\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 21 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0154",
+    "evidencePath": "evidence/homepage/TC-HOME-029/"
+  },
+  {
+    "id": "TC-HOME-030",
+    "requirementId": "REQ-HOME-030",
+    "sectionId": "HOME-SEC-008",
+    "elementId": null,
+    "scenarioId": "SC-HOME-030",
+    "feature": "Most Popular Products — buttons",
+    "scenario": "For each button in section HOME-SEC-008, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-008].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-008 (\"Most Popular Products\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0141",
+    "evidencePath": "evidence/homepage/TC-HOME-030/"
+  },
+  {
+    "id": "TC-HOME-031",
+    "requirementId": "REQ-HOME-031",
+    "sectionId": "HOME-SEC-008",
+    "elementId": null,
+    "scenarioId": "SC-HOME-031",
+    "feature": "Most Popular Products — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-008].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "sample #8: product image broken (naturalWidth=0 after load completed) | sample #15: product image broken (naturalWidth=0 after load completed)",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0167",
+    "evidencePath": "evidence/homepage/TC-HOME-031/"
+  },
+  {
+    "id": "TC-HOME-032",
+    "requirementId": "REQ-HOME-032",
+    "sectionId": "HOME-SEC-008",
+    "elementId": null,
+    "scenarioId": "SC-HOME-032",
+    "feature": "Most Popular Products — images",
+    "scenario": "Assert every image in section HOME-SEC-008 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-008].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0187",
+    "evidencePath": "evidence/homepage/TC-HOME-032/"
+  },
+  {
+    "id": "TC-HOME-033",
+    "requirementId": "REQ-HOME-033",
+    "sectionId": "HOME-SEC-009",
+    "elementId": null,
+    "scenarioId": "SC-HOME-033",
+    "feature": "Big adventures start with small steps — links",
+    "scenario": "For each link in section HOME-SEC-009, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-009].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-009 (\"Big adventures start with small steps\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "First-party link failures: https://mcstaging.thekanaa.com/en-sa/toys-games/dolls-collectables.html?page=1 -> 503",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0155",
+    "evidencePath": "evidence/homepage/TC-HOME-033/"
+  },
+  {
+    "id": "TC-HOME-034",
+    "requirementId": "REQ-HOME-034",
+    "sectionId": "HOME-SEC-009",
+    "elementId": null,
+    "scenarioId": "SC-HOME-034",
+    "feature": "Big adventures start with small steps — images",
+    "scenario": "Assert every image in section HOME-SEC-009 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-009].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "Broken: /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fa%2Ft%2Fatlas_banner_en_2_2_2.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F0%2F1%2F015f9541c328987d51c1e304dca68cf4f8f429a5_1_.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fp%2Fo%2Fpokemon_cards_web_banner_1920x600_english_1.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F5%2Fi%2F5in1_en_web_2_2_2.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fa%2Ft%2Fatlas_banner_en_2_2_2.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F0%2F1%2F015f9541c328987d51c1e304dca68cf4f8f429a5_1_.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fp%2Fo%2Fpokemon_cards_web_banner_1920x600_english_1.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F5%2Fi%2F5in1_en_web_2_2_2.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fa%2Ft%2Fatlas_banner_en_2_2_2.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F0%2F1%2F015f9541c328987d51c1e304dca68cf4f8f429a5_1_.jpg&w=1920&q=75",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0188",
+    "evidencePath": "evidence/homepage/TC-HOME-034/"
+  },
+  {
+    "id": "TC-HOME-035",
+    "requirementId": "REQ-HOME-035",
+    "sectionId": "HOME-SEC-010",
+    "elementId": null,
+    "scenarioId": "SC-HOME-035",
+    "feature": "New to our Collection — links",
+    "scenario": "For each link in section HOME-SEC-010, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-010].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-010 (\"New to our Collection\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 13 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0156",
+    "evidencePath": "evidence/homepage/TC-HOME-035/"
+  },
+  {
+    "id": "TC-HOME-036",
+    "requirementId": "REQ-HOME-036",
+    "sectionId": "HOME-SEC-010",
+    "elementId": null,
+    "scenarioId": "SC-HOME-036",
+    "feature": "New to our Collection — buttons",
+    "scenario": "For each button in section HOME-SEC-010, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-010].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-010 (\"New to our Collection\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0142",
+    "evidencePath": "evidence/homepage/TC-HOME-036/"
+  },
+  {
+    "id": "TC-HOME-037",
+    "requirementId": "REQ-HOME-037",
+    "sectionId": "HOME-SEC-010",
+    "elementId": null,
+    "scenarioId": "SC-HOME-037",
+    "feature": "New to our Collection — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-010].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "No product cards found live for widget originally titled \"New to our Collection\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0168",
+    "evidencePath": "evidence/homepage/TC-HOME-037/"
+  },
+  {
+    "id": "TC-HOME-038",
+    "requirementId": "REQ-HOME-038",
+    "sectionId": "HOME-SEC-010",
+    "elementId": null,
+    "scenarioId": "SC-HOME-038",
+    "feature": "New to our Collection — images",
+    "scenario": "Assert every image in section HOME-SEC-010 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-010].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0189",
+    "evidencePath": "evidence/homepage/TC-HOME-038/"
+  },
+  {
+    "id": "TC-HOME-039",
+    "requirementId": "REQ-HOME-039",
+    "sectionId": "HOME-SEC-011",
+    "elementId": null,
+    "scenarioId": "SC-HOME-039",
+    "feature": "Unbeatable Deals You’ll💖 — links",
+    "scenario": "For each link in section HOME-SEC-011, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-011].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-011 (\"Unbeatable Deals You’ll💖\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0157",
+    "evidencePath": "evidence/homepage/TC-HOME-039/"
+  },
+  {
+    "id": "TC-HOME-040",
+    "requirementId": "REQ-HOME-040",
+    "sectionId": "HOME-SEC-011",
+    "elementId": null,
+    "scenarioId": "SC-HOME-040",
+    "feature": "Unbeatable Deals You’ll💖 — images",
+    "scenario": "Assert every image in section HOME-SEC-011 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-011].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0190",
+    "evidencePath": "evidence/homepage/TC-HOME-040/"
+  },
+  {
+    "id": "TC-HOME-041",
+    "requirementId": "REQ-HOME-041",
+    "sectionId": "HOME-SEC-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-041",
+    "feature": "(untitled section) — links",
+    "scenario": "For each link in section HOME-SEC-012, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-012].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-012 (\"(untitled section)\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 12 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0158",
+    "evidencePath": "evidence/homepage/TC-HOME-041/"
+  },
+  {
+    "id": "TC-HOME-042",
+    "requirementId": "REQ-HOME-042",
+    "sectionId": "HOME-SEC-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-042",
+    "feature": "(untitled section) — buttons",
+    "scenario": "For each button in section HOME-SEC-012, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-012].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-012 (\"(untitled section)\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0143",
+    "evidencePath": "evidence/homepage/TC-HOME-042/"
+  },
+  {
+    "id": "TC-HOME-043",
+    "requirementId": "REQ-HOME-043",
+    "sectionId": "HOME-SEC-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-043",
+    "feature": "(untitled section) — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-012].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "Untitled widget — see known-risks.json RISK-HOME-001 (blank section heading).",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0205",
+    "evidencePath": "evidence/homepage/TC-HOME-043/"
+  },
+  {
+    "id": "TC-HOME-044",
+    "requirementId": "REQ-HOME-044",
+    "sectionId": "HOME-SEC-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-044",
+    "feature": "(untitled section) — images",
+    "scenario": "Assert every image in section HOME-SEC-012 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-012].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0191",
+    "evidencePath": "evidence/homepage/TC-HOME-044/"
+  },
+  {
+    "id": "TC-HOME-045",
+    "requirementId": "REQ-HOME-045",
+    "sectionId": "HOME-SEC-013",
+    "elementId": null,
+    "scenarioId": "SC-HOME-045",
+    "feature": "Ready set go — links",
+    "scenario": "For each link in section HOME-SEC-013, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-013].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-013 (\"Ready set go\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "First-party link failures: https://mcstaging.thekanaa.com/en-sa/about-us -> 503",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0159",
+    "evidencePath": "evidence/homepage/TC-HOME-045/"
+  },
+  {
+    "id": "TC-HOME-046",
+    "requirementId": "REQ-HOME-046",
+    "sectionId": "HOME-SEC-013",
+    "elementId": null,
+    "scenarioId": "SC-HOME-046",
+    "feature": "Ready set go — buttons",
+    "scenario": "For each button in section HOME-SEC-013, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-013].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-013 (\"Ready set go\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0144",
+    "evidencePath": "evidence/homepage/TC-HOME-046/"
+  },
+  {
+    "id": "TC-HOME-047",
+    "requirementId": "REQ-HOME-047",
+    "sectionId": "HOME-SEC-013",
+    "elementId": null,
+    "scenarioId": "SC-HOME-047",
+    "feature": "Ready set go — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-013].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0170",
+    "evidencePath": "evidence/homepage/TC-HOME-047/"
+  },
+  {
+    "id": "TC-HOME-048",
+    "requirementId": "REQ-HOME-048",
+    "sectionId": "HOME-SEC-013",
+    "elementId": null,
+    "scenarioId": "SC-HOME-048",
+    "feature": "Ready set go — images",
+    "scenario": "Assert every image in section HOME-SEC-013 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-013].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0192",
+    "evidencePath": "evidence/homepage/TC-HOME-048/"
+  },
+  {
+    "id": "TC-HOME-049",
+    "requirementId": "REQ-HOME-049",
+    "sectionId": "HOME-SEC-014",
+    "elementId": null,
+    "scenarioId": "SC-HOME-049",
+    "feature": "Delivering Happiness, Creating Memories — buttons",
+    "scenario": "For each button in section HOME-SEC-014, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-014].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-014 (\"Delivering Happiness, Creating Memories\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0145",
+    "evidencePath": "evidence/homepage/TC-HOME-049/"
+  },
+  {
+    "id": "TC-HOME-050",
+    "requirementId": "REQ-HOME-050",
+    "sectionId": "HOME-SEC-014",
+    "elementId": null,
+    "scenarioId": "SC-HOME-050",
+    "feature": "Delivering Happiness, Creating Memories — images",
+    "scenario": "Assert every image in section HOME-SEC-014 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-014].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0193",
+    "evidencePath": "evidence/homepage/TC-HOME-050/"
+  },
+  {
+    "id": "TC-HOME-051",
+    "requirementId": "REQ-HOME-051",
+    "sectionId": "HOME-SEC-015",
+    "elementId": null,
+    "scenarioId": "SC-HOME-051",
+    "feature": "⭐ Rated 4.7 on Google — links",
+    "scenario": "For each link in section HOME-SEC-015, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-015].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-015 (\"⭐ Rated 4.7 on Google\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0160",
+    "evidencePath": "evidence/homepage/TC-HOME-051/"
+  },
+  {
+    "id": "TC-HOME-052",
+    "requirementId": "REQ-HOME-052",
+    "sectionId": "HOME-SEC-020",
+    "elementId": null,
+    "scenarioId": "SC-HOME-052",
+    "feature": "Search By Category — links",
+    "scenario": "For each link in section HOME-SEC-020, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-020].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-020 (\"Search By Category\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 24 unique hrefs. 3 third-party link(s) returned non-2xx/3xx (informational): https://www.facebook.com/profile.php?id=61566537040778 -> 400; https://www.tiktok.com/@kanaa.sa -> request error: apiRequestContext.get: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://www.tiktok.com/@kanaa.sa\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Wind; https://eauthenticate.saudibusiness.gov.sa/certificate-details/0000171112 -> request error: apiRequestContext.get: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://eauthenticate.saudibusiness.gov.sa/certificate-details/0000171112\u001b[22",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0028",
+    "evidencePath": "evidence/homepage/TC-HOME-052/"
+  },
+  {
+    "id": "TC-HOME-053",
+    "requirementId": "REQ-HOME-053",
+    "sectionId": "HOME-SEC-020",
+    "elementId": null,
+    "scenarioId": "SC-HOME-053",
+    "feature": "Search By Category — buttons",
+    "scenario": "For each button in section HOME-SEC-020, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at BASE_URL + LOCALE_PATH; guest session.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-020].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-020 (\"Search By Category\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0146",
+    "evidencePath": "evidence/homepage/TC-HOME-053/"
+  },
+  {
+    "id": "TC-HOME-054",
+    "requirementId": "REQ-HOME-054",
+    "sectionId": "HOME-SEC-020",
+    "elementId": null,
+    "scenarioId": "SC-HOME-054",
+    "feature": "Search By Category — images",
+    "scenario": "Assert every image in section HOME-SEC-020 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-020].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0194",
+    "evidencePath": "evidence/homepage/TC-HOME-054/"
+  },
+  {
+    "id": "TC-HOME-055",
+    "requirementId": "REQ-HOME-055",
+    "sectionId": "HOME-SEC-020",
+    "elementId": null,
+    "scenarioId": "SC-HOME-055",
+    "feature": "Search By Category — inputs",
+    "scenario": "Enter typical, empty, very long, and special-character values; confirm no crash, no console error, and reasonable UI feedback.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded.",
+    "testData": "state/homepage-map.json → sections[id=HOME-SEC-020].elements.inputs",
+    "steps": [
+      "Locate each input in the section.",
+      "Type a typical query/value and confirm expected behavior (e.g. search suggestions).",
+      "Clear and submit empty; confirm no crash.",
+      "Type a very long string (200+ chars) and Unicode/Arabic text; confirm no overflow/crash."
+    ],
+    "expectedResult": "Inputs handle all cases gracefully with no console errors or broken layout.",
+    "actualResult": "No crashes, console errors, or overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0199",
+    "evidencePath": "evidence/homepage/TC-HOME-055/"
+  },
+  {
+    "id": "TC-HOME-056",
+    "requirementId": "REQ-HOME-056",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-056",
+    "feature": "Responsive — Desktop 1440x900",
+    "scenario": "Load the homepage at 1440x900 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 1440x900.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 1440x900.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "executionId": "EXEC-0171",
+    "evidencePath": "evidence/homepage/TC-HOME-056/"
+  },
+  {
+    "id": "TC-HOME-057",
+    "requirementId": "REQ-HOME-057",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-057",
+    "feature": "Responsive — Desktop 1920x1080",
+    "scenario": "Load the homepage at 1920x1080 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 1920x1080.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 1920x1080.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "executionId": "EXEC-0172",
+    "evidencePath": "evidence/homepage/TC-HOME-057/"
+  },
+  {
+    "id": "TC-HOME-058",
+    "requirementId": "REQ-HOME-058",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-058",
+    "feature": "Responsive — Tablet 1024x768",
+    "scenario": "Load the homepage at 1024x768 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 1024x768.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 1024x768.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "executionId": "EXEC-0173",
+    "evidencePath": "evidence/homepage/TC-HOME-058/"
+  },
+  {
+    "id": "TC-HOME-059",
+    "requirementId": "REQ-HOME-059",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-059",
+    "feature": "Responsive — Tablet 768x1024",
+    "scenario": "Load the homepage at 768x1024 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 768x1024.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 768x1024.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "executionId": "EXEC-0174",
+    "evidencePath": "evidence/homepage/TC-HOME-059/"
+  },
+  {
+    "id": "TC-HOME-060",
+    "requirementId": "REQ-HOME-060",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-060",
+    "feature": "Responsive — Mobile 390x844",
+    "scenario": "Load the homepage at 390x844 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 390x844.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 390x844.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "executionId": "EXEC-0175",
+    "evidencePath": "evidence/homepage/TC-HOME-060/"
+  },
+  {
+    "id": "TC-HOME-061",
+    "requirementId": "REQ-HOME-061",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-061",
+    "feature": "Responsive — Mobile 393x852",
+    "scenario": "Load the homepage at 393x852 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 393x852.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 393x852.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "executionId": "EXEC-0176",
+    "evidencePath": "evidence/homepage/TC-HOME-061/"
+  },
+  {
+    "id": "TC-HOME-062",
+    "requirementId": "REQ-HOME-062",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-062",
+    "feature": "Responsive — Mobile 412x915",
+    "scenario": "Load the homepage at 412x915 and check header, hero, category grid, product widgets, footer for layout breakage.",
+    "priority": "P1",
+    "preconditions": "Viewport set to 412x915.",
+    "testData": "N/A",
+    "steps": [
+      "Set viewport to 412x915.",
+      "Load the homepage.",
+      "Check for horizontal scroll on body/html.",
+      "Screenshot header, hero, first two product widgets, and footer.",
+      "Confirm no element overlap or CTA clipping."
+    ],
+    "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "executionId": "EXEC-0177",
+    "evidencePath": "evidence/homepage/TC-HOME-062/"
+  },
+  {
+    "id": "TC-HOME-063",
+    "requirementId": "REQ-HOME-063",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-063",
+    "feature": "Cross-browser — chromium",
+    "scenario": "Run the homepage smoke path (load, hero carousel next/prev, header nav link, add first product to cart) on chromium.",
+    "priority": "P1",
+    "preconditions": "Playwright chromium project configured.",
+    "testData": "N/A",
+    "steps": [
+      "Launch chromium.",
+      "Load the homepage; assert title and hero heading visible.",
+      "Exercise hero carousel Next/Previous.",
+      "Click a header category link and confirm navigation.",
+      "Add a product to cart from a homepage widget and confirm confirmation UI."
+    ],
+    "expectedResult": "Smoke path passes on chromium with no console errors introduced.",
+    "actualResult": "Add to Cart smoke failed: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByText('View Cart')\nExpected: visible\nTimeout: 10000ms",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0203",
+    "evidencePath": "evidence/homepage/TC-HOME-063/"
+  },
+  {
+    "id": "TC-HOME-064",
+    "requirementId": "REQ-HOME-064",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-064",
+    "feature": "Cross-browser — firefox",
+    "scenario": "Run the homepage smoke path (load, hero carousel next/prev, header nav link, add first product to cart) on firefox.",
+    "priority": "P1",
+    "preconditions": "Playwright firefox project configured.",
+    "testData": "N/A",
+    "steps": [
+      "Launch firefox.",
+      "Load the homepage; assert title and hero heading visible.",
+      "Exercise hero carousel Next/Previous.",
+      "Click a header category link and confirm navigation.",
+      "Add a product to cart from a homepage widget and confirm confirmation UI."
+    ],
+    "expectedResult": "Smoke path passes on firefox with no console errors introduced.",
+    "actualResult": null,
+    "status": "NOT_EXECUTED",
+    "environment": "staging (dev-nx)",
+    "browser": null,
+    "viewport": null,
+    "executionId": null,
+    "evidencePath": "evidence/homepage/TC-HOME-064/"
+  },
+  {
+    "id": "TC-HOME-065",
+    "requirementId": "REQ-HOME-065",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-065",
+    "feature": "Cross-browser — webkit",
+    "scenario": "Run the homepage smoke path (load, hero carousel next/prev, header nav link, add first product to cart) on webkit.",
+    "priority": "P1",
+    "preconditions": "Playwright webkit project configured.",
+    "testData": "N/A",
+    "steps": [
+      "Launch webkit.",
+      "Load the homepage; assert title and hero heading visible.",
+      "Exercise hero carousel Next/Previous.",
+      "Click a header category link and confirm navigation.",
+      "Add a product to cart from a homepage widget and confirm confirmation UI."
+    ],
+    "expectedResult": "Smoke path passes on webkit with no console errors introduced.",
+    "actualResult": "Smoke path passed on webkit.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "webkit",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0204",
+    "evidencePath": "evidence/homepage/TC-HOME-065/"
+  },
+  {
+    "id": "TC-HOME-066",
+    "requirementId": "REQ-HOME-066",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-066",
+    "feature": "Accessibility — keyboard & names",
+    "scenario": "Tab through the homepage from the top and confirm a visible focus indicator on every stop; cross-check accessible names against homepage-map.json for blank names.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded, desktop viewport.",
+    "testData": "state/homepage-map.json → any element with name === \"\"",
+    "steps": [
+      "Load the homepage.",
+      "Press Tab repeatedly from the top of the page and screenshot the focus ring at each header/hero control.",
+      "Cross-reference homepage-map.json for interactive elements with an empty accessible name (candidates already flagged: unlabeled logo/cart/menu icon links).",
+      "Confirm heading structure is hierarchical (no skipped levels) for the section headings captured in homepage-map.json."
+    ],
+    "expectedResult": "All interactive elements are keyboard-reachable with a visible focus state and a non-empty accessible name.",
+    "actualResult": "8 visible interactive element(s) with no accessible name (sample: HOME-SEC-001 link href=\"/en-sa/\"; HOME-SEC-002 link href=\"https://dev-nx.thekanaa.com/en-sa/eazy-kids-favorites.html\"; HOME-SEC-002 link href=\"https://dev-nx.thekanaa.com/en-sa/eazy-kids-favorites.html\"; HOME-SEC-002 link href=\"https://dev-nx.thekanaa.com/en-sa/all-toys.html\"; HOME-SEC-003 link href=\"https://dev-nx.thekanaa.com/en-sa/eazy-kids-favorites.html\")",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0195",
+    "evidencePath": "evidence/homepage/TC-HOME-066/"
+  },
+  {
+    "id": "TC-HOME-067",
+    "requirementId": "REQ-HOME-067",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-067",
+    "feature": "Negative & edge — interaction robustness",
+    "scenario": "Rapid double-click the same CTA, navigate back/forward through a homepage->PDP->homepage sequence, and refresh mid-load; confirm no console errors or stuck UI.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded.",
+    "testData": "N/A",
+    "steps": [
+      "Double-click \"Add to Cart\" on a homepage product card in quick succession; confirm no duplicate cart entries and no crash.",
+      "Navigate homepage -> a product PDP -> browser Back -> browser Forward; confirm each state renders correctly.",
+      "Reload the homepage mid-carousel-animation; confirm it settles into a valid state.",
+      "Throttle network to slow 3G (or simulate) and confirm skeleton/loading states appear rather than a blank page."
+    ],
+    "expectedResult": "No crashes, duplicate actions, or stuck UI under any of the above; console stays free of new errors.",
+    "actualResult": "No Add to Cart button found for rapid-click check | Clicking a product card did not navigate away from the homepage (still at https://dev-nx.thekanaa.com/en-sa/) | Back navigation did not return to homepage (at about:blank) — reproduced once; rerun to confirm before filing as a bug",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0161",
+    "evidencePath": "evidence/homepage/TC-HOME-067/"
+  },
+  {
+    "id": "TC-HOME-068",
+    "requirementId": "REQ-HOME-068",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-068",
+    "feature": "Console & network health",
+    "scenario": "Load the homepage fresh and classify every console error / failed request as first-party (site code, API, CDN-hosted asset) vs third-party (analytics/ads beacon), then evaluate only the first-party ones as candidate defects.",
+    "priority": "P1",
+    "preconditions": "Fresh session, no ad blocker.",
+    "testData": "state/homepage-map.json → consoleErrors (19 captured), networkFailures (44 captured)",
+    "steps": [
+      "Load the homepage with console/network listeners attached from before navigation.",
+      "Classify each captured error/failure by host (dev-nx.thekanaa.com / media-stage.thekanaa.com = first-party; google.com, doubleclick.net, google-analytics.com, merchant-center-analytics.goog = third-party).",
+      "For first-party failures only, correlate to the section/element responsible and file as a candidate bug."
+    ],
+    "expectedResult": "Zero first-party console errors or failed first-party requests on a clean homepage load.",
+    "actualResult": "Console: 3, Network: GET https://thekanaa.com/en-sa/pooloutdoor/ -> net::ERR_FAILED",
+    "status": "FAIL",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0208",
+    "evidencePath": "evidence/homepage/TC-HOME-068/"
+  },
+  {
+    "id": "TC-HOME-069",
+    "requirementId": "REQ-HOME-069",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-069",
+    "feature": "Localization — RTL / Arabic",
+    "scenario": "Click the language switcher (\"عربي\") discovered in the header, confirm the page re-renders RTL, and spot-check hero/category/product-widget layout for RTL-specific breakage.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded in English.",
+    "testData": "Header language switcher button (accessible name \"عربي\")",
+    "steps": [
+      "Click the header language switcher.",
+      "Confirm <html dir=\"rtl\"> (or equivalent) is applied.",
+      "Screenshot header, hero, and first product widget in RTL and compare against LTR for mirrored/overlapping elements.",
+      "Confirm currency/number formatting is locale-appropriate."
+    ],
+    "expectedResult": "RTL layout mirrors correctly with no text overflow, clipped buttons, or broken product widgets.",
+    "actualResult": "RTL applied cleanly with no overflow.",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0196",
+    "evidencePath": "evidence/homepage/TC-HOME-069/"
+  },
+  {
+    "id": "TC-HOME-070",
+    "requirementId": "REQ-HOME-070",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-070",
+    "feature": "Performance observation — initial load",
+    "scenario": "Measure time-to-first-contentful-paint-equivalent (hero banner visible) and count duplicate network requests to the same endpoint within one page load.",
+    "priority": "P3",
+    "preconditions": "Fresh session, no throttling (baseline) then Slow 3G (comparison).",
+    "testData": "Network log from a full homepage load.",
+    "steps": [
+      "Load the homepage with network logging enabled.",
+      "Record time until the hero carousel controls are interactive.",
+      "Group network requests by URL and flag any endpoint called more than once with identical params within the same load."
+    ],
+    "expectedResult": "No destructive/duplicate-fetch pattern; load reaches an interactive hero within a few seconds on an unthrottled connection. This is an observational check, not a load/stress test.",
+    "actualResult": "heroInteractiveMs=1973, duplicateRequestCount=1",
+    "status": "PASS",
+    "environment": "staging (dev-nx)",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-0162",
+    "evidencePath": "evidence/homepage/TC-HOME-070/"
+  }
+]

@@ -1,0 +1,28 @@
+config:
+  target: "https://dev-nx.thekanaa.com"
+  # Kept deliberately modest since this hits a shared dev/staging box.
+  # Raise arrivalRate/rampTo only after checking with whoever owns the
+  # dev-nx environment that it can take the extra load.
+  phases:
+    - name: warm-up
+      duration: 20
+      arrivalRate: 1
+    - name: ramp-up
+      duration: 40
+      arrivalRate: 2
+      rampTo: 8
+    - name: sustained
+      duration: 60
+      arrivalRate: 8
+
+scenarios:
+  - name: "Hit the PLP products API"
+    flow:
+      - get:
+          url: "/api/plp-products/?locale=en-sa&pageSize=12&currentPage=1&sort=%7B%22position%22%3A%22ASC%22%7D&filter=%7B%22sku%22%3A%7B%22in%22%3A%5B%225412581531JSM100001%22%5D%7D%7D"
+          expect:
+            - statusCode: 200
+      - get:
+          url: "/api/verify-client-ip/"
+          expect:
+            - statusCode: 200

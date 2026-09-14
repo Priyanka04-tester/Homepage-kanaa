@@ -1,0 +1,37 @@
+config:
+  target: "https://dev-nx.thekanaa.com"
+  # Kept deliberately modest since this hits a shared dev/staging box.
+  # Raise arrivalRate/rampTo only after checking with whoever owns the
+  # dev-nx environment that it can take the extra load.
+  phases:
+    - name: warm-up
+      duration: 30
+      arrivalRate: 1
+    - name: ramp-up
+      duration: 60
+      arrivalRate: 2
+      rampTo: 6
+    - name: sustained
+      duration: 60
+      arrivalRate: 6
+  defaults:
+    headers:
+      user-agent: "kanaa-test-bot/load"
+
+scenarios:
+  - name: "Browse homepage and a category"
+    flow:
+      - get:
+          url: "/en-sa/"
+          expect:
+            - statusCode: 200
+      - think: 2
+      - get:
+          url: "/en-sa/books-stationery.html"
+          expect:
+            - statusCode: 200
+      - think: 2
+      - get:
+          url: "/en-sa/toys-games.html"
+          expect:
+            - statusCode: 200

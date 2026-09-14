@@ -1,0 +1,110 @@
+[
+  {
+    "id": "RISK-HOME-001",
+    "type": "content-anomaly",
+    "description": "Product widget at top=5538 has an empty section heading (blank title above the product row)",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-002",
+    "type": "test-data-leak",
+    "description": "A homepage product widget displays what looks like QA/placeholder test data as a real product: \"Testing product for label\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-003",
+    "type": "test-data-leak",
+    "description": "A homepage product widget displays what looks like QA/placeholder test data as a real product: \"Rental Test Product\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-004",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/m/a/maisto_rock_crawler_r_c_car_boys_8_10_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Maisto Rock Crawler R/C Car Boys, 8-10 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-005",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/m/a/maisto_1_24_scale_1929_ford_model_a_diecast_car_boys_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Maisto 1:24 Scale 1929 Ford Model A Diecast Car Boys, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-006",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/m/a/maisto_1_24_1967_ford_mustang_gt_diecast_car_boys_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Maisto 1:24 1967 Ford Mustang GT Diecast Car Boys, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-007",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/d/i/disney_stitch_light_up_yoyo_unisex_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Disney Stitch Light-Up Yoyo Unisex, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-008",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/p/o/pop_mart_labubu_assorted_the_monsters_keychain_unisex_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Pop Mart Labubu The Monsters Blind Box Keychain Unisex, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-009",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/e/a/eazy_kids_500ml_water_bottle_with_handle_unisex_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Eazy Kids 500ml Water Bottle with Handle Unisex, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-010",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/s/u/sunce_bts_transformers_earthspark_pencil_case_unisex_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Sunce BTS Transformers Earthspark Pencil Case Unisex, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-011",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/d/i/disney_stitch_bowling_set_unisex_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Disney Stitch Bowling Set Unisex, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-012",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/d/i/disney_stitch_mini_basketball_set_with_hoop_unisex_3_4_years_1.jpg?width=240&quality=70&format=webp\" alt=\"Disney Stitch Mini Basketball Set with Hoop Unisex, 3-4 Years\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-013",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"https://media-stage.thekanaa.com/cloud/media/catalog/product/f/o/foldermate_13_pockets_black_expanding_file_pack_of_10_1.jpg?width=240&quality=70&format=webp\" alt=\"Foldermate 13 Pockets Black Expanding File, Pack of 10\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-014",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"/_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fa%2Ft%2Fatlas_banner_en_2_2_2.jpg&w=1920&q=75\" alt=\"Toys & Games\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-015",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"/_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F0%2F1%2F015f9541c328987d51c1e304dca68cf4f8f429a5_1_.jpg&w=1920&q=75\" alt=\"Consoles\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-016",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"/_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fp%2Fo%2Fpokemon_cards_web_banner_1920x600_english_1.jpg&w=1920&q=75\" alt=\"Gaming & Consoles\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-017",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"/_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2F5%2Fi%2F5in1_en_web_2_2_2.jpg&w=1920&q=75\" alt=\"Gaming & Consoles\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  },
+  {
+    "id": "RISK-HOME-018",
+    "type": "broken-image",
+    "description": "Broken image (naturalWidth=0): src=\"/_next/image/?url=https%3A%2F%2Fmedia-stage.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fa%2Ft%2Fatlas_banner_en_2_2_2.jpg&w=1920&q=75\" alt=\"Toys & Games\"",
+    "note": "Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md)."
+  }
+]
