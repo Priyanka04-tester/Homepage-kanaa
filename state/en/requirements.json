@@ -1,0 +1,404 @@
+[
+  {
+    "id": "REQ-HOME-EN-001",
+    "sectionId": "HOME-SEC-EN-001",
+    "feature": "Shop By Brand — links",
+    "text": "Every link in \"Shop By Brand\" (64 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-002",
+    "sectionId": "HOME-SEC-EN-001",
+    "feature": "Shop By Brand — buttons",
+    "text": "Every interactive button in \"Shop By Brand\" (26 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-003",
+    "sectionId": "HOME-SEC-EN-001",
+    "feature": "Shop By Brand — carousel",
+    "text": "The carousel in \"Shop By Brand\" must support first/next/previous/last slide navigation, looping, and (if present) pagination indicators, without blank slides, stuck state, or broken CTAs."
+  },
+  {
+    "id": "REQ-HOME-EN-004",
+    "sectionId": "HOME-SEC-EN-001",
+    "feature": "Shop By Brand — images",
+    "text": "All images in \"Shop By Brand\" (72 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-005",
+    "sectionId": "HOME-SEC-EN-001",
+    "feature": "Shop By Brand — inputs",
+    "text": "Form inputs in \"Shop By Brand\" must accept valid input and behave predictably for empty/boundary/invalid values."
+  },
+  {
+    "id": "REQ-HOME-EN-006",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "SMART TABLET. SMARTER BUNDLE — links",
+    "text": "Every link in \"SMART TABLET. SMARTER BUNDLE\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-007",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "SMART TABLET. SMARTER BUNDLE — buttons",
+    "text": "Every interactive button in \"SMART TABLET. SMARTER BUNDLE\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-008",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "SMART TABLET. SMARTER BUNDLE — product cards",
+    "text": "Product cards in \"SMART TABLET. SMARTER BUNDLE\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-009",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "SMART TABLET. SMARTER BUNDLE — images",
+    "text": "All images in \"SMART TABLET. SMARTER BUNDLE\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-010",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "BUY 1 GET 1 FREE — links",
+    "text": "Every link in \"BUY 1 GET 1 FREE\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-011",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "BUY 1 GET 1 FREE — buttons",
+    "text": "Every interactive button in \"BUY 1 GET 1 FREE\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-012",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "BUY 1 GET 1 FREE — product cards",
+    "text": "Product cards in \"BUY 1 GET 1 FREE\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-013",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "BUY 1 GET 1 FREE — images",
+    "text": "All images in \"BUY 1 GET 1 FREE\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-014",
+    "sectionId": "HOME-SEC-EN-004",
+    "feature": "SHOP PS5 BUNDLES — links",
+    "text": "Every link in \"SHOP PS5 BUNDLES\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-015",
+    "sectionId": "HOME-SEC-EN-004",
+    "feature": "SHOP PS5 BUNDLES — buttons",
+    "text": "Every interactive button in \"SHOP PS5 BUNDLES\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-016",
+    "sectionId": "HOME-SEC-EN-004",
+    "feature": "SHOP PS5 BUNDLES — product cards",
+    "text": "Product cards in \"SHOP PS5 BUNDLES\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-017",
+    "sectionId": "HOME-SEC-EN-004",
+    "feature": "SHOP PS5 BUNDLES — images",
+    "text": "All images in \"SHOP PS5 BUNDLES\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-018",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A FRAGRANCE WORTH GIFTING — links",
+    "text": "Every link in \"A FRAGRANCE WORTH GIFTING\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-019",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A FRAGRANCE WORTH GIFTING — buttons",
+    "text": "Every interactive button in \"A FRAGRANCE WORTH GIFTING\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-020",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A FRAGRANCE WORTH GIFTING — product cards",
+    "text": "Product cards in \"A FRAGRANCE WORTH GIFTING\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-021",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A FRAGRANCE WORTH GIFTING — images",
+    "text": "All images in \"A FRAGRANCE WORTH GIFTING\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-022",
+    "sectionId": "HOME-SEC-EN-006",
+    "feature": "Deal Of The Week — links",
+    "text": "Every link in \"Deal Of The Week\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-023",
+    "sectionId": "HOME-SEC-EN-006",
+    "feature": "Deal Of The Week — buttons",
+    "text": "Every interactive button in \"Deal Of The Week\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-024",
+    "sectionId": "HOME-SEC-EN-006",
+    "feature": "Deal Of The Week — product cards",
+    "text": "Product cards in \"Deal Of The Week\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-025",
+    "sectionId": "HOME-SEC-EN-006",
+    "feature": "Deal Of The Week — images",
+    "text": "All images in \"Deal Of The Week\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-026",
+    "sectionId": "HOME-SEC-EN-007",
+    "feature": "Most Popular Products — links",
+    "text": "Every link in \"Most Popular Products\" (11 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-027",
+    "sectionId": "HOME-SEC-EN-007",
+    "feature": "Most Popular Products — buttons",
+    "text": "Every interactive button in \"Most Popular Products\" (23 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-028",
+    "sectionId": "HOME-SEC-EN-007",
+    "feature": "Most Popular Products — product cards",
+    "text": "Product cards in \"Most Popular Products\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-029",
+    "sectionId": "HOME-SEC-EN-007",
+    "feature": "Most Popular Products — images",
+    "text": "All images in \"Most Popular Products\" (34 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-030",
+    "sectionId": "HOME-SEC-EN-008",
+    "feature": "Explore our hidden gems — links",
+    "text": "Every link in \"Explore our hidden gems\" (2 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-031",
+    "sectionId": "HOME-SEC-EN-008",
+    "feature": "Explore our hidden gems — images",
+    "text": "All images in \"Explore our hidden gems\" (1 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-032",
+    "sectionId": "HOME-SEC-EN-009",
+    "feature": "New to our Collection — links",
+    "text": "Every link in \"New to our Collection\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-033",
+    "sectionId": "HOME-SEC-EN-009",
+    "feature": "New to our Collection — buttons",
+    "text": "Every interactive button in \"New to our Collection\" (21 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-034",
+    "sectionId": "HOME-SEC-EN-009",
+    "feature": "New to our Collection — product cards",
+    "text": "Product cards in \"New to our Collection\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-035",
+    "sectionId": "HOME-SEC-EN-009",
+    "feature": "New to our Collection — images",
+    "text": "All images in \"New to our Collection\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-036",
+    "sectionId": "HOME-SEC-EN-010",
+    "feature": "Spotlight Deals💖 — links",
+    "text": "Every link in \"Spotlight Deals💖\" (8 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-037",
+    "sectionId": "HOME-SEC-EN-010",
+    "feature": "Spotlight Deals💖 — images",
+    "text": "All images in \"Spotlight Deals💖\" (4 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-038",
+    "sectionId": "HOME-SEC-EN-011",
+    "feature": "Tailored For You — links",
+    "text": "Every link in \"Tailored For You\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-039",
+    "sectionId": "HOME-SEC-EN-011",
+    "feature": "Tailored For You — buttons",
+    "text": "Every interactive button in \"Tailored For You\" (21 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-040",
+    "sectionId": "HOME-SEC-EN-011",
+    "feature": "Tailored For You — product cards",
+    "text": "Product cards in \"Tailored For You\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-041",
+    "sectionId": "HOME-SEC-EN-011",
+    "feature": "Tailored For You — images",
+    "text": "All images in \"Tailored For You\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-042",
+    "sectionId": "HOME-SEC-EN-012",
+    "feature": "Shop by Age — links",
+    "text": "Every link in \"Shop by Age\" (14 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-043",
+    "sectionId": "HOME-SEC-EN-012",
+    "feature": "Shop by Age — buttons",
+    "text": "Every interactive button in \"Shop by Age\" (14 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-044",
+    "sectionId": "HOME-SEC-EN-012",
+    "feature": "Shop by Age — product cards",
+    "text": "Product cards in \"Shop by Age\" (7 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-045",
+    "sectionId": "HOME-SEC-EN-012",
+    "feature": "Shop by Age — images",
+    "text": "All images in \"Shop by Age\" (35 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-046",
+    "sectionId": "HOME-SEC-EN-013",
+    "feature": "Delivering Happiness, Creating Memories — buttons",
+    "text": "Every interactive button in \"Delivering Happiness, Creating Memories\" (6 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-047",
+    "sectionId": "HOME-SEC-EN-013",
+    "feature": "Delivering Happiness, Creating Memories — images",
+    "text": "All images in \"Delivering Happiness, Creating Memories\" (6 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-048",
+    "sectionId": "HOME-SEC-EN-014",
+    "feature": "⭐ Rated 4.7 on Google — links",
+    "text": "Every link in \"⭐ Rated 4.7 on Google\" (1 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-049",
+    "sectionId": "HOME-SEC-EN-019",
+    "feature": "Search By Category — links",
+    "text": "Every link in \"Search By Category\" (23 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-050",
+    "sectionId": "HOME-SEC-EN-019",
+    "feature": "Search By Category — buttons",
+    "text": "Every interactive button in \"Search By Category\" (1 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-051",
+    "sectionId": "HOME-SEC-EN-019",
+    "feature": "Search By Category — images",
+    "text": "All images in \"Search By Category\" (10 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-052",
+    "sectionId": "HOME-SEC-EN-019",
+    "feature": "Search By Category — inputs",
+    "text": "Form inputs in \"Search By Category\" must accept valid input and behave predictably for empty/boundary/invalid values."
+  },
+  {
+    "id": "REQ-HOME-EN-053",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Desktop 1440x900",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Desktop 1440x900 (1440x900)."
+  },
+  {
+    "id": "REQ-HOME-EN-054",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Desktop 1920x1080",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Desktop 1920x1080 (1920x1080)."
+  },
+  {
+    "id": "REQ-HOME-EN-055",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Tablet 1024x768",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Tablet 1024x768 (1024x768)."
+  },
+  {
+    "id": "REQ-HOME-EN-056",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Tablet 768x1024",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Tablet 768x1024 (768x1024)."
+  },
+  {
+    "id": "REQ-HOME-EN-057",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Mobile 390x844",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Mobile 390x844 (390x844)."
+  },
+  {
+    "id": "REQ-HOME-EN-058",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Mobile 393x852",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Mobile 393x852 (393x852)."
+  },
+  {
+    "id": "REQ-HOME-EN-059",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Mobile 412x915",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Mobile 412x915 (412x915)."
+  },
+  {
+    "id": "REQ-HOME-EN-060",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Cross-browser — chromium",
+    "text": "The homepage must load and its core interactions (nav, hero carousel, add to cart) must function on chromium."
+  },
+  {
+    "id": "REQ-HOME-EN-061",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Cross-browser — firefox",
+    "text": "The homepage must load and its core interactions (nav, hero carousel, add to cart) must function on firefox."
+  },
+  {
+    "id": "REQ-HOME-EN-062",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Cross-browser — webkit",
+    "text": "The homepage must load and its core interactions (nav, hero carousel, add to cart) must function on webkit."
+  },
+  {
+    "id": "REQ-HOME-EN-063",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Accessibility — keyboard & names",
+    "text": "Primary interactive elements (search, nav links, carousel controls, add-to-cart, wishlist) must be reachable via Tab and expose a non-empty accessible name."
+  },
+  {
+    "id": "REQ-HOME-EN-064",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Negative & edge — interaction robustness",
+    "text": "The homepage must not error or enter a broken state under rapid repeated interaction, back/forward navigation, or a refresh mid-load."
+  },
+  {
+    "id": "REQ-HOME-EN-065",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Console & network health",
+    "text": "A homepage load must not produce first-party JavaScript console errors or failed first-party network requests (third-party analytics/beacon failures are tracked separately and are not, by themselves, blocking)."
+  },
+  {
+    "id": "REQ-HOME-EN-066",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Localization — switch to Arabic",
+    "text": "The language switcher must navigate from the English homepage to the Arabic homepage, with no horizontal overflow introduced by the switch."
+  },
+  {
+    "id": "REQ-HOME-EN-067",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Performance observation — initial load",
+    "text": "The homepage must reach a usable state (hero banner interactive) within a reasonable time on staging, and must not issue duplicate/redundant API calls on a single load."
+  }
+]

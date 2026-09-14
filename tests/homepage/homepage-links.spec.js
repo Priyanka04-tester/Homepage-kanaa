@@ -26,9 +26,7 @@
  * correctly, so it's flagged for a manual look rather than asserted as a dead link.
  */
 const { test, expect } = require('@playwright/test');
-const { loadHomepageMap, findTestCase, recordExecution, evidenceDir, isFirstPartyUrl } = require('../../utils/qaState');
-
-const BASE_URL = process.env.BASE_URL || 'https://dev-nx.thekanaa.com';
+const { loadHomepageMap, findTestCase, recordExecution, evidenceDir, isFirstPartyUrl, BASE_URL } = require('../../utils/qaState');
 const map = loadHomepageMap();
 const sectionsWithLinks = map.sections.filter((s) => s.elementCounts && s.elementCounts.links > 0);
 

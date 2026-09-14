@@ -1,7 +1,8 @@
 /**
  * PHASE 4 — Test plan generation.
  *
- * Reads state/homepage-map.json (produced by tests/homepage/homepage-discovery.spec.js)
+ * Reads state/<locale>/homepage-map.json (produced by tests/homepage/homepage-discovery.spec.js,
+ * locale selected via the HOMEPAGE_LOCALE env var this script also reads — see utils/qaState.js)
  * and derives requirements/scenarios/test-cases/traceability. Test cases are written at
  * the scenario/pattern level (e.g. "every link in this section resolves"), not one literal
  * row per DOM element — with 240+ buttons and 442 images on this homepage, a catalog with
@@ -12,17 +13,17 @@
  */
 const fs = require('fs');
 const path = require('path');
+const { LOCALE, ID_PREFIX, BASE_URL, STATE_DIR, loadHomepageMap, isFirstPartyUrl } = require('../utils/qaState');
 
-const STATE_DIR = path.join(__dirname, '..', 'state');
 const REQUIREMENTS_DIR = path.join(__dirname, '..', 'requirements');
 const SPECS_DIR = path.join(__dirname, '..', 'specs');
 
-const homepageMap = JSON.parse(fs.readFileSync(path.join(STATE_DIR, 'homepage-map.json'), 'utf-8'));
+const homepageMap = loadHomepageMap();
 
 let reqSeq = 0, scSeq = 0, tcSeq = 0;
-const nextReq = () => `REQ-HOME-${String(++reqSeq).padStart(3, '0')}`;
-const nextSc = () => `SC-HOME-${String(++scSeq).padStart(3, '0')}`;
-const nextTc = () => `TC-HOME-${String(++tcSeq).padStart(3, '0')}`;
+const nextReq = () => `REQ-HOME-${ID_PREFIX}-${String(++reqSeq).padStart(3, '0')}`;
+const nextSc = () => `SC-HOME-${ID_PREFIX}-${String(++scSeq).padStart(3, '0')}`;
+const nextTc = () => `TC-HOME-${ID_PREFIX}-${String(++tcSeq).padStart(3, '0')}`;
 
 const requirements = [];
 const scenarios = [];
@@ -51,11 +52,11 @@ function addUnit({ sectionId, elementId = null, feature, requirementText, scenar
     expectedResult,
     actualResult: null,
     status: 'NOT_EXECUTED',
-    environment: 'staging (dev-nx)',
+    environment: `production (${BASE_URL}), locale=${LOCALE}`,
     browser: null,
     viewport: null,
     executionId: null,
-    evidencePath: `evidence/homepage/${tcId}/`,
+    evidencePath: `evidence/homepage/${LOCALE}/${tcId}/`,
   });
   traceability.push({ requirementId: reqId, sectionId, elementId, scenarioId: scId, testCaseId: tcId, bugIds: [] });
   return tcId;
@@ -74,9 +75,9 @@ for (const section of homepageMap.sections) {
       feature: `${sname} — links`,
       requirementText: `Every link in "${sname}" (${counts.links} discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination.`,
       scenarioText: `For each link in section ${sid}, click it, confirm the resulting URL/page matches the href's intent, then navigate back.`,
-      priority: sid === 'HOME-SEC-001' || sid === 'HOME-SEC-002' ? 'P1' : 'P2',
-      preconditions: 'Homepage loaded at BASE_URL + LOCALE_PATH; guest session.',
-      testData: `state/homepage-map.json → sections[id=${sid}].elements.links`,
+      priority: sid.endsWith('-001') || sid.endsWith('-002') ? 'P1' : 'P2',
+      preconditions: 'Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.',
+      testData: `state/${LOCALE}/homepage-map.json → sections[id=${sid}].elements.links`,
       steps: [
         'Load the homepage.',
         `Locate section ${sid} ("${sname}").`,
@@ -93,8 +94,8 @@ for (const section of homepageMap.sections) {
       requirementText: `Every interactive button in "${sname}" (${counts.buttons} discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked.`,
       scenarioText: `For each button in section ${sid}, verify pre-click state, click, and verify the expected UI/state change with no console or network error.`,
       priority: 'P2',
-      preconditions: 'Homepage loaded at BASE_URL + LOCALE_PATH; guest session.',
-      testData: `state/homepage-map.json → sections[id=${sid}].elements.buttons`,
+      preconditions: 'Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.',
+      testData: `state/${LOCALE}/homepage-map.json → sections[id=${sid}].elements.buttons`,
       steps: [
         'Load the homepage.',
         `Locate section ${sid} ("${sname}").`,
@@ -112,7 +113,7 @@ for (const section of homepageMap.sections) {
       scenarioText: 'Exercise Next repeatedly to the last slide and confirm it loops or stops correctly; exercise Previous back to the first slide; rapid-click Next/Previous; click any slide CTA/link.',
       priority: 'P1',
       preconditions: 'Homepage loaded; carousel visible in viewport.',
-      testData: `state/homepage-map.json → sections[id=${sid}].elements.sliders`,
+      testData: `state/${LOCALE}/homepage-map.json → sections[id=${sid}].elements.sliders`,
       steps: [
         'Load the homepage and scroll the carousel into view.',
         'Click Next N times (N = detected slide/link count) and screenshot each slide.',
@@ -133,7 +134,7 @@ for (const section of homepageMap.sections) {
       scenarioText: 'Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.',
       priority: 'P1',
       preconditions: 'Homepage loaded; guest session; widget scrolled into view.',
-      testData: `state/homepage-map.json → sections[id=${sid}].elements.productCards`,
+      testData: `state/${LOCALE}/homepage-map.json → sections[id=${sid}].elements.productCards`,
       steps: [
         'Load the homepage and scroll the widget into view.',
         'Pick first/middle/last sampled card.',
@@ -156,7 +157,7 @@ for (const section of homepageMap.sections) {
       scenarioText: `Assert every image in section ${sid} has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.`,
       priority: homepageMap.discoveredIssues.some((i) => i.type === 'broken-image') ? 'P1' : 'P3',
       preconditions: 'Homepage loaded; section scrolled into view (image loading is native-lazy).',
-      testData: `state/homepage-map.json → sections[id=${sid}].elements.images`,
+      testData: `state/${LOCALE}/homepage-map.json → sections[id=${sid}].elements.images`,
       steps: [
         'Scroll the section fully into view to trigger native lazy-loading.',
         'For each image, assert complete=true and naturalWidth > 0.',
@@ -174,7 +175,7 @@ for (const section of homepageMap.sections) {
       scenarioText: 'Enter typical, empty, very long, and special-character values; confirm no crash, no console error, and reasonable UI feedback.',
       priority: 'P2',
       preconditions: 'Homepage loaded.',
-      testData: `state/homepage-map.json → sections[id=${sid}].elements.inputs`,
+      testData: `state/${LOCALE}/homepage-map.json → sections[id=${sid}].elements.inputs`,
       steps: [
         'Locate each input in the section.',
         'Type a typical query/value and confirm expected behavior (e.g. search suggestions).',
@@ -245,7 +246,7 @@ addGlobal({
   scenarioText: 'Tab through the homepage from the top and confirm a visible focus indicator on every stop; cross-check accessible names against homepage-map.json for blank names.',
   priority: 'P2',
   preconditions: 'Homepage loaded, desktop viewport.',
-  testData: 'state/homepage-map.json → any element with name === ""',
+  testData: 'state/${LOCALE}/homepage-map.json → any element with name === ""',
   steps: [
     'Load the homepage.',
     'Press Tab repeatedly from the top of the page and screenshot the focus ring at each header/hero control.',
@@ -277,29 +278,35 @@ addGlobal({
   scenarioText: 'Load the homepage fresh and classify every console error / failed request as first-party (site code, API, CDN-hosted asset) vs third-party (analytics/ads beacon), then evaluate only the first-party ones as candidate defects.',
   priority: 'P1',
   preconditions: 'Fresh session, no ad blocker.',
-  testData: `state/homepage-map.json → consoleErrors (${homepageMap.consoleErrors.length} captured), networkFailures (${homepageMap.networkFailures.length} captured)`,
+  testData: `state/${LOCALE}/homepage-map.json → consoleErrors (${homepageMap.consoleErrors.length} captured), networkFailures (${homepageMap.networkFailures.length} captured)`,
   steps: [
     'Load the homepage with console/network listeners attached from before navigation.',
-    'Classify each captured error/failure by host (dev-nx.thekanaa.com / media-stage.thekanaa.com = first-party; google.com, doubleclick.net, google-analytics.com, merchant-center-analytics.goog = third-party).',
+    'Classify each captured error/failure by host (thekanaa.com and its subdomains, e.g. media-stage.thekanaa.com = first-party; google.com, doubleclick.net, google-analytics.com, merchant-center-analytics.goog = third-party).',
     'For first-party failures only, correlate to the section/element responsible and file as a candidate bug.',
   ],
   expectedResult: 'Zero first-party console errors or failed first-party requests on a clean homepage load.',
 });
 
+// The homepage is now discovered/planned/executed natively per locale (this file
+// runs once per HOMEPAGE_LOCALE), so RTL layout correctness for Arabic is already
+// covered end-to-end by the "ar" run's own full test suite — no separate "switch
+// to Arabic and eyeball it" check is needed from the "en" run for that. What's
+// still worth a dedicated check per locale is the switcher CONTROL itself: does
+// clicking it actually take you to the other locale's homepage.
 addGlobal({
-  feature: 'Localization — RTL / Arabic',
-  requirementText: 'Switching the language selector to Arabic must mirror the layout to RTL without text overflow, broken alignment, or untranslated strings in primary navigation.',
-  scenarioText: 'Click the language switcher ("عربي") discovered in the header, confirm the page re-renders RTL, and spot-check hero/category/product-widget layout for RTL-specific breakage.',
+  feature: LOCALE === 'ar' ? 'Localization — switch to English' : 'Localization — switch to Arabic',
+  requirementText: `The language switcher must navigate from the ${LOCALE === 'ar' ? 'Arabic' : 'English'} homepage to the ${LOCALE === 'ar' ? 'English' : 'Arabic'} homepage, with no horizontal overflow introduced by the switch.`,
+  scenarioText: `Click the header language switcher ("${LOCALE === 'ar' ? 'EN' : 'عربي'}") and confirm the resulting URL and <html dir> attribute match the target locale, with no overflow.`,
   priority: 'P2',
-  preconditions: 'Homepage loaded in English.',
-  testData: 'Header language switcher button (accessible name "عربي")',
+  preconditions: `Homepage loaded in ${LOCALE === 'ar' ? 'Arabic' : 'English'}.`,
+  testData: `Header language switcher button (accessible name "${LOCALE === 'ar' ? 'EN' : 'عربي'}")`,
   steps: [
     'Click the header language switcher.',
-    'Confirm <html dir="rtl"> (or equivalent) is applied.',
-    'Screenshot header, hero, and first product widget in RTL and compare against LTR for mirrored/overlapping elements.',
-    'Confirm currency/number formatting is locale-appropriate.',
+    `Confirm the URL now contains "${LOCALE === 'ar' ? '/en-sa/' : '/ar-sa/'}".`,
+    `Confirm <html dir="${LOCALE === 'ar' ? 'ltr' : 'rtl'}"> (or equivalent) is applied on the destination page.`,
+    'Confirm no horizontal overflow was introduced by the switch.',
   ],
-  expectedResult: 'RTL layout mirrors correctly with no text overflow, clipped buttons, or broken product widgets.',
+  expectedResult: 'Language switcher reliably navigates to the other locale with the correct text direction and no layout breakage.',
 });
 
 addGlobal({
@@ -322,7 +329,7 @@ const knownRisks = homepageMap.discoveredIssues.map((issue, i) => ({
   id: `RISK-HOME-${String(i + 1).padStart(3, '0')}`,
   type: issue.type,
   description: issue.description,
-  note: 'Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.md).',
+  note: `Surfaced during automated discovery. Requires a dedicated execution + evidence capture before being filed as a bug (see specs/homepage-test-plan.${LOCALE}.md).`,
 }));
 
 // --- Write state files ---
@@ -339,21 +346,22 @@ if (!fs.existsSync(path.join(STATE_DIR, 'bugs.json'))) writeJson('bugs.json', []
 
 // --- Human-readable docs ---
 const uniqueConsoleErrors = [...new Set(homepageMap.consoleErrors.map((e) => e.text))];
-const firstPartyFailures = homepageMap.networkFailures.filter((f) => /dev-nx\.thekanaa\.com|media-stage\.thekanaa\.com/.test(f.url));
+const firstPartyFailures = homepageMap.networkFailures.filter((f) => isFirstPartyUrl(f.url));
 const thirdPartyFailureCount = homepageMap.networkFailures.length - firstPartyFailures.length;
+const localeLabel = LOCALE === 'ar' ? 'Arabic (/ar-sa/)' : 'English (/en-sa/)';
 
-const reqMd = `# Homepage Requirements — Kanaa (dev-nx.thekanaa.com)
+const reqMd = `# Homepage Requirements — Kanaa, ${localeLabel} (${BASE_URL})
 
-Generated from \`state/homepage-map.json\` (captured ${homepageMap.meta.capturedAt}) by \`scripts/generate-test-plan.js\`.
+Generated from \`state/${LOCALE}/homepage-map.json\` (captured ${homepageMap.meta.capturedAt}) by \`scripts/generate-test-plan.js\` (HOMEPAGE_LOCALE=${LOCALE}).
 Do not hand-edit this file — regenerate it after re-running discovery.
 
 ${requirements.map((r) => `- **${r.id}** (${r.sectionId}) — ${r.feature}: ${r.text}`).join('\n')}
 `;
-fs.writeFileSync(path.join(REQUIREMENTS_DIR, 'homepage-requirements.md'), reqMd, 'utf-8');
+fs.writeFileSync(path.join(REQUIREMENTS_DIR, `homepage-requirements.${LOCALE}.md`), reqMd, 'utf-8');
 
-const planMd = `# Homepage Test Plan — Kanaa (dev-nx.thekanaa.com)
+const planMd = `# Homepage Test Plan — Kanaa, ${localeLabel} (${BASE_URL})
 
-Generated from \`state/homepage-map.json\` (captured ${homepageMap.meta.capturedAt}) by \`scripts/generate-test-plan.js\`.
+Generated from \`state/${LOCALE}/homepage-map.json\` (captured ${homepageMap.meta.capturedAt}) by \`scripts/generate-test-plan.js\` (HOMEPAGE_LOCALE=${LOCALE}).
 
 ## Source discovery
 - URL: ${homepageMap.meta.url}
@@ -379,12 +387,12 @@ ${knownRisks.length ? knownRisks.map((r) => `- **${r.id}** [${r.type}] — ${r.d
 ${uniqueConsoleErrors.length ? uniqueConsoleErrors.map((e) => `- ${e.slice(0, 200)}`).join('\n') : '- None.'}
 
 ## Network failures observed during discovery load
-- First-party (dev-nx / media-stage) — **actionable, likely correlates with the ${homepageMap.totals.brokenImages} broken images above**: ${firstPartyFailures.length}
+- First-party (thekanaa.com and subdomains, e.g. media-stage) — **actionable, likely correlates with the ${homepageMap.totals.brokenImages} broken images above**: ${firstPartyFailures.length}
 ${firstPartyFailures.length ? firstPartyFailures.map((f) => `  - ${f.method} ${f.url} — ${f.failure || f.status}`).join('\n') : '  - None.'}
 - Third-party (analytics/ads beacons — informational, not blocking): ${thirdPartyFailureCount}
 
 ## Assumptions
-- "Every button/link" requirements are executed data-driven against \`state/homepage-map.json\`, not enumerated one row per element in this plan.
+- "Every button/link" requirements are executed data-driven against \`state/${LOCALE}/homepage-map.json\`, not enumerated one row per element in this plan.
 - Product-card test cases sample representative cards (first/middle/last of the widget) per spec section 12, not every card in every widget.
 - No real order is ever placed; Add to Cart tests stop at cart confirmation, consistent with README safety notes for this project.
 - Login-gated flows are out of scope for the homepage suite (kanaa-test-bot's existing \`tests/e2e/login.spec.js\`/\`checkout.spec.js\` cover those separately and are tagged \`@otp\` since they trigger a real OTP).
@@ -392,6 +400,6 @@ ${firstPartyFailures.length ? firstPartyFailures.map((f) => `  - ${f.method} ${f
 ## Not yet executed
 This plan has been generated but **no test cases have been executed yet**. Execution, evidence capture, bug filing, retesting, regression and the final QA report are later phases — see \`agents/homepage-executor.md\` and \`agents/homepage-bug-analyzer.md\`.
 `;
-fs.writeFileSync(path.join(SPECS_DIR, 'homepage-test-plan.md'), planMd, 'utf-8');
+fs.writeFileSync(path.join(SPECS_DIR, `homepage-test-plan.${LOCALE}.md`), planMd, 'utf-8');
 
-console.log(`[plan] requirements=${requirements.length} scenarios=${scenarios.length} testCases=${testCases.length} knownRisks=${knownRisks.length}`);
+console.log(`[plan] locale=${LOCALE} requirements=${requirements.length} scenarios=${scenarios.length} testCases=${testCases.length} knownRisks=${knownRisks.length}`);

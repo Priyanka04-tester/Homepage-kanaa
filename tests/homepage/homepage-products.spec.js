@@ -22,10 +22,7 @@
  * has its Add to Cart button asserted present/enabled, not clicked.
  */
 const { test, expect } = require('@playwright/test');
-const { loadHomepageMap, findTestCase, recordExecution, evidenceDir } = require('../../utils/qaState');
-
-const BASE_URL = process.env.BASE_URL || 'https://dev-nx.thekanaa.com';
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
+const { loadHomepageMap, findTestCase, recordExecution, evidenceDir, LOCALE_PATH, BASE_URL, PATTERNS } = require('../../utils/qaState');
 
 const map = loadHomepageMap();
 const productSections = map.sections.filter((s) => s.elementCounts && s.elementCounts.productCards > 0);
@@ -36,7 +33,9 @@ const productSections = map.sections.filter((s) => s.elementCounts && s.elementC
  * so it stays consistent with how sections were originally mapped. Returns only
  * headings that have at least one product card under them, in document order. */
 async function liveProductWidgetBuckets(page) {
-  return page.evaluate(() => {
+  const addToCartPattern = { source: PATTERNS.addToCart.source, flags: PATTERNS.addToCart.flags };
+  return page.evaluate((pattern) => {
+    const addToCartRe = new RegExp(pattern.source, pattern.flags);
     function absTop(el) { return Math.round(el.getBoundingClientRect().top + window.scrollY); }
     const headingEls = Array.from(document.querySelectorAll('h1, h2, h3, h4, [role="heading"]'))
       .filter((el) => !el.closest('a[href]'))
@@ -44,7 +43,7 @@ async function liveProductWidgetBuckets(page) {
       .sort((a, b) => a.top - b.top);
 
     const addToCartBtns = Array.from(document.querySelectorAll('button')).filter(
-      (b) => /add to cart/i.test((b.getAttribute('aria-label') || b.textContent || '').trim())
+      (b) => addToCartRe.test((b.getAttribute('aria-label') || b.textContent || '').trim())
     );
 
     function sectionIndexForTop(top) {
@@ -62,7 +61,7 @@ async function liveProductWidgetBuckets(page) {
       if (idx !== -1) buckets[idx].indices.push(globalIdx);
     });
     return buckets.filter((b) => b.indices.length > 0);
-  });
+  }, addToCartPattern);
 }
 
 /** Exact heading-text match first; if the widget's title text itself rotated since
@@ -128,7 +127,7 @@ for (const section of productSections) {
     const localCount = liveIndices.length;
     const sampleLocalIdx = [...new Set([0, Math.floor(localCount / 2), localCount - 1])].filter((i) => i >= 0 && i < localCount);
 
-    const addToCartButtons = page.getByRole('button', { name: 'Add to Cart' });
+    const addToCartButtons = page.getByRole('button', { name: PATTERNS.addToCart });
     let smokeAttempted = false;
 
     for (const localIdx of sampleLocalIdx) {
@@ -203,7 +202,7 @@ for (const section of productSections) {
         smokeAttempted = true;
         try {
           await addBtn.click({ timeout: 5000 });
-          await expect(page.getByText('View Cart')).toBeVisible({ timeout: 10_000 });
+          await expect(page.getByText(PATTERNS.viewCartConfirmation)).toBeVisible({ timeout: 10_000 });
         } catch (e) {
           findings.push(`smoke Add to Cart (sample #${localIdx}) failed: ${e.message.slice(0, 150)} — see README "Known site quirks" re: throttling before filing as a bug`);
         }

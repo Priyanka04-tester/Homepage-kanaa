@@ -1,0 +1,538 @@
+[
+  {
+    "requirementId": "REQ-HOME-AR-001",
+    "sectionId": "HOME-SEC-AR-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-001",
+    "testCaseId": "TC-HOME-AR-001",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-002",
+    "sectionId": "HOME-SEC-AR-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-002",
+    "testCaseId": "TC-HOME-AR-002",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-003",
+    "sectionId": "HOME-SEC-AR-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-003",
+    "testCaseId": "TC-HOME-AR-003",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-004",
+    "sectionId": "HOME-SEC-AR-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-004",
+    "testCaseId": "TC-HOME-AR-004",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-005",
+    "sectionId": "HOME-SEC-AR-001",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-005",
+    "testCaseId": "TC-HOME-AR-005",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-006",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-006",
+    "testCaseId": "TC-HOME-AR-006",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-007",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-007",
+    "testCaseId": "TC-HOME-AR-007",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-008",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-008",
+    "testCaseId": "TC-HOME-AR-008",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-009",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-009",
+    "testCaseId": "TC-HOME-AR-009",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-010",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-010",
+    "testCaseId": "TC-HOME-AR-010",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-011",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-011",
+    "testCaseId": "TC-HOME-AR-011",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-012",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-012",
+    "testCaseId": "TC-HOME-AR-012",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-013",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-013",
+    "testCaseId": "TC-HOME-AR-013",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-014",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-014",
+    "testCaseId": "TC-HOME-AR-014",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-015",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-015",
+    "testCaseId": "TC-HOME-AR-015",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-016",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-016",
+    "testCaseId": "TC-HOME-AR-016",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-017",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-017",
+    "testCaseId": "TC-HOME-AR-017",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-018",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-018",
+    "testCaseId": "TC-HOME-AR-018",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-019",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-019",
+    "testCaseId": "TC-HOME-AR-019",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-020",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-020",
+    "testCaseId": "TC-HOME-AR-020",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-021",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-021",
+    "testCaseId": "TC-HOME-AR-021",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-022",
+    "sectionId": "HOME-SEC-AR-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-022",
+    "testCaseId": "TC-HOME-AR-022",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-023",
+    "sectionId": "HOME-SEC-AR-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-023",
+    "testCaseId": "TC-HOME-AR-023",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-024",
+    "sectionId": "HOME-SEC-AR-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-024",
+    "testCaseId": "TC-HOME-AR-024",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-025",
+    "sectionId": "HOME-SEC-AR-006",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-025",
+    "testCaseId": "TC-HOME-AR-025",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-026",
+    "sectionId": "HOME-SEC-AR-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-026",
+    "testCaseId": "TC-HOME-AR-026",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-027",
+    "sectionId": "HOME-SEC-AR-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-027",
+    "testCaseId": "TC-HOME-AR-027",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-028",
+    "sectionId": "HOME-SEC-AR-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-028",
+    "testCaseId": "TC-HOME-AR-028",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-029",
+    "sectionId": "HOME-SEC-AR-007",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-029",
+    "testCaseId": "TC-HOME-AR-029",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-030",
+    "sectionId": "HOME-SEC-AR-008",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-030",
+    "testCaseId": "TC-HOME-AR-030",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-031",
+    "sectionId": "HOME-SEC-AR-008",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-031",
+    "testCaseId": "TC-HOME-AR-031",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-032",
+    "sectionId": "HOME-SEC-AR-009",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-032",
+    "testCaseId": "TC-HOME-AR-032",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-033",
+    "sectionId": "HOME-SEC-AR-009",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-033",
+    "testCaseId": "TC-HOME-AR-033",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-034",
+    "sectionId": "HOME-SEC-AR-009",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-034",
+    "testCaseId": "TC-HOME-AR-034",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-035",
+    "sectionId": "HOME-SEC-AR-009",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-035",
+    "testCaseId": "TC-HOME-AR-035",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-036",
+    "sectionId": "HOME-SEC-AR-010",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-036",
+    "testCaseId": "TC-HOME-AR-036",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-037",
+    "sectionId": "HOME-SEC-AR-010",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-037",
+    "testCaseId": "TC-HOME-AR-037",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-038",
+    "sectionId": "HOME-SEC-AR-011",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-038",
+    "testCaseId": "TC-HOME-AR-038",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-039",
+    "sectionId": "HOME-SEC-AR-011",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-039",
+    "testCaseId": "TC-HOME-AR-039",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-040",
+    "sectionId": "HOME-SEC-AR-011",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-040",
+    "testCaseId": "TC-HOME-AR-040",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-041",
+    "sectionId": "HOME-SEC-AR-011",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-041",
+    "testCaseId": "TC-HOME-AR-041",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-042",
+    "sectionId": "HOME-SEC-AR-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-042",
+    "testCaseId": "TC-HOME-AR-042",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-043",
+    "sectionId": "HOME-SEC-AR-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-043",
+    "testCaseId": "TC-HOME-AR-043",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-044",
+    "sectionId": "HOME-SEC-AR-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-044",
+    "testCaseId": "TC-HOME-AR-044",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-045",
+    "sectionId": "HOME-SEC-AR-012",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-045",
+    "testCaseId": "TC-HOME-AR-045",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-046",
+    "sectionId": "HOME-SEC-AR-013",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-046",
+    "testCaseId": "TC-HOME-AR-046",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-047",
+    "sectionId": "HOME-SEC-AR-013",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-047",
+    "testCaseId": "TC-HOME-AR-047",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-048",
+    "sectionId": "HOME-SEC-AR-014",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-048",
+    "testCaseId": "TC-HOME-AR-048",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-049",
+    "sectionId": "HOME-SEC-AR-019",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-049",
+    "testCaseId": "TC-HOME-AR-049",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-050",
+    "sectionId": "HOME-SEC-AR-019",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-050",
+    "testCaseId": "TC-HOME-AR-050",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-051",
+    "sectionId": "HOME-SEC-AR-019",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-051",
+    "testCaseId": "TC-HOME-AR-051",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-052",
+    "sectionId": "HOME-SEC-AR-019",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-052",
+    "testCaseId": "TC-HOME-AR-052",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-053",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-053",
+    "testCaseId": "TC-HOME-AR-053",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-054",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-054",
+    "testCaseId": "TC-HOME-AR-054",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-055",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-055",
+    "testCaseId": "TC-HOME-AR-055",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-056",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-056",
+    "testCaseId": "TC-HOME-AR-056",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-057",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-057",
+    "testCaseId": "TC-HOME-AR-057",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-058",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-058",
+    "testCaseId": "TC-HOME-AR-058",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-059",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-059",
+    "testCaseId": "TC-HOME-AR-059",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-060",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-060",
+    "testCaseId": "TC-HOME-AR-060",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-061",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-061",
+    "testCaseId": "TC-HOME-AR-061",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-062",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-062",
+    "testCaseId": "TC-HOME-AR-062",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-063",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-063",
+    "testCaseId": "TC-HOME-AR-063",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-064",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-064",
+    "testCaseId": "TC-HOME-AR-064",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-065",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-065",
+    "testCaseId": "TC-HOME-AR-065",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-066",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-066",
+    "testCaseId": "TC-HOME-AR-066",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-AR-067",
+    "sectionId": "HOME-GLOBAL",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-067",
+    "testCaseId": "TC-HOME-AR-067",
+    "bugIds": []
+  }
+]

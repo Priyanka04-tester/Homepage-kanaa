@@ -5,9 +5,11 @@
  * localization, and console/network health.
  */
 const { test, expect } = require('@playwright/test');
-const { loadHomepageMap, findTestCase, findGlobalTestCase, recordExecution, evidenceDir, isFirstPartyUrl } = require('../../utils/qaState');
+const {
+  loadHomepageMap, findTestCase, findGlobalTestCase, recordExecution, evidenceDir, isFirstPartyUrl,
+  LOCALE, LOCALE_PATH, PATTERNS,
+} = require('../../utils/qaState');
 
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
 const map = loadHomepageMap();
 const sectionsWithImages = map.sections.filter((s) => s.elementCounts && s.elementCounts.images > 0);
 const sectionsWithInputs = map.sections.filter((s) => s.elementCounts && s.elementCounts.inputs > 0);
@@ -106,31 +108,41 @@ test(`${a11yTc.id}: Global accessibility — keyboard reachability & accessible 
   test.info().annotations.push({ type: 'a11y-findings', description: String(findings.length) });
 });
 
-const rtlTc = findGlobalTestCase('RTL / Arabic');
-test(`${rtlTc.id}: Global localization — Arabic / RTL switch`, async ({ page }, testInfo) => {
-  const tc = rtlTc;
+// This runs once per locale (HOMEPAGE_LOCALE). On "en" it verifies switching TO
+// Arabic; on "ar" it verifies switching TO English — see generate-test-plan.js for
+// why RTL layout correctness itself doesn't need a separate check here anymore
+// (the "ar" locale's own full pipeline already covers that end-to-end).
+const targetLocaleLabel = LOCALE === 'ar' ? 'English' : 'Arabic';
+const targetDir = LOCALE === 'ar' ? 'ltr' : 'rtl';
+const localizationTc = findGlobalTestCase(LOCALE === 'ar' ? 'switch to English' : 'switch to Arabic');
+test(`${localizationTc.id}: Global localization — switch to ${targetLocaleLabel}`, async ({ page }, testInfo) => {
+  const tc = localizationTc;
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
   const dir = evidenceDir(tc.id);
   const findings = [];
 
-  await page.screenshot({ path: require('path').join(dir, 'before-ltr.png') });
+  await page.screenshot({ path: require('path').join(dir, 'before-switch.png') });
 
-  const switcher = page.getByRole('button', { name: /عربي/ });
+  const switcher = page.getByRole('button', { name: PATTERNS.switchToOtherLocale });
   if (await switcher.count() === 0) {
-    findings.push('Language switcher control not found by expected accessible name "عربي"');
+    findings.push(`Language switcher control not found by expected accessible name (pattern: ${PATTERNS.switchToOtherLocale})`);
   } else {
     await switcher.first().click();
-    await page.waitForTimeout(1500);
-    const dir_attr = await page.evaluate(() => document.documentElement.getAttribute('dir') || document.documentElement.dir);
-    if (dir_attr !== 'rtl') findings.push(`Expected <html dir="rtl"> after switching language, got dir="${dir_attr}"`);
+    await page.waitForURL(PATTERNS.otherLocaleUrlHint, { timeout: 10_000 }).catch(() => {
+      findings.push(`URL did not change to the ${targetLocaleLabel} locale after clicking the switcher (still at ${page.url()})`);
+    });
+    await page.waitForTimeout(1000);
+
+    const dirAttr = await page.evaluate(() => document.documentElement.getAttribute('dir') || document.documentElement.dir);
+    if (dirAttr !== targetDir) findings.push(`Expected <html dir="${targetDir}"> after switching to ${targetLocaleLabel}, got dir="${dirAttr}"`);
 
     const hasHorizontalOverflow = await page.evaluate(() => {
       const el = document.getElementById('main-container') || document.documentElement;
       return el.scrollWidth > el.clientWidth + 2;
     });
-    if (hasHorizontalOverflow) findings.push('Horizontal overflow detected after switching to RTL');
+    if (hasHorizontalOverflow) findings.push(`Horizontal overflow detected after switching to ${targetLocaleLabel}`);
 
-    await page.screenshot({ path: require('path').join(dir, 'after-rtl.png') });
+    await page.screenshot({ path: require('path').join(dir, 'after-switch.png') });
   }
 
   const status = findings.length === 0 ? 'PASS' : 'FAIL';
@@ -140,8 +152,8 @@ test(`${rtlTc.id}: Global localization — Arabic / RTL switch`, async ({ page }
     browser: testInfo.project.name,
     viewport: page.viewportSize(),
     evidencePath: `evidence/homepage/${tc.id}/`,
-    notes: 'Clicked header language switcher and checked dir attribute + horizontal overflow.',
-    actualResult: status === 'PASS' ? 'RTL applied cleanly with no overflow.' : findings.join(' | '),
+    notes: `Clicked header language switcher toward ${targetLocaleLabel} and checked URL + dir attribute + horizontal overflow.`,
+    actualResult: status === 'PASS' ? `Switched to ${targetLocaleLabel} cleanly with no overflow.` : findings.join(' | '),
   });
   expect(findings, findings.join('\n')).toEqual([]);
 });

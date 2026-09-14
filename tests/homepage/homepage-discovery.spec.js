@@ -17,14 +17,10 @@
 const fs = require('fs');
 const path = require('path');
 const { test } = require('@playwright/test');
+const { LOCALE, LOCALE_PATH, ID_PREFIX, STATE_DIR, PATTERNS, PREV_CONTROL_PATTERN, NEXT_CONTROL_PATTERN } = require('../../utils/qaState');
 
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
-const STATE_DIR = path.join(__dirname, '..', '..', 'state');
-const EVIDENCE_DIR = path.join(__dirname, '..', '..', 'evidence', 'homepage', 'discovery');
-
-for (const dir of [STATE_DIR, EVIDENCE_DIR]) {
-  fs.mkdirSync(dir, { recursive: true });
-}
+const EVIDENCE_DIR = path.join(__dirname, '..', '..', 'evidence', 'homepage', LOCALE, 'discovery');
+fs.mkdirSync(EVIDENCE_DIR, { recursive: true });
 
 function writeJson(filePath, data) {
   fs.writeFileSync(filePath, JSON.stringify(data, null, 2), 'utf-8');
@@ -98,7 +94,16 @@ test.describe('Homepage discovery', () => {
     fs.writeFileSync(path.join(EVIDENCE_DIR, 'aria-snapshot.txt'), ariaSnapshot, 'utf-8');
 
     // --- In-page structural extraction ---
-    const raw = await page.evaluate(() => {
+    const patternArgs = {
+      addToCart: { source: PATTERNS.addToCart.source, flags: PATTERNS.addToCart.flags },
+      prev: { source: PREV_CONTROL_PATTERN.source, flags: PREV_CONTROL_PATTERN.flags },
+      next: { source: NEXT_CONTROL_PATTERN.source, flags: NEXT_CONTROL_PATTERN.flags },
+    };
+    const raw = await page.evaluate((patterns) => {
+      const addToCartRe = new RegExp(patterns.addToCart.source, patterns.addToCart.flags);
+      const prevRe = new RegExp(patterns.prev.source, patterns.prev.flags);
+      const nextRe = new RegExp(patterns.next.source, patterns.next.flags);
+
       function isVisible(el) {
         if (!(el instanceof Element)) return false;
         const rect = el.getBoundingClientRect();
@@ -171,8 +176,8 @@ test.describe('Homepage discovery', () => {
       }));
 
       // 4. Sliders/carousels: pair "Previous slide" / "Next slide" controls by common ancestor
-      const prevBtns = interactiveEls.filter((el) => /previous slide/i.test(accessibleName(el)));
-      const nextBtns = interactiveEls.filter((el) => /next slide/i.test(accessibleName(el)));
+      const prevBtns = interactiveEls.filter((el) => prevRe.test(accessibleName(el)));
+      const nextBtns = interactiveEls.filter((el) => nextRe.test(accessibleName(el)));
       function closestCommonAncestor(a, b) {
         const ancestorsOfA = new Set();
         let cur = a;
@@ -205,7 +210,7 @@ test.describe('Homepage discovery', () => {
       });
 
       // 5. Product cards: anchor on "Add to Cart"-style buttons (validated pattern for this site)
-      const addToCartBtns = interactiveEls.filter((el) => /add to cart/i.test(accessibleName(el)));
+      const addToCartBtns = interactiveEls.filter((el) => addToCartRe.test(accessibleName(el)));
       const productCards = addToCartBtns.map((btn) => {
         let card = btn.closest('a') || btn.parentElement;
         const text = card ? card.textContent.replace(/\s+/g, ' ').trim().slice(0, 200) : '';
@@ -244,7 +249,7 @@ test.describe('Homepage discovery', () => {
         // window/body, so document.documentElement.scrollHeight is just the viewport height.
         documentHeight: (document.getElementById('main-container') || document.documentElement).scrollHeight,
       };
-    });
+    }, patternArgs);
 
     await page.evaluate(() => window.scrollTo(0, 0));
 
@@ -288,7 +293,7 @@ test.describe('Homepage discovery', () => {
     let secNum = 0;
     const sections = allBuckets.map((b) => {
       secNum += 1;
-      const id = `HOME-SEC-${String(secNum).padStart(3, '0')}`;
+      const id = `HOME-SEC-${ID_PREFIX}-${String(secNum).padStart(3, '0')}`;
       const elementCount = b.buttons.length + b.links.length + b.inputs.length + b.images.length;
       let type = 'content-block';
       if (!b.heading) type = 'topbar-or-preamble';
@@ -324,7 +329,7 @@ test.describe('Homepage discovery', () => {
     if (raw.siteFooterPresent) {
       secNum += 1;
       sections.push({
-        id: `HOME-SEC-${String(secNum).padStart(3, '0')}`,
+        id: `HOME-SEC-${ID_PREFIX}-${String(secNum).padStart(3, '0')}`,
         name: 'Site Footer',
         type: 'footer',
         locationTop: raw.siteFooterTop,
@@ -378,6 +383,7 @@ test.describe('Homepage discovery', () => {
 
     const homepageMap = {
       meta: {
+        locale: LOCALE,
         url,
         title,
         viewport,

@@ -4,10 +4,7 @@
  * observational performance check (spec section 22 — not a load/stress test).
  */
 const { test, expect } = require('@playwright/test');
-const { findGlobalTestCase, recordExecution, evidenceDir } = require('../../utils/qaState');
-
-const BASE_URL = process.env.BASE_URL || 'https://dev-nx.thekanaa.com';
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
+const { findGlobalTestCase, recordExecution, evidenceDir, LOCALE_PATH, BASE_URL, PATTERNS, NEXT_CONTROL_PATTERN } = require('../../utils/qaState');
 
 const negativeTc = findGlobalTestCase('interaction robustness');
 test(`${negativeTc.id}: Global negative/edge — interaction robustness`, async ({ page }, testInfo) => {
@@ -28,7 +25,7 @@ test(`${negativeTc.id}: Global negative/edge — interaction robustness`, async 
   // partway down first, or "Add to Cart" won't exist in the DOM yet on a cold load.
   await page.evaluate(() => { (document.getElementById('main-container') || document.scrollingElement).scrollTop = 900; });
   await page.waitForTimeout(500);
-  const addToCartBtn = page.getByRole('button', { name: 'Add to Cart' }).first();
+  const addToCartBtn = page.getByRole('button', { name: PATTERNS.addToCart }).first();
   if (await addToCartBtn.count() > 0) {
     const before = consoleErrors.length;
     try {
@@ -49,7 +46,7 @@ test(`${negativeTc.id}: Global negative/edge — interaction robustness`, async 
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
   await page.evaluate(() => { (document.getElementById('main-container') || document.scrollingElement).scrollTop = 900; });
   await page.waitForTimeout(500);
-  const firstCard = page.getByRole('button', { name: 'Add to Cart' }).first().locator('xpath=ancestor::a[1]');
+  const firstCard = page.getByRole('button', { name: PATTERNS.addToCart }).first().locator('xpath=ancestor::a[1]');
   const pdpHref = await firstCard.getAttribute('href').catch(() => null);
   if (pdpHref) {
     await firstCard.click();
@@ -71,7 +68,7 @@ test(`${negativeTc.id}: Global negative/edge — interaction robustness`, async 
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
   await page.reload({ waitUntil: 'domcontentloaded' });
   await page.waitForTimeout(1000);
-  const stillUsable = await page.getByPlaceholder(/what are you looking for/i).count();
+  const stillUsable = await page.getByPlaceholder(PATTERNS.searchPlaceholder).count();
   if (stillUsable === 0) findings.push('Search box not present after a reload — page may not have settled into a usable state');
 
   await page.screenshot({ path: require('path').join(dir, 'final-state.png') }).catch(() => {});
@@ -99,7 +96,7 @@ test(`${perfTc.id}: Global performance observation — initial load`, async ({ p
 
   const start = Date.now();
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
-  await page.getByRole('button', { name: 'Next slide' }).first().waitFor({ state: 'visible', timeout: 15_000 }).catch(() => {});
+  await page.getByRole('button', { name: NEXT_CONTROL_PATTERN }).first().waitFor({ state: 'visible', timeout: 15_000 }).catch(() => {});
   const heroInteractiveMs = Date.now() - start;
 
   const counts = {};

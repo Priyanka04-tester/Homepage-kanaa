@@ -21,17 +21,23 @@
  * here is expected noise, not evidence of breakage on its own.
  */
 const { test, expect } = require('@playwright/test');
-const { loadHomepageMap, findTestCase, recordExecution, evidenceDir } = require('../../utils/qaState');
+const {
+  loadHomepageMap, findTestCase, recordExecution, evidenceDir,
+  LOCALE_PATH, PATTERNS, WISHLIST_PATTERN, PREV_CONTROL_PATTERN, NEXT_CONTROL_PATTERN,
+} = require('../../utils/qaState');
 
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
-const EXCLUDE_NAME = /previous slide|next slide|add to wishlist|add to cart|عربي|chat/i;
+function isExcluded(name) {
+  return PREV_CONTROL_PATTERN.test(name) || NEXT_CONTROL_PATTERN.test(name)
+    || WISHLIST_PATTERN.test(name) || PATTERNS.addToCart.test(name)
+    || PATTERNS.switchToOtherLocale.test(name) || /chat/i.test(name);
+}
 
 const map = loadHomepageMap();
 const sectionsWithButtons = map.sections.filter((s) => s.elementCounts && s.elementCounts.buttons > 0);
 
 for (const section of sectionsWithButtons) {
   const tc = findTestCase(section.id, 'buttons');
-  const candidates = section.elements.buttons.filter((b) => b.visible && !EXCLUDE_NAME.test(b.name));
+  const candidates = section.elements.buttons.filter((b) => b.visible && !isExcluded(b.name));
 
   test(`${tc.id}: ${section.name || section.id} — buttons behave as expected`, async ({ page }, testInfo) => {
     await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });

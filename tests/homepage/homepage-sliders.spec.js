@@ -3,16 +3,14 @@
  * first/next/previous/last slide, rapid-click robustness, pagination (if present),
  * and slide CTA/link sanity, for every slider state/homepage-map.json found.
  *
- * Both sliders on this homepage expose identically-named "Previous slide"/"Next
- * slide" controls, so they're disambiguated by index in DOM order (0 = topbar promo
- * ticker in HOME-SEC-001, 1 = hero banner in HOME-SEC-002) — the same order the
- * discovery script found them in, and the same order they appear in
- * state/homepage-map.json's per-section elements.sliders arrays.
+ * Sliders on this homepage expose identically-named "Previous"/"Next" controls
+ * (untranslated — same text on both locales, see utils/qaState.js), so they're
+ * disambiguated by index in DOM order, matching the order the discovery script
+ * found them in and the order they appear in homepage-map.json's per-section
+ * elements.sliders arrays.
  */
 const { test, expect } = require('@playwright/test');
-const { loadHomepageMap, findTestCase, recordExecution, evidenceDir } = require('../../utils/qaState');
-
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
+const { loadHomepageMap, findTestCase, recordExecution, evidenceDir, LOCALE_PATH, PREV_CONTROL_PATTERN, NEXT_CONTROL_PATTERN } = require('../../utils/qaState');
 
 const map = loadHomepageMap();
 const sectionsWithSliders = map.sections.filter((s) => s.elementCounts && s.elementCounts.sliders > 0);
@@ -27,8 +25,8 @@ for (const section of sectionsWithSliders) {
   test(`${tc.id}: ${section.name || section.id} — carousel navigation`, async ({ page }, testInfo) => {
     await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
 
-    const prev = page.getByRole('button', { name: 'Previous slide' }).nth(sliderIndex);
-    const next = page.getByRole('button', { name: 'Next slide' }).nth(sliderIndex);
+    const prev = page.getByRole('button', { name: PREV_CONTROL_PATTERN }).nth(sliderIndex);
+    const next = page.getByRole('button', { name: NEXT_CONTROL_PATTERN }).nth(sliderIndex);
     await expect(prev, 'Previous control should be visible').toBeVisible();
     await expect(next, 'Next control should be visible').toBeVisible();
 
