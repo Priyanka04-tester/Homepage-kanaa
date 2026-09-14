@@ -1,0 +1,404 @@
+[
+  {
+    "id": "REQ-HOME-AR-001",
+    "sectionId": "HOME-SEC-AR-001",
+    "feature": "تسوّّق حسب الماركة — links",
+    "text": "Every link in \"تسوّّق حسب الماركة\" (63 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-002",
+    "sectionId": "HOME-SEC-AR-001",
+    "feature": "تسوّّق حسب الماركة — buttons",
+    "text": "Every interactive button in \"تسوّّق حسب الماركة\" (26 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-003",
+    "sectionId": "HOME-SEC-AR-001",
+    "feature": "تسوّّق حسب الماركة — carousel",
+    "text": "The carousel in \"تسوّّق حسب الماركة\" must support first/next/previous/last slide navigation, looping, and (if present) pagination indicators, without blank slides, stuck state, or broken CTAs."
+  },
+  {
+    "id": "REQ-HOME-AR-004",
+    "sectionId": "HOME-SEC-AR-001",
+    "feature": "تسوّّق حسب الماركة — images",
+    "text": "All images in \"تسوّّق حسب الماركة\" (71 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-005",
+    "sectionId": "HOME-SEC-AR-001",
+    "feature": "تسوّّق حسب الماركة — inputs",
+    "text": "Form inputs in \"تسوّّق حسب الماركة\" must accept valid input and behave predictably for empty/boundary/invalid values."
+  },
+  {
+    "id": "REQ-HOME-AR-006",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "تابلتك الجديد مع كل اللي تحتاجه. — links",
+    "text": "Every link in \"تابلتك الجديد مع كل اللي تحتاجه.\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-007",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "تابلتك الجديد مع كل اللي تحتاجه. — buttons",
+    "text": "Every interactive button in \"تابلتك الجديد مع كل اللي تحتاجه.\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-008",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "تابلتك الجديد مع كل اللي تحتاجه. — product cards",
+    "text": "Product cards in \"تابلتك الجديد مع كل اللي تحتاجه.\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-009",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "تابلتك الجديد مع كل اللي تحتاجه. — images",
+    "text": "All images in \"تابلتك الجديد مع كل اللي تحتاجه.\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-010",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "اشتر 1 واحصل على 1 مجانا — links",
+    "text": "Every link in \"اشتر 1 واحصل على 1 مجانا\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-011",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "اشتر 1 واحصل على 1 مجانا — buttons",
+    "text": "Every interactive button in \"اشتر 1 واحصل على 1 مجانا\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-012",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "اشتر 1 واحصل على 1 مجانا — product cards",
+    "text": "Product cards in \"اشتر 1 واحصل على 1 مجانا\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-013",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "اشتر 1 واحصل على 1 مجانا — images",
+    "text": "All images in \"اشتر 1 واحصل على 1 مجانا\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-014",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "PS5 تسوق باقات — links",
+    "text": "Every link in \"PS5 تسوق باقات\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-015",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "PS5 تسوق باقات — buttons",
+    "text": "Every interactive button in \"PS5 تسوق باقات\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-016",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "PS5 تسوق باقات — product cards",
+    "text": "Product cards in \"PS5 تسوق باقات\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-017",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "PS5 تسوق باقات — images",
+    "text": "All images in \"PS5 تسوق باقات\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-018",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "اختاروا عطراً يستحق أن يكون هدية. — links",
+    "text": "Every link in \"اختاروا عطراً يستحق أن يكون هدية.\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-019",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "اختاروا عطراً يستحق أن يكون هدية. — buttons",
+    "text": "Every interactive button in \"اختاروا عطراً يستحق أن يكون هدية.\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-020",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "اختاروا عطراً يستحق أن يكون هدية. — product cards",
+    "text": "Product cards in \"اختاروا عطراً يستحق أن يكون هدية.\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-021",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "اختاروا عطراً يستحق أن يكون هدية. — images",
+    "text": "All images in \"اختاروا عطراً يستحق أن يكون هدية.\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-022",
+    "sectionId": "HOME-SEC-AR-006",
+    "feature": "عروض الأسبوع — links",
+    "text": "Every link in \"عروض الأسبوع\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-023",
+    "sectionId": "HOME-SEC-AR-006",
+    "feature": "عروض الأسبوع — buttons",
+    "text": "Every interactive button in \"عروض الأسبوع\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-024",
+    "sectionId": "HOME-SEC-AR-006",
+    "feature": "عروض الأسبوع — product cards",
+    "text": "Product cards in \"عروض الأسبوع\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-025",
+    "sectionId": "HOME-SEC-AR-006",
+    "feature": "عروض الأسبوع — images",
+    "text": "All images in \"عروض الأسبوع\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-026",
+    "sectionId": "HOME-SEC-AR-007",
+    "feature": "المنتجات الأكثر شعبية — links",
+    "text": "Every link in \"المنتجات الأكثر شعبية\" (11 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-027",
+    "sectionId": "HOME-SEC-AR-007",
+    "feature": "المنتجات الأكثر شعبية — buttons",
+    "text": "Every interactive button in \"المنتجات الأكثر شعبية\" (23 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-028",
+    "sectionId": "HOME-SEC-AR-007",
+    "feature": "المنتجات الأكثر شعبية — product cards",
+    "text": "Product cards in \"المنتجات الأكثر شعبية\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-029",
+    "sectionId": "HOME-SEC-AR-007",
+    "feature": "المنتجات الأكثر شعبية — images",
+    "text": "All images in \"المنتجات الأكثر شعبية\" (34 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-030",
+    "sectionId": "HOME-SEC-AR-008",
+    "feature": "استكشف جواهرنا الخفية — links",
+    "text": "Every link in \"استكشف جواهرنا الخفية\" (2 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-031",
+    "sectionId": "HOME-SEC-AR-008",
+    "feature": "استكشف جواهرنا الخفية — images",
+    "text": "All images in \"استكشف جواهرنا الخفية\" (1 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-032",
+    "sectionId": "HOME-SEC-AR-009",
+    "feature": "جديد في مجموعتنا — links",
+    "text": "Every link in \"جديد في مجموعتنا\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-033",
+    "sectionId": "HOME-SEC-AR-009",
+    "feature": "جديد في مجموعتنا — buttons",
+    "text": "Every interactive button in \"جديد في مجموعتنا\" (21 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-034",
+    "sectionId": "HOME-SEC-AR-009",
+    "feature": "جديد في مجموعتنا — product cards",
+    "text": "Product cards in \"جديد في مجموعتنا\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-035",
+    "sectionId": "HOME-SEC-AR-009",
+    "feature": "جديد في مجموعتنا — images",
+    "text": "All images in \"جديد في مجموعتنا\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-036",
+    "sectionId": "HOME-SEC-AR-010",
+    "feature": "عروض اس تثنائية💖 — links",
+    "text": "Every link in \"عروض اس تثنائية💖\" (8 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-037",
+    "sectionId": "HOME-SEC-AR-010",
+    "feature": "عروض اس تثنائية💖 — images",
+    "text": "All images in \"عروض اس تثنائية💖\" (4 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-038",
+    "sectionId": "HOME-SEC-AR-011",
+    "feature": "منتجات على ذوقك — links",
+    "text": "Every link in \"منتجات على ذوقك\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-039",
+    "sectionId": "HOME-SEC-AR-011",
+    "feature": "منتجات على ذوقك — buttons",
+    "text": "Every interactive button in \"منتجات على ذوقك\" (21 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-040",
+    "sectionId": "HOME-SEC-AR-011",
+    "feature": "منتجات على ذوقك — product cards",
+    "text": "Product cards in \"منتجات على ذوقك\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-041",
+    "sectionId": "HOME-SEC-AR-011",
+    "feature": "منتجات على ذوقك — images",
+    "text": "All images in \"منتجات على ذوقك\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-042",
+    "sectionId": "HOME-SEC-AR-012",
+    "feature": "منتجات مناسبة لكل عمر — links",
+    "text": "Every link in \"منتجات مناسبة لكل عمر\" (14 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-043",
+    "sectionId": "HOME-SEC-AR-012",
+    "feature": "منتجات مناسبة لكل عمر — buttons",
+    "text": "Every interactive button in \"منتجات مناسبة لكل عمر\" (14 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-044",
+    "sectionId": "HOME-SEC-AR-012",
+    "feature": "منتجات مناسبة لكل عمر — product cards",
+    "text": "Product cards in \"منتجات مناسبة لكل عمر\" (7 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-045",
+    "sectionId": "HOME-SEC-AR-012",
+    "feature": "منتجات مناسبة لكل عمر — images",
+    "text": "All images in \"منتجات مناسبة لكل عمر\" (35 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-046",
+    "sectionId": "HOME-SEC-AR-013",
+    "feature": "نصنع السعادة , نخلق الذكريات — buttons",
+    "text": "Every interactive button in \"نصنع السعادة , نخلق الذكريات\" (6 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-047",
+    "sectionId": "HOME-SEC-AR-013",
+    "feature": "نصنع السعادة , نخلق الذكريات — images",
+    "text": "All images in \"نصنع السعادة , نخلق الذكريات\" (6 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-048",
+    "sectionId": "HOME-SEC-AR-014",
+    "feature": "⭐ بتقييم 4.7 على قوقل — links",
+    "text": "Every link in \"⭐ بتقييم 4.7 على قوقل\" (1 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-049",
+    "sectionId": "HOME-SEC-AR-019",
+    "feature": "تسوق حسب الفئة — links",
+    "text": "Every link in \"تسوق حسب الفئة\" (23 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-050",
+    "sectionId": "HOME-SEC-AR-019",
+    "feature": "تسوق حسب الفئة — buttons",
+    "text": "Every interactive button in \"تسوق حسب الفئة\" (1 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-051",
+    "sectionId": "HOME-SEC-AR-019",
+    "feature": "تسوق حسب الفئة — images",
+    "text": "All images in \"تسوق حسب الفئة\" (10 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-052",
+    "sectionId": "HOME-SEC-AR-019",
+    "feature": "تسوق حسب الفئة — inputs",
+    "text": "Form inputs in \"تسوق حسب الفئة\" must accept valid input and behave predictably for empty/boundary/invalid values."
+  },
+  {
+    "id": "REQ-HOME-AR-053",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Desktop 1440x900",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Desktop 1440x900 (1440x900)."
+  },
+  {
+    "id": "REQ-HOME-AR-054",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Desktop 1920x1080",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Desktop 1920x1080 (1920x1080)."
+  },
+  {
+    "id": "REQ-HOME-AR-055",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Tablet 1024x768",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Tablet 1024x768 (1024x768)."
+  },
+  {
+    "id": "REQ-HOME-AR-056",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Tablet 768x1024",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Tablet 768x1024 (768x1024)."
+  },
+  {
+    "id": "REQ-HOME-AR-057",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Mobile 390x844",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Mobile 390x844 (390x844)."
+  },
+  {
+    "id": "REQ-HOME-AR-058",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Mobile 393x852",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Mobile 393x852 (393x852)."
+  },
+  {
+    "id": "REQ-HOME-AR-059",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Responsive — Mobile 412x915",
+    "text": "The homepage must render without horizontal overflow, overlapping elements, or clipped CTAs at Mobile 412x915 (412x915)."
+  },
+  {
+    "id": "REQ-HOME-AR-060",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Cross-browser — chromium",
+    "text": "The homepage must load and its core interactions (nav, hero carousel, add to cart) must function on chromium."
+  },
+  {
+    "id": "REQ-HOME-AR-061",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Cross-browser — firefox",
+    "text": "The homepage must load and its core interactions (nav, hero carousel, add to cart) must function on firefox."
+  },
+  {
+    "id": "REQ-HOME-AR-062",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Cross-browser — webkit",
+    "text": "The homepage must load and its core interactions (nav, hero carousel, add to cart) must function on webkit."
+  },
+  {
+    "id": "REQ-HOME-AR-063",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Accessibility — keyboard & names",
+    "text": "Primary interactive elements (search, nav links, carousel controls, add-to-cart, wishlist) must be reachable via Tab and expose a non-empty accessible name."
+  },
+  {
+    "id": "REQ-HOME-AR-064",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Negative & edge — interaction robustness",
+    "text": "The homepage must not error or enter a broken state under rapid repeated interaction, back/forward navigation, or a refresh mid-load."
+  },
+  {
+    "id": "REQ-HOME-AR-065",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Console & network health",
+    "text": "A homepage load must not produce first-party JavaScript console errors or failed first-party network requests (third-party analytics/beacon failures are tracked separately and are not, by themselves, blocking)."
+  },
+  {
+    "id": "REQ-HOME-AR-066",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Localization — switch to English",
+    "text": "The language switcher must navigate from the Arabic homepage to the English homepage, with no horizontal overflow introduced by the switch."
+  },
+  {
+    "id": "REQ-HOME-AR-067",
+    "sectionId": "HOME-GLOBAL",
+    "feature": "Performance observation — initial load",
+    "text": "The homepage must reach a usable state (hero banner interactive) within a reasonable time on staging, and must not issue duplicate/redundant API calls on a single load."
+  }
+]

@@ -6,9 +6,7 @@
  * see playwright.homepage.config.js for why).
  */
 const { test, expect } = require('@playwright/test');
-const { findGlobalTestCase, recordExecution, evidenceDir } = require('../../utils/qaState');
-
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
+const { findGlobalTestCase, recordExecution, evidenceDir, LOCALE_PATH, PATTERNS, NEXT_CONTROL_PATTERN } = require('../../utils/qaState');
 
 test('Cross-browser homepage smoke', async ({ page }, testInfo) => {
   const browserName = testInfo.project.name;
@@ -17,9 +15,9 @@ test('Cross-browser homepage smoke', async ({ page }, testInfo) => {
   const findings = [];
 
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
-  await expect(page).toHaveTitle(/Kanaa/i);
+  await expect(page).toHaveTitle(/kanaa|كانا/i);
 
-  const next = page.getByRole('button', { name: 'Next slide' }).first();
+  const next = page.getByRole('button', { name: NEXT_CONTROL_PATTERN }).first();
   try {
     await expect(next).toBeVisible({ timeout: 10_000 });
     await next.click();
@@ -29,21 +27,24 @@ test('Cross-browser homepage smoke', async ({ page }, testInfo) => {
   }
 
   try {
-    // Next.js client-side routing: the URL changes via the History API, not a full
-    // navigation, so waitForLoadState('domcontentloaded') resolves immediately against
-    // the *already-loaded* page and never actually waits for the route change. Wait for
-    // the URL itself instead.
-    await page.getByRole('link', { name: 'Toys & Games' }).first().click();
-    await page.waitForURL(/toys-games/, { timeout: 10_000 });
+    // Not matched by link text — that's translated per locale. Any real category
+    // link (locale-path prefix, .html suffix, not "#") works for a smoke check.
+    // Next.js client-side routing changes the URL via the History API, not a full
+    // navigation, so waitForLoadState('domcontentloaded') would resolve immediately
+    // against the *already-loaded* page — wait for the URL itself instead.
+    const catLink = page.locator(`a[href^="${LOCALE_PATH}"][href$=".html"]`).first();
+    const href = await catLink.getAttribute('href');
+    await catLink.click();
+    await page.waitForURL((url) => url.pathname === href, { timeout: 10_000 });
   } catch (e) {
     findings.push(`Header category nav failed: ${e.message.slice(0, 150)} (at ${page.url()})`);
   }
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' }).catch(() => {});
 
   try {
-    const addBtn = page.getByRole('button', { name: 'Add to Cart' }).first();
+    const addBtn = page.getByRole('button', { name: PATTERNS.addToCart }).first();
     await addBtn.click({ timeout: 5000 });
-    await expect(page.getByText('View Cart')).toBeVisible({ timeout: 10_000 });
+    await expect(page.getByText(PATTERNS.viewCartConfirmation)).toBeVisible({ timeout: 10_000 });
   } catch (e) {
     findings.push(`Add to Cart smoke failed: ${e.message.slice(0, 150)}`);
   }

@@ -86,7 +86,7 @@ const isBrowserSmoke = [...targetTcIds].some((id) => {
 
 const cmd = isBrowserSmoke
   ? `npx playwright test --config=playwright.homepage.config.js homepage-browsers.spec.js --project=${browser}`
-  : `npx playwright test tests/homepage --project=chromium --grep "${[...targetTcIds].join('|')}"`;
+  : `npx playwright test --config=playwright.homepage.config.js tests/homepage --project=chromium --grep "${[...targetTcIds].join('|')}"`;
 
 console.log(`[retest] ${bugId}: re-running ${[...targetTcIds].join(', ')}`);
 console.log(`[retest] ${cmd}`);

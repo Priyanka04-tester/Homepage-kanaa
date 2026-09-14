@@ -1,16 +1,23 @@
 /**
  * Dedicated config for the homepage QA bot's own test files (tests/homepage/**).
- * Kept separate from the root playwright.config.js on purpose: that config is
- * pinned to a single chromium project at 1280x800 because tests/e2e's selectors
- * only work at/above the site's "xl" breakpoint (see README "Known site quirks").
- * The homepage bot's specs are viewport-agnostic (they set their own viewport per
- * test case, or don't care), so they can run across all three engines here without
- * touching that constraint.
+ * Kept separate from the root playwright.config.js on two counts, both intentional:
+ *  1. That config is pinned to a single chromium project at 1280x800 because
+ *     tests/e2e's selectors only work at/above the site's "xl" breakpoint (see
+ *     README "Known site quirks"). The homepage bot's specs set their own viewport
+ *     per test case, so they can run across all three engines here.
+ *  2. DIFFERENT TARGET SITE. tests/e2e and tests/api point at dev-nx.thekanaa.com
+ *     (via BASE_URL) — a shared dev/staging environment, on purpose, because those
+ *     suites do things like add-to-cart/checkout-adjacent flows that shouldn't run
+ *     against a live storefront by default. The homepage bot was built specifically
+ *     to test the public homepage itself (English + Arabic) and targets PRODUCTION
+ *     (https://thekanaa.com) via HOMEPAGE_BASE_URL — a separate env var, precisely
+ *     so that changing one target never silently changes the other. See CLAUDE.md
+ *     "Two different targets, on purpose" before pointing either at the other's URL.
  */
 require('dotenv').config();
 const { defineConfig, devices } = require('@playwright/test');
 
-const BASE_URL = process.env.BASE_URL || 'https://dev-nx.thekanaa.com';
+const BASE_URL = process.env.HOMEPAGE_BASE_URL || 'https://thekanaa.com';
 
 module.exports = defineConfig({
   testDir: './tests/homepage',

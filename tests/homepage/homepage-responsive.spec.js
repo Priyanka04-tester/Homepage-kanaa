@@ -3,9 +3,7 @@
  * horizontal-overflow check plus header/hero/footer presence at each viewport.
  */
 const { test, expect } = require('@playwright/test');
-const { findGlobalTestCase, recordExecution, evidenceDir } = require('../../utils/qaState');
-
-const LOCALE_PATH = process.env.LOCALE_PATH || '/en-sa/';
+const { findGlobalTestCase, recordExecution, evidenceDir, LOCALE_PATH, PATTERNS } = require('../../utils/qaState');
 
 const VIEWPORTS = [
   { name: 'Desktop 1440x900', width: 1440, height: 900 },
@@ -46,7 +44,7 @@ for (const vp of VIEWPORTS) {
     await page.waitForTimeout(500);
     await page.screenshot({ path: require('path').join(dir, 'mid-scroll.png') });
 
-    const hasSearch = await page.getByPlaceholder(/what are you looking for/i).count();
+    const hasSearch = await page.getByPlaceholder(PATTERNS.searchPlaceholder).count();
     if (hasSearch === 0) findings.push('Search input not found in DOM at this viewport (may be intentionally hidden behind a menu on small screens — verify manually if unexpected)');
 
     const status = findings.filter((f) => f.startsWith('Horizontal overflow')).length === 0 ? 'PASS' : 'FAIL';
