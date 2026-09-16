@@ -1,0 +1,22 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-16T10:45:31.515Z",
+    "updatedAt": "2026-09-16T10:45:31.515Z",
+    "discoveryStatus": "in-progress"
+  },
+  "filters": [],
+  "summary": {
+    "totalFilters": 0,
+    "filtersByType": {
+      "checkbox": 0,
+      "radio": 0,
+      "range": 0,
+      "dropdown": 0,
+      "custom": 0
+    },
+    "discoveredAt": [
+      "2026-09-16T10:45:31.515Z"
+    ]
+  }
+}

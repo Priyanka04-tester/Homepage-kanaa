@@ -1,0 +1,285 @@
+{
+  "timestamp": "2026-09-16T10:45:27.876Z",
+  "baseUrl": "https://thekanaa.com/en-sa/",
+  "totalCategoriesDiscovered": 38,
+  "categoryBreakdown": {
+    "parents": 28,
+    "subcategories": 9,
+    "nested": 1
+  },
+  "categories": [
+    {
+      "id": "CAT-1789555527260-v9ob978bk",
+      "name": "Gaming & Consoles",
+      "url": "https://thekanaa.com/en-sa/gaming-consoles.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527266-aequjxe4q",
+      "name": "Mobile Phones & Tablets",
+      "url": "https://thekanaa.com/en-sa/mobile-phones-tablets.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527293-ndj3j0t9n",
+      "name": "Electronics",
+      "url": "https://thekanaa.com/en-sa/electronics.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527299-owubeuf3l",
+      "name": "Toys & Games",
+      "url": "https://thekanaa.com/en-sa/toys-games.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527307-mulkyijmx",
+      "name": "Baby Essentials",
+      "url": "https://thekanaa.com/en-sa/baby-essentials.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527312-3usphnrxw",
+      "name": "Books & Stationery",
+      "url": "https://thekanaa.com/en-sa/books-stationery.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527320-q3zklvu94",
+      "name": "New In",
+      "url": "https://thekanaa.com/en-sa/new-to-our-collection.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527327-whiprwba8",
+      "name": "Trending",
+      "url": "https://thekanaa.com/en-sa/most-popular-products.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527393-vlawkr2kj",
+      "name": "Back To School",
+      "url": "https://thekanaa.com/en-sa/back-to-school.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527410-8o5kj3vxa",
+      "name": "Perfumes & Fragrances",
+      "url": "https://thekanaa.com/en-sa/perfumes-fragrances.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527416-a6qm6udo7",
+      "name": "Pools & Outdoor",
+      "url": "https://thekanaa.com/en-sa/sports-outdoor.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527424-1dlz0hvnh",
+      "name": "Arts & Crafts",
+      "url": "https://thekanaa.com/en-sa/toys-games/arts-crafts.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527429-zs4dflx4o",
+      "name": "Cars & Vehicles",
+      "url": "https://thekanaa.com/en-sa/toys-games/cars-vehicles.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527437-38wn27hvi",
+      "name": "Super Heroes",
+      "url": "https://thekanaa.com/en-sa/toys-games/characters-heroes.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527442-m8xl1faxw",
+      "name": "Dolls & Collectibles",
+      "url": "https://thekanaa.com/en-sa/toys-games/dolls-collectables.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527448-67dgfvfap",
+      "name": "Educational",
+      "url": "https://thekanaa.com/en-sa/toys-games/educational.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527455-2bxet25na",
+      "name": "Figures & Statues",
+      "url": "https://thekanaa.com/en-sa/toys-games/figures-statues.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527461-9ud8hfgn3",
+      "name": "Board Games",
+      "url": "https://thekanaa.com/en-sa/toys-games/games/board-games.html",
+      "type": "subcategory",
+      "level": 4
+    },
+    {
+      "id": "CAT-1789555527469-376omffu7",
+      "name": "Kids Furniture",
+      "url": "https://thekanaa.com/en-sa/toys-games/kids-furniture.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527474-x0k8wfcjz",
+      "name": "Pool Toys & Inflatables",
+      "url": "https://thekanaa.com/en-sa/sports-outdoor/beach-water/beach-water-toys/pool-toys-inflatables.html",
+      "type": "nested",
+      "level": 5
+    },
+    {
+      "id": "CAT-1789555527479-l4u1m72ab",
+      "name": "Baby Care",
+      "url": "https://thekanaa.com/en-sa/baby-essentials/baby-care.html",
+      "type": "subcategory",
+      "level": 3
+    },
+    {
+      "id": "CAT-1789555527493-051sh88zs",
+      "name": "NewSony PS5 Blu-Ray Disc 1TB - Official KSA Version + 2K NBA 2K27 Video Game for PS5 + DualSense Wireless Controller Bundle3,1993,624(12% OFF)14 Days Easy Returns",
+      "url": "https://thekanaa.com/en-sa/sony-ps5-blu-ray-disc-1tb-official-ksa-version-2k-nba-2k27-video-game-for-xbox-series-x-dualsense-wireless-controller-bundle.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527499-ghtpsfdb1",
+      "name": "NewSony PlayStation5 KSA Version Slim Digital Edition 825 GB Console+Western Digital 1TB SN850 NVMe SSD+DualSense Wireless Controller+PlayStation 5 Disc Drive Bundle3,7994,356(13% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/sony-playstation5-ksa-version-slim-digital-edition-825-gb-console-western-digital-1tb-sn850-nvme-ssd-dualsense-wireless-controller-playstation-5-disc-drive-bundle.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527506-53ticwovc",
+      "name": "NewSony PlayStation5 KSA Version Slim Digital Edition 825 GB Console + Western Digital 1TB SN850 NVMe SSD + DualSense Wireless Controller Bundle3,2993,727(11% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/sony-playstation5-ksa-version-slim-digital-edition-825-gb-console-western-digital-1tb-sn850-nvme-ssd-dualsense-wireless-controller-bundle.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527511-rw4bvaorw",
+      "name": "NewSony PS5 Blu-Ray Disc 1TB Official KSA Version + Western Digital 1TB NVMe SSD + Sony DualSense Wireless Controller KSA Version Bundle3,5493,727(5% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/sony-ps5-blu-ray-disc-1tb-official-ksa-version-western-digital-1tb-nvme-ssd-sony-dualsense-wireless-controller-ksa-version-bundle.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527518-mwhvyqs60",
+      "name": "NewSony PlayStation5 KSA Version Slim Digital Edition 825 GB Console + Western Digital 1TB SN850 NVMe SSD Bundle3,0993,428(10% OFF)14 Days Easy Returns",
+      "url": "https://thekanaa.com/en-sa/sony-playstation5-ksa-version-slim-digital-edition-825-gb-console-western-digital-1tb-sn850-nvme-ssd-bundle.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527526-agh71mw5w",
+      "name": "NewSony PS5 Blu-Ray Disc 1TB - Official KSA Version + Western Digital 1TB NVMe SSD Bundle3,2493,428(5% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/sony-ps5-blu-ray-disc-1tb-official-ksa-version-western-digital-1tb-nvme-ssd-bundle.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527531-egwdivumr",
+      "name": "View All",
+      "url": "https://thekanaa.com/en-sa/all-game-bundles.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527544-drjz0yxwt",
+      "name": "Lattafa Khamrah Eau De Parfum Unisex115155(26% OFF)100% Genuine",
+      "url": "https://thekanaa.com/en-sa/lattafa-khamrah-eau-de-parfum-unisex.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527550-izkswl3lc",
+      "name": "Lattafa Yara Eau De Parfum 100 ml for Women85105(19% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/lattafa-yara-eau-de-parfum-for-women.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527557-ywwv37kpv",
+      "name": "Almajed Prestige Ruby Eau De Parfum for Men185225(18% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/almajed-prestige-ruby-eau-de-parfum-for-men.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527562-l566ep48x",
+      "name": "Lattafa Asad Eau De Parfum for Men7595(21% OFF)100% Genuine",
+      "url": "https://thekanaa.com/en-sa/lattafa-asad-eau-de-parfum-for-men.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527567-u86vl154p",
+      "name": "Rasasi Hawas Eau De Parfum for Men99119(17% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/rasasi-hawas-eau-de-parfum-for-men.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527575-jaf5m1kb1",
+      "name": "Armaf Club De Nuit Intense Eau De Parfum for Women119159(25% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/armaf-club-de-nuit-intense-eau-de-parfum-for-women.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527580-qgum6pvqy",
+      "name": "View All",
+      "url": "https://thekanaa.com/en-sa/new-perfumes.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527708-h25olapjx",
+      "name": "View All",
+      "url": "https://thekanaa.com/en-sa/brand_list.html",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527772-vthhtink8",
+      "name": "New In",
+      "url": "https://thekanaa.com/en-sa/new-to-our-collection.html?page=1",
+      "type": "parent",
+      "level": 2
+    },
+    {
+      "id": "CAT-1789555527779-fq8ww3bil",
+      "name": "Trending",
+      "url": "https://thekanaa.com/en-sa/most-popular-products.html?page=1",
+      "type": "parent",
+      "level": 2
+    }
+  ],
+  "nextSteps": [
+    "1. Review discovered categories in state/plp-inventory.json",
+    "2. Navigate to top-priority PLPs for filter/sort discovery",
+    "3. Create test strategy in specs/plp-test-plan.md",
+    "4. Run filter and sort tests",
+    "5. Generate comprehensive test report"
+  ]
+}

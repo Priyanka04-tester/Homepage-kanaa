@@ -1,0 +1,20 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-16T00:00:00Z",
+    "updatedAt": "2026-09-16T00:00:00Z",
+    "discoveryStatus": "pending"
+  },
+  "productCards": [],
+  "summary": {
+    "totalProductCards": 0,
+    "cardsByCategory": {},
+    "cardsByLocale": {
+      "en": 0,
+      "ar": 0
+    },
+    "cardsByViewport": {},
+    "averageLoadTime": 0,
+    "discoveredAt": []
+  }
+}

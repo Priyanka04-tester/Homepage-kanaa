@@ -1,0 +1,399 @@
+{
+  "metadata": {
+    "version": "1.0.0",
+    "createdAt": "2026-09-16T10:44:04.167Z",
+    "updatedAt": "2026-09-16T10:44:04.167Z",
+    "discoveryStatus": "in-progress"
+  },
+  "categories": [
+    {
+      "id": "CAT-1789555443391-u48ryg17u",
+      "name": "Gaming & Consoles",
+      "url": "https://thekanaa.com/en-sa/gaming-consoles.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.391Z"
+    },
+    {
+      "id": "CAT-1789555443398-gxr7v02wo",
+      "name": "Mobile Phones & Tablets",
+      "url": "https://thekanaa.com/en-sa/mobile-phones-tablets.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.398Z"
+    },
+    {
+      "id": "CAT-1789555443431-atubtkj6a",
+      "name": "Electronics",
+      "url": "https://thekanaa.com/en-sa/electronics.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.431Z"
+    },
+    {
+      "id": "CAT-1789555443441-6s2ydw1k9",
+      "name": "Toys & Games",
+      "url": "https://thekanaa.com/en-sa/toys-games.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.441Z"
+    },
+    {
+      "id": "CAT-1789555443450-i3jvl9331",
+      "name": "Baby Essentials",
+      "url": "https://thekanaa.com/en-sa/baby-essentials.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.450Z"
+    },
+    {
+      "id": "CAT-1789555443459-u6iw30ocv",
+      "name": "Books & Stationery",
+      "url": "https://thekanaa.com/en-sa/books-stationery.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.459Z"
+    },
+    {
+      "id": "CAT-1789555443467-bouxzi9cd",
+      "name": "New In",
+      "url": "https://thekanaa.com/en-sa/new-to-our-collection.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.467Z"
+    },
+    {
+      "id": "CAT-1789555443478-g6fkcumd5",
+      "name": "Trending",
+      "url": "https://thekanaa.com/en-sa/most-popular-products.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.478Z"
+    },
+    {
+      "id": "CAT-1789555443553-rb9rm65ze",
+      "name": "Back To School",
+      "url": "https://thekanaa.com/en-sa/back-to-school.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.553Z"
+    },
+    {
+      "id": "CAT-1789555443574-9qexlo35n",
+      "name": "Perfumes & Fragrances",
+      "url": "https://thekanaa.com/en-sa/perfumes-fragrances.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.574Z"
+    },
+    {
+      "id": "CAT-1789555443580-phsgssvjt",
+      "name": "Pools & Outdoor",
+      "url": "https://thekanaa.com/en-sa/sports-outdoor.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.580Z"
+    },
+    {
+      "id": "CAT-1789555443591-i45br1kko",
+      "name": "Arts & Crafts",
+      "url": "https://thekanaa.com/en-sa/toys-games/arts-crafts.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.591Z"
+    },
+    {
+      "id": "CAT-1789555443597-0hpucaoqj",
+      "name": "Cars & Vehicles",
+      "url": "https://thekanaa.com/en-sa/toys-games/cars-vehicles.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.597Z"
+    },
+    {
+      "id": "CAT-1789555443603-qedo8oayx",
+      "name": "Super Heroes",
+      "url": "https://thekanaa.com/en-sa/toys-games/characters-heroes.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.603Z"
+    },
+    {
+      "id": "CAT-1789555443611-babhb56l4",
+      "name": "Dolls & Collectibles",
+      "url": "https://thekanaa.com/en-sa/toys-games/dolls-collectables.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.611Z"
+    },
+    {
+      "id": "CAT-1789555443620-neigl2sjn",
+      "name": "Educational",
+      "url": "https://thekanaa.com/en-sa/toys-games/educational.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.620Z"
+    },
+    {
+      "id": "CAT-1789555443630-c4f2umsxr",
+      "name": "Figures & Statues",
+      "url": "https://thekanaa.com/en-sa/toys-games/figures-statues.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.630Z"
+    },
+    {
+      "id": "CAT-1789555443636-8u9vzq9t7",
+      "name": "Board Games",
+      "url": "https://thekanaa.com/en-sa/toys-games/games/board-games.html",
+      "type": "subcategory",
+      "level": 4,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.636Z"
+    },
+    {
+      "id": "CAT-1789555443644-vcdkq13av",
+      "name": "Kids Furniture",
+      "url": "https://thekanaa.com/en-sa/toys-games/kids-furniture.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.644Z"
+    },
+    {
+      "id": "CAT-1789555443650-syy95bqzd",
+      "name": "Pool Toys & Inflatables",
+      "url": "https://thekanaa.com/en-sa/sports-outdoor/beach-water/beach-water-toys/pool-toys-inflatables.html",
+      "type": "nested",
+      "level": 5,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.650Z"
+    },
+    {
+      "id": "CAT-1789555443658-kejq0e8ni",
+      "name": "Baby Care",
+      "url": "https://thekanaa.com/en-sa/baby-essentials/baby-care.html",
+      "type": "subcategory",
+      "level": 3,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.658Z"
+    },
+    {
+      "id": "CAT-1789555443670-4luwqn60m",
+      "name": "NewSony PS5 Blu-Ray Disc 1TB - Official KSA Version + 2K NBA 2K27 Video Game for PS5 + DualSense Wireless Controller Bundle3,1993,624(12% OFF)14 Days Easy Returns",
+      "url": "https://thekanaa.com/en-sa/sony-ps5-blu-ray-disc-1tb-official-ksa-version-2k-nba-2k27-video-game-for-xbox-series-x-dualsense-wireless-controller-bundle.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.670Z"
+    },
+    {
+      "id": "CAT-1789555443678-v2lr6ijmg",
+      "name": "NewSony PlayStation5 KSA Version Slim Digital Edition 825 GB Console+Western Digital 1TB SN850 NVMe SSD+DualSense Wireless Controller+PlayStation 5 Disc Drive Bundle3,7994,356(13% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/sony-playstation5-ksa-version-slim-digital-edition-825-gb-console-western-digital-1tb-sn850-nvme-ssd-dualsense-wireless-controller-playstation-5-disc-drive-bundle.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.678Z"
+    },
+    {
+      "id": "CAT-1789555443684-o67pa9fqw",
+      "name": "NewSony PlayStation5 KSA Version Slim Digital Edition 825 GB Console + Western Digital 1TB SN850 NVMe SSD + DualSense Wireless Controller Bundle3,2993,727(11% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/sony-playstation5-ksa-version-slim-digital-edition-825-gb-console-western-digital-1tb-sn850-nvme-ssd-dualsense-wireless-controller-bundle.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.684Z"
+    },
+    {
+      "id": "CAT-1789555443691-mascn14m7",
+      "name": "NewSony PS5 Blu-Ray Disc 1TB Official KSA Version + Western Digital 1TB NVMe SSD + Sony DualSense Wireless Controller KSA Version Bundle3,5493,727(5% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/sony-ps5-blu-ray-disc-1tb-official-ksa-version-western-digital-1tb-nvme-ssd-sony-dualsense-wireless-controller-ksa-version-bundle.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.691Z"
+    },
+    {
+      "id": "CAT-1789555443698-y3nf1p0wn",
+      "name": "NewSony PlayStation5 KSA Version Slim Digital Edition 825 GB Console + Western Digital 1TB SN850 NVMe SSD Bundle3,0993,428(10% OFF)14 Days Easy Returns",
+      "url": "https://thekanaa.com/en-sa/sony-playstation5-ksa-version-slim-digital-edition-825-gb-console-western-digital-1tb-sn850-nvme-ssd-bundle.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.698Z"
+    },
+    {
+      "id": "CAT-1789555443703-yv7xifzsg",
+      "name": "NewSony PS5 Blu-Ray Disc 1TB - Official KSA Version + Western Digital 1TB NVMe SSD Bundle3,2493,428(5% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/sony-ps5-blu-ray-disc-1tb-official-ksa-version-western-digital-1tb-nvme-ssd-bundle.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.703Z"
+    },
+    {
+      "id": "CAT-1789555443711-f7cy693r1",
+      "name": "View All",
+      "url": "https://thekanaa.com/en-sa/all-game-bundles.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.711Z"
+    },
+    {
+      "id": "CAT-1789555443725-8oet6v0ht",
+      "name": "Lattafa Khamrah Eau De Parfum Unisex115155(26% OFF)100% Genuine",
+      "url": "https://thekanaa.com/en-sa/lattafa-khamrah-eau-de-parfum-unisex.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.725Z"
+    },
+    {
+      "id": "CAT-1789555443731-dup5svu55",
+      "name": "Lattafa Yara Eau De Parfum 100 ml for Women85105(19% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/lattafa-yara-eau-de-parfum-for-women.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.731Z"
+    },
+    {
+      "id": "CAT-1789555443736-jdd4ix5pu",
+      "name": "Almajed Prestige Ruby Eau De Parfum for Men185225(18% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/almajed-prestige-ruby-eau-de-parfum-for-men.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.736Z"
+    },
+    {
+      "id": "CAT-1789555443744-zpvqfc8ot",
+      "name": "Lattafa Asad Eau De Parfum for Men7595(21% OFF)100% Genuine",
+      "url": "https://thekanaa.com/en-sa/lattafa-asad-eau-de-parfum-for-men.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.744Z"
+    },
+    {
+      "id": "CAT-1789555443751-pjkjpq33g",
+      "name": "Rasasi Hawas Eau De Parfum for Men99119(17% OFF)Sign-Up Promotion",
+      "url": "https://thekanaa.com/en-sa/rasasi-hawas-eau-de-parfum-for-men.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.751Z"
+    },
+    {
+      "id": "CAT-1789555443758-o5lfhjote",
+      "name": "Armaf Club De Nuit Intense Eau De Parfum for Women119159(25% OFF)Free Delivery",
+      "url": "https://thekanaa.com/en-sa/armaf-club-de-nuit-intense-eau-de-parfum-for-women.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.758Z"
+    },
+    {
+      "id": "CAT-1789555443764-vqeja7vth",
+      "name": "View All",
+      "url": "https://thekanaa.com/en-sa/new-perfumes.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.764Z"
+    },
+    {
+      "id": "CAT-1789555443914-5fxiol9u8",
+      "name": "View All",
+      "url": "https://thekanaa.com/en-sa/brand_list.html",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.914Z"
+    },
+    {
+      "id": "CAT-1789555443984-cv3wnsqqc",
+      "name": "New In",
+      "url": "https://thekanaa.com/en-sa/new-to-our-collection.html?page=1",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.984Z"
+    },
+    {
+      "id": "CAT-1789555443991-g4ubg1fqm",
+      "name": "Trending",
+      "url": "https://thekanaa.com/en-sa/most-popular-products.html?page=1",
+      "type": "parent",
+      "level": 2,
+      "visible": true,
+      "locale": "en",
+      "discoveredAt": "2026-09-16T10:44:03.991Z"
+    }
+  ],
+  "summary": {
+    "totalCategories": 38,
+    "parentCategories": 28,
+    "subcategories": 9,
+    "nestedCategories": 1,
+    "discoveredAt": [
+      "2026-09-16T10:44:04.167Z"
+    ]
+  }
+}
