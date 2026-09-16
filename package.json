@@ -18,7 +18,13 @@
     "test:regression": "playwright test tests/homepage/homepage-regression.spec.ts",
     "test:debug": "playwright test --debug",
     "test:headed": "playwright test --headed",
-    "test:trace": "playwright test --trace on"
+    "test:trace": "playwright test --trace on",
+    "test:pdp:discovery": "playwright test tests/pdp/pdp-discovery.spec.ts --config=pdp-playwright.config.ts",
+    "test:pdp:smoke": "playwright test tests/pdp/pdp-smoke.spec.ts --config=pdp-playwright.config.ts",
+    "test:pdp:full": "playwright test tests/pdp/pdp-full.spec.ts --config=pdp-playwright.config.ts",
+    "test:pdp:headed": "playwright test tests/pdp/ --config=pdp-playwright.config.ts --headed",
+    "test:pdp:debug": "playwright test tests/pdp/ --config=pdp-playwright.config.ts --debug",
+    "test:pdp:trace": "playwright test tests/pdp/ --config=pdp-playwright.config.ts --trace on"
   },
   "keywords": ["QA", "testing", "Playwright", "ecommerce", "automation"],
   "author": "Claude QA Agent",
