@@ -57,13 +57,6 @@ function firstProductCard(page) {
  * substitute for that.
  */
 async function addFirstProductToCart(page, { startIndex = 2, maxAttempts = 3 } = {}) {
-  // The dev environment appears to rate-limit/throttle the stock or
-  // pricing check behind Add to Cart when it's called in quick succession
-  // (observed: the very next attempt after a successful add fails on
-  // every candidate, regardless of product). A short pause up front makes
-  // back-to-back tests noticeably more reliable.
-  await page.waitForTimeout(2_000);
-
   // A hard navigation (not a client-side nav-link click) so the grid is
   // fully hydrated before we look for cards in it.
   await page.goto('/en-sa/books-stationery.html');
@@ -73,17 +66,28 @@ async function addFirstProductToCart(page, { startIndex = 2, maxAttempts = 3 } =
   for (let i = startIndex; i < lastIndex; i++) {
     const card = page.getByRole('button', { name: 'Add to Cart' }).nth(i).locator('xpath=ancestor::a[1]');
     await card.click();
+
+    // Wait for the page to load after navigation. The key fix is to ensure we wait
+    // for the PDP URL/DOM to be fully ready before trying to interact with elements.
+    // This prevents the issue where we get multiple "Add to Cart" buttons from both
+    // PLP and PDP being partially visible at the same time.
     await page.waitForLoadState('domcontentloaded');
+
+    // Minimal wait to ensure PDP SPA has rendered.
+    await page.waitForTimeout(300);
 
     const pdpAddToCartBtn = page.getByRole('button', { name: 'Add to Cart' });
     try {
-      await expect(pdpAddToCartBtn).toBeEnabled({ timeout: 15_000 });
+      await expect(pdpAddToCartBtn).toBeEnabled({ timeout: 10_000 });
       await pdpAddToCartBtn.click();
-      await expect(page.getByText('View Cart')).toBeVisible({ timeout: 10_000 });
+      await expect(page.getByText('View Cart')).toBeVisible({ timeout: 8_000 });
       return;
     } catch {
-      await page.waitForTimeout(1_500);
-      await page.goto('/en-sa/books-stationery.html');
+      // Brief wait before retrying with next candidate.
+      if (i < lastIndex - 1) {
+        await page.waitForTimeout(300);
+        await page.goto('/en-sa/books-stationery.html');
+      }
     }
   }
 
