@@ -1,0 +1,34 @@
+{
+  "name": "qa-homepage-agent",
+  "version": "1.0.0",
+  "description": "Autonomous QA testing bot for ecommerce homepage - Thekanaa",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test tests/homepage/smoke-test.spec.ts",
+    "test:discovery": "playwright test tests/homepage/homepage-discovery.spec.ts",
+    "test:navigation": "playwright test tests/homepage/homepage-navigation.spec.ts",
+    "test:buttons": "playwright test tests/homepage/homepage-buttons.spec.ts",
+    "test:links": "playwright test tests/homepage/homepage-links.spec.ts",
+    "test:sliders": "playwright test tests/homepage/homepage-sliders.spec.ts",
+    "test:products": "playwright test tests/homepage/homepage-products.spec.ts",
+    "test:ui": "playwright test tests/homepage/homepage-ui.spec.ts",
+    "test:responsive": "playwright test tests/homepage/homepage-responsive.spec.ts",
+    "test:negative": "playwright test tests/homepage/homepage-negative.spec.ts",
+    "test:regression": "playwright test tests/homepage/homepage-regression.spec.ts",
+    "test:debug": "playwright test --debug",
+    "test:headed": "playwright test --headed",
+    "test:trace": "playwright test --trace on"
+  },
+  "keywords": ["QA", "testing", "Playwright", "ecommerce", "automation"],
+  "author": "Claude QA Agent",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.40.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  }
+}

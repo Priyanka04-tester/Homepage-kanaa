@@ -1,0 +1,43 @@
+{
+  "metadata": {
+    "version": "1.0",
+    "created": "PENDING",
+    "url": "PENDING",
+    "title": "PENDING",
+    "timestamp": "PENDING",
+    "status": "NotDiscoveredYet"
+  },
+  "viewport": {
+    "width": 0,
+    "height": 0
+  },
+  "quality": {
+    "consoleErrors": [],
+    "networkFailures": [],
+    "totalElements": 0,
+    "totalSections": 0
+  },
+  "sections": [],
+  "elements": {
+    "buttons": [],
+    "links": [],
+    "sliders": [],
+    "productCards": [],
+    "images": [],
+    "forms": [],
+    "ctas": []
+  },
+  "statistics": {
+    "sectionCount": 0,
+    "elementCount": 0,
+    "buttonCount": 0,
+    "linkCount": 0,
+    "sliderCount": 0,
+    "productWidgetCount": 0,
+    "ctaCount": 0,
+    "imageCount": 0,
+    "consoleErrorCount": 0,
+    "networkFailureCount": 0
+  },
+  "notes": "This file will be populated by the homepage-discovery.spec.ts test"
+}

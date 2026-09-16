@@ -1,0 +1,122 @@
+{
+  "REQ-HOME-001": {
+    "id": "REQ-HOME-001",
+    "title": "Homepage accessibility and loading",
+    "description": "Homepage must load successfully and be accessible from BASE_URL",
+    "priority": "P0",
+    "category": "Functional",
+    "status": "Pending"
+  },
+  "REQ-HOME-002": {
+    "id": "REQ-HOME-002",
+    "title": "Header navigation",
+    "description": "Header must be visible and contain navigation elements",
+    "priority": "P0",
+    "category": "Navigation",
+    "status": "Pending"
+  },
+  "REQ-HOME-003": {
+    "id": "REQ-HOME-003",
+    "title": "Hero section functionality",
+    "description": "Hero section must display and carousel controls must function",
+    "priority": "P0",
+    "category": "Functional",
+    "status": "Pending"
+  },
+  "REQ-HOME-004": {
+    "id": "REQ-HOME-004",
+    "title": "Product display",
+    "description": "Products must be displayed with complete information (name, price, image, rating)",
+    "priority": "P0",
+    "category": "Functional",
+    "status": "Pending"
+  },
+  "REQ-HOME-005": {
+    "id": "REQ-HOME-005",
+    "title": "Add to cart functionality",
+    "description": "Add to cart buttons must be visible and clickable",
+    "priority": "P0",
+    "category": "Functional",
+    "status": "Pending"
+  },
+  "REQ-HOME-006": {
+    "id": "REQ-HOME-006",
+    "title": "Footer visibility",
+    "description": "Footer must be visible and contain contact/links information",
+    "priority": "P1",
+    "category": "Functional",
+    "status": "Pending"
+  },
+  "REQ-HOME-007": {
+    "id": "REQ-HOME-007",
+    "title": "Responsive design - Desktop",
+    "description": "Homepage must render correctly on desktop viewports (1440x900, 1920x1080)",
+    "priority": "P0",
+    "category": "Responsive",
+    "status": "Pending"
+  },
+  "REQ-HOME-008": {
+    "id": "REQ-HOME-008",
+    "title": "Responsive design - Tablet",
+    "description": "Homepage must render correctly on tablet viewports (1024x768, 768x1024)",
+    "priority": "P0",
+    "category": "Responsive",
+    "status": "Pending"
+  },
+  "REQ-HOME-009": {
+    "id": "REQ-HOME-009",
+    "title": "Responsive design - Mobile",
+    "description": "Homepage must render correctly on mobile viewports (390x844, 393x852, 412x915)",
+    "priority": "P0",
+    "category": "Responsive",
+    "status": "Pending"
+  },
+  "REQ-HOME-010": {
+    "id": "REQ-HOME-010",
+    "title": "Browser compatibility",
+    "description": "Homepage must work on Chromium, Firefox, and WebKit browsers",
+    "priority": "P0",
+    "category": "Browser Compatibility",
+    "status": "Pending"
+  },
+  "REQ-HOME-011": {
+    "id": "REQ-HOME-011",
+    "title": "Internationalization support",
+    "description": "Homepage must support both English (en-SA) and Arabic (ar-SA) with RTL layout",
+    "priority": "P1",
+    "category": "Internationalization",
+    "status": "Pending"
+  },
+  "REQ-HOME-012": {
+    "id": "REQ-HOME-012",
+    "title": "No console errors",
+    "description": "Homepage should load without critical JavaScript errors in console",
+    "priority": "P1",
+    "category": "Quality",
+    "status": "Pending"
+  },
+  "REQ-HOME-013": {
+    "id": "REQ-HOME-013",
+    "title": "No network failures",
+    "description": "All critical resources must load successfully (no 4xx/5xx errors)",
+    "priority": "P1",
+    "category": "Quality",
+    "status": "Pending"
+  },
+  "REQ-HOME-014": {
+    "id": "REQ-HOME-014",
+    "title": "Accessibility compliance",
+    "description": "Homepage must support keyboard navigation and have accessible labels",
+    "priority": "P1",
+    "category": "Accessibility",
+    "status": "Pending"
+  },
+  "REQ-HOME-015": {
+    "id": "REQ-HOME-015",
+    "title": "Image loading",
+    "description": "All images must load correctly without broken links",
+    "priority": "P1",
+    "category": "Functional",
+    "status": "Pending"
+  }
+}

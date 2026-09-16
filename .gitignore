@@ -1,0 +1,36 @@
+﻿# Dependencies
+node_modules/
+package-lock.json
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Test & Build Artifacts
+test-results/
+playwright-report/
+evidence/
+*.webm
+*.png
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Playwright
+.playwright/
+.cache/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Temp
+Claude outputs/

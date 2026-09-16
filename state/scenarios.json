@@ -1,0 +1,223 @@
+{
+  "SC-HOME-001": {
+    "id": "SC-HOME-001",
+    "name": "Homepage loads successfully",
+    "description": "User navigates to homepage and page loads",
+    "requirementId": "REQ-HOME-001",
+    "preconditions": "User has internet connection, BASE_URL is accessible",
+    "testData": "BASE_URL environment variable",
+    "steps": [
+      "Open BASE_URL",
+      "Wait for page to load (networkidle)",
+      "Verify page title is visible",
+      "Verify URL contains expected domain"
+    ],
+    "expectedResult": "Page loads successfully with 200 status code, no critical console errors"
+  },
+  "SC-HOME-002": {
+    "id": "SC-HOME-002",
+    "name": "Header navigation is visible",
+    "description": "Header displays with all navigation elements",
+    "requirementId": "REQ-HOME-002",
+    "preconditions": "Homepage loaded successfully",
+    "steps": [
+      "Verify header element is visible",
+      "Verify logo is visible",
+      "Verify search input is visible",
+      "Verify navigation menu is visible",
+      "Verify cart button is visible"
+    ],
+    "expectedResult": "Header and all required navigation elements are visible and interactive"
+  },
+  "SC-HOME-003": {
+    "id": "SC-HOME-003",
+    "name": "Hero carousel navigation works",
+    "description": "User can navigate through hero carousel",
+    "requirementId": "REQ-HOME-003",
+    "preconditions": "Homepage loaded, hero section visible",
+    "steps": [
+      "Identify hero carousel",
+      "Click next button",
+      "Verify slide changes",
+      "Click previous button",
+      "Verify slide changes back"
+    ],
+    "expectedResult": "Carousel slides change as expected, no errors"
+  },
+  "SC-HOME-004": {
+    "id": "SC-HOME-004",
+    "name": "Product cards display correctly",
+    "description": "Product cards show all required information",
+    "requirementId": "REQ-HOME-004",
+    "preconditions": "Homepage loaded, product section visible",
+    "steps": [
+      "Verify product cards are visible",
+      "Verify product image is visible for each card",
+      "Verify product name is visible",
+      "Verify product price is visible",
+      "Verify product rating is visible"
+    ],
+    "expectedResult": "All product information displays correctly"
+  },
+  "SC-HOME-005": {
+    "id": "SC-HOME-005",
+    "name": "Add to cart button is clickable",
+    "description": "User can click add to cart button",
+    "requirementId": "REQ-HOME-005",
+    "preconditions": "Homepage loaded, product visible",
+    "steps": [
+      "Locate add to cart button",
+      "Verify button is enabled",
+      "Click add to cart button",
+      "Wait for response (modal or cart update)"
+    ],
+    "expectedResult": "Button click is successful, no errors in console"
+  },
+  "SC-HOME-006": {
+    "id": "SC-HOME-006",
+    "name": "Footer displays and contains links",
+    "description": "Footer is visible and contains navigation links",
+    "requirementId": "REQ-HOME-006",
+    "preconditions": "Homepage loaded, user scrolls to bottom",
+    "steps": [
+      "Scroll to bottom of page",
+      "Verify footer is visible",
+      "Verify footer links are visible",
+      "Verify contact information is displayed"
+    ],
+    "expectedResult": "Footer displays with all required elements"
+  },
+  "SC-HOME-007": {
+    "id": "SC-HOME-007",
+    "name": "Responsive layout at desktop viewport",
+    "description": "Homepage renders correctly at desktop viewport sizes",
+    "requirementId": "REQ-HOME-007",
+    "preconditions": "Viewport set to desktop size (1440x900, 1920x1080)",
+    "viewports": ["1440x900", "1920x1080"],
+    "steps": [
+      "Set viewport to desktop size",
+      "Load homepage",
+      "Verify no horizontal scrolling",
+      "Verify all elements properly aligned",
+      "Verify text is readable"
+    ],
+    "expectedResult": "All elements display correctly without overflow or misalignment"
+  },
+  "SC-HOME-008": {
+    "id": "SC-HOME-008",
+    "name": "Responsive layout at tablet viewport",
+    "description": "Homepage renders correctly at tablet viewport sizes",
+    "requirementId": "REQ-HOME-008",
+    "preconditions": "Viewport set to tablet size (1024x768, 768x1024)",
+    "viewports": ["1024x768", "768x1024"],
+    "steps": [
+      "Set viewport to tablet size",
+      "Load homepage",
+      "Verify responsive menu/hamburger",
+      "Verify layout adjusts to viewport",
+      "Verify no content clipping"
+    ],
+    "expectedResult": "Layout adapts correctly to tablet viewport"
+  },
+  "SC-HOME-009": {
+    "id": "SC-HOME-009",
+    "name": "Responsive layout at mobile viewport",
+    "description": "Homepage renders correctly at mobile viewport sizes",
+    "requirementId": "REQ-HOME-009",
+    "preconditions": "Viewport set to mobile size (390x844, 393x852, 412x915)",
+    "viewports": ["390x844", "393x852", "412x915"],
+    "steps": [
+      "Set viewport to mobile size",
+      "Load homepage",
+      "Verify mobile menu works",
+      "Verify vertical scrolling required",
+      "Verify touch-friendly button sizes"
+    ],
+    "expectedResult": "Mobile layout displays correctly with proper spacing and usability"
+  },
+  "SC-HOME-010": {
+    "id": "SC-HOME-010",
+    "name": "Browser compatibility - Chromium",
+    "description": "Homepage works in Chromium browser",
+    "requirementId": "REQ-HOME-010",
+    "browsers": ["chromium"],
+    "steps": [
+      "Load homepage in Chromium",
+      "Verify page loads",
+      "Verify interactive elements work",
+      "Verify no critical errors"
+    ],
+    "expectedResult": "Homepage functions correctly in Chromium"
+  },
+  "SC-HOME-011": {
+    "id": "SC-HOME-011",
+    "name": "Browser compatibility - Firefox",
+    "description": "Homepage works in Firefox browser",
+    "requirementId": "REQ-HOME-010",
+    "browsers": ["firefox"],
+    "steps": [
+      "Load homepage in Firefox",
+      "Verify page loads",
+      "Verify interactive elements work",
+      "Verify no critical errors"
+    ],
+    "expectedResult": "Homepage functions correctly in Firefox"
+  },
+  "SC-HOME-012": {
+    "id": "SC-HOME-012",
+    "name": "English version loads correctly",
+    "description": "English language version displays properly",
+    "requirementId": "REQ-HOME-011",
+    "languages": ["en-SA"],
+    "testData": "BASE_URL=https://thekanaa.com/en-sa/",
+    "steps": [
+      "Load English version",
+      "Verify page title is in English",
+      "Verify content is in English",
+      "Verify layout is LTR"
+    ],
+    "expectedResult": "English version displays correctly"
+  },
+  "SC-HOME-013": {
+    "id": "SC-HOME-013",
+    "name": "Arabic version loads correctly",
+    "description": "Arabic language version displays properly with RTL layout",
+    "requirementId": "REQ-HOME-011",
+    "languages": ["ar-SA"],
+    "testData": "BASE_URL_AR=https://thekanaa.com/ar-sa/",
+    "steps": [
+      "Load Arabic version",
+      "Verify page title is in Arabic",
+      "Verify content is in Arabic",
+      "Verify layout is RTL",
+      "Verify text direction is right-to-left"
+    ],
+    "expectedResult": "Arabic version displays correctly with RTL layout"
+  },
+  "SC-HOME-014": {
+    "id": "SC-HOME-014",
+    "name": "No console errors on page load",
+    "description": "Page loads without critical JavaScript errors",
+    "requirementId": "REQ-HOME-012",
+    "steps": [
+      "Open developer console",
+      "Load homepage",
+      "Monitor console messages",
+      "Verify no critical errors"
+    ],
+    "expectedResult": "No critical console errors, warnings are acceptable"
+  },
+  "SC-HOME-015": {
+    "id": "SC-HOME-015",
+    "name": "All images load successfully",
+    "description": "All page images load without broken links",
+    "requirementId": "REQ-HOME-015",
+    "steps": [
+      "Load homepage",
+      "Identify all images",
+      "Verify each image has src attribute",
+      "Verify images load (network requests 200 OK)"
+    ],
+    "expectedResult": "All images load successfully, no 404 or broken image indicators"
+  }
+}
