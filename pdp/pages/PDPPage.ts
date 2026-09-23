@@ -15,7 +15,23 @@ export class PDPPage {
 
   // Navigation
   async goto(pdpUrl: string): Promise<void> {
+    // Add header to bypass ngrok browser warning if URL is ngrok
+    if (pdpUrl.includes('ngrok')) {
+      await this.page.setExtraHTTPHeaders({
+        'ngrok-skip-browser-warning': 'true',
+      });
+    }
     await this.page.goto(pdpUrl, { waitUntil: 'networkidle' });
+
+    // Handle country selection if present
+    const uaeButton = this.page.locator('text=United Arab Emirates');
+    if (await uaeButton.isVisible().catch(() => false)) {
+      await uaeButton.click();
+      await this.page.waitForLoadState('networkidle');
+      // Wait a bit longer for redirect
+      await this.page.waitForTimeout(2000);
+    }
+
     await this.page.waitForLoadState('domcontentloaded');
   }
 
