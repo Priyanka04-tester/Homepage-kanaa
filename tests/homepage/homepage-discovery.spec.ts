@@ -95,13 +95,13 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Navigate to homepage
-    test.step('Navigate to homepage', async () => {
-      const response = await page.goto('/');
+    await test.step('Navigate to homepage', async () => {
+      const response = await page.goto('./');
       expect(response?.status()).toBeLessThan(400);
     });
 
     // Record homepage info
-    test.step('Record homepage metadata', async () => {
+    await test.step('Record homepage metadata', async () => {
       homepageMap.url = page.url();
       homepageMap.title = await page.title();
       const viewport = page.viewportSize();
@@ -111,7 +111,7 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Wait for page load
-    test.step('Wait for page load', async () => {
+    await test.step('Wait for page load', async () => {
       await page.waitForLoadState('networkidle');
       await page.evaluate(() => {
         // Wait for common lazy-load patterns
@@ -120,7 +120,7 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Take initial screenshot
-    test.step('Capture initial screenshot', async () => {
+    await test.step('Capture initial screenshot', async () => {
       await page.screenshot({
         path: 'evidence/homepage/initial-screenshot.png',
         fullPage: true,
@@ -128,13 +128,13 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Discover main sections
-    test.step('Discover main sections', async () => {
+    await test.step('Discover main sections', async () => {
       const sections = await discoverSections(page);
       homepageMap.sections = sections;
     });
 
     // Discover all interactive elements
-    test.step('Discover interactive elements', async () => {
+    await test.step('Discover interactive elements', async () => {
       const elements = await discoverElements(page);
       homepageMap.elementCount = elements.length;
       homepageMap.buttonCount = elements.filter(
@@ -155,7 +155,7 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Scroll full page to trigger lazy loading
-    test.step('Trigger lazy loading', async () => {
+    await test.step('Trigger lazy loading', async () => {
       const scrollHeight = await page.evaluate(
         () => document.documentElement.scrollHeight
       );
@@ -163,13 +163,9 @@ test.describe('Homepage Discovery - Phase 2', () => {
       const scrollSteps = Math.ceil(scrollHeight / viewportHeight);
 
       for (let i = 0; i < scrollSteps; i++) {
-        await page.evaluate(
-          (step, vh) => {
-            window.scrollBy(0, vh);
-          },
-          i,
-          viewportHeight
-        );
+        await page.evaluate((vh) => {
+          window.scrollBy(0, vh);
+        }, viewportHeight);
         await page.evaluate(() =>
           new Promise((resolve) => setTimeout(resolve, 300))
         );
@@ -182,7 +178,7 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Detect hidden/expandable elements
-    test.step('Detect hidden elements', async () => {
+    await test.step('Detect hidden elements', async () => {
       const hiddenElements = await page.evaluate(() => {
         const elements = [];
         const all = document.querySelectorAll('*');
@@ -211,13 +207,13 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Record console errors and network failures
-    test.step('Record errors', async () => {
+    await test.step('Record errors', async () => {
       homepageMap.consoleErrors = consoleErrors;
       homepageMap.networkFailures = networkFailures;
     });
 
     // Save homepage map
-    test.step('Save homepage map', async () => {
+    await test.step('Save homepage map', async () => {
       const mapPath = path.join(
         process.cwd(),
         'state/homepage-map.json'
@@ -228,7 +224,7 @@ test.describe('Homepage Discovery - Phase 2', () => {
     });
 
     // Log discovery summary
-    test.step('Log discovery summary', async () => {
+    await test.step('Log discovery summary', async () => {
       console.log('\n╔═══════════════════════════════════════════════════╗');
       console.log('║      HOMEPAGE DISCOVERY COMPLETE                   ║');
       console.log('╚═══════════════════════════════════════════════════╝');

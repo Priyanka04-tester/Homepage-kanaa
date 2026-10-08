@@ -15,24 +15,24 @@ test.describe('Responsive Design', () => {
   for (const viewport of viewports) {
     test(`TC-HOME-037: Layout on ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
-      await page.goto('/');
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
 
-      test.step('Verify viewport size', async () => {
+      await test.step('Verify viewport size', async () => {
         const actualSize = page.viewportSize();
         console.log(`Set viewport: ${viewport.width}x${viewport.height}`);
         console.log(`Actual viewport: ${actualSize?.width}x${actualSize?.height}`);
         expect(actualSize?.width).toBe(viewport.width);
       });
 
-      test.step('Check header layout', async () => {
+      await test.step('Check header layout', async () => {
         const header = page.locator('header').first();
         const visible = await header.isVisible();
         console.log(`Header visible on ${viewport.name}: ${visible}`);
         expect(visible).toBe(true);
       });
 
-      test.step('Check for horizontal scroll', async () => {
+      await test.step('Check for horizontal scroll', async () => {
         const overflow = await page.evaluate(() => {
           return document.documentElement.scrollWidth > document.documentElement.clientWidth;
         });
@@ -40,7 +40,7 @@ test.describe('Responsive Design', () => {
         expect(overflow).toBe(false);
       });
 
-      test.step('Check main content area', async () => {
+      await test.step('Check main content area', async () => {
         const mainContent = page.locator('main, [role="main"]').first();
         const exists = await mainContent.count().then(c => c > 0);
         if (exists) {
@@ -49,7 +49,7 @@ test.describe('Responsive Design', () => {
         }
       });
 
-      test.step(`Take ${viewport.name} screenshot`, async () => {
+      await test.step(`Take ${viewport.name} screenshot`, async () => {
         const screenshotPath = `evidence/homepage/responsive-${viewport.name.toLowerCase()}.png`;
         await page.screenshot({ path: screenshotPath, fullPage: true }).catch(() => {});
       });
@@ -58,17 +58,17 @@ test.describe('Responsive Design', () => {
 
   test('TC-HOME-040: Mobile menu functionality', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Look for mobile menu button', async () => {
+    await test.step('Look for mobile menu button', async () => {
       const menuButton = page.locator('button[aria-label*="menu"], button[class*="hamburger"], .mobile-menu-toggle').first();
       const exists = await menuButton.count().then(c => c > 0);
 
       console.log(`Mobile menu button found: ${exists}`);
 
       if (exists) {
-        test.step('Click mobile menu', async () => {
+        await test.step('Click mobile menu', async () => {
           try {
             await menuButton.click();
             await page.waitForTimeout(500);
@@ -88,10 +88,10 @@ test.describe('Responsive Design', () => {
 
   test('TC-HOME-041: Tablet layout optimization', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Verify tablet layout', async () => {
+    await test.step('Verify tablet layout', async () => {
       const sections = page.locator('section, div[class*="section"]').all();
       const sectionElements = await sections;
 
@@ -109,10 +109,10 @@ test.describe('Responsive Design', () => {
 
   test('TC-HOME-042: Touch target sizes on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check button/link sizes for touch', async () => {
+    await test.step('Check button/link sizes for touch', async () => {
       const buttons = page.locator('button, a[role="button"]').all();
       const btnElements = await buttons;
       const MIN_TOUCH_TARGET = 44; // WCAG recommended
@@ -146,9 +146,9 @@ test.describe('Responsive Design', () => {
     let fontSizes1: Record<string, number> = {};
     let fontSizes2: Record<string, number> = {};
 
-    test.step('Measure fonts on mobile', async () => {
+    await test.step('Measure fonts on mobile', async () => {
       await page.setViewportSize(viewport1);
-      await page.goto('/');
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
 
       fontSizes1 = await page.evaluate(() => {
@@ -166,9 +166,9 @@ test.describe('Responsive Design', () => {
       console.log(`Mobile font sizes: h1=${fontSizes1.h1}px, h2=${fontSizes1.h2}px, p=${fontSizes1.p}px`);
     });
 
-    test.step('Measure fonts on desktop', async () => {
+    await test.step('Measure fonts on desktop', async () => {
       await page.setViewportSize(viewport2);
-      await page.goto('/');
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
 
       fontSizes2 = await page.evaluate(() => {
@@ -190,10 +190,10 @@ test.describe('Responsive Design', () => {
 
   test('TC-HOME-044: Images responsive', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check image responsive attributes', async () => {
+    await test.step('Check image responsive attributes', async () => {
       const images = page.locator('img').all();
       const imgElements = await images;
 

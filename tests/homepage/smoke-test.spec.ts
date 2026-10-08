@@ -6,7 +6,7 @@
 import { test, expect } from '@playwright/test';
 
 test('SC-001: Homepage responds with 200', async ({ page }) => {
-  const response = await page.goto('/');
+  const response = await page.goto('./');
   expect(response?.status()).toBe(200);
   console.log('✓ Homepage returns 200 OK');
 });
@@ -24,7 +24,7 @@ test('SC-003: Arabic version responds', async ({ page }) => {
 });
 
 test('SC-004: Page has content', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('./');
 
   // Wait briefly for rendering
   await page.locator('body').waitFor({ state: 'visible', timeout: 5000 });
@@ -35,7 +35,7 @@ test('SC-004: Page has content', async ({ page }) => {
 });
 
 test('SC-005: Page has interactive elements', async ({ page }) => {
-  await page.goto('/');
+  await page.goto('./');
 
   const buttons = await page.locator('button').count();
   const links = await page.locator('a[href]').count();

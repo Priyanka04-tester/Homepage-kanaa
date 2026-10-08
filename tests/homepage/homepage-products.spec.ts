@@ -7,17 +7,17 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Products & Product Cards', () => {
   test('TC-HOME-023: Product cards are displayed', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find product cards', async () => {
+    await test.step('Find product cards', async () => {
       const productCards = page.locator('[class*="product-card"], [data-product], [class*="product-item"]').all();
       const cards = await productCards;
       console.log(`Found ${cards.length} product cards`);
       expect(cards.length).toBeGreaterThan(0);
     });
 
-    test.step('Verify product card content', async () => {
+    await test.step('Verify product card content', async () => {
       const productCards = page.locator('[class*="product-card"], [data-product]').all();
       const cards = await productCards;
 
@@ -33,10 +33,10 @@ test.describe('Products & Product Cards', () => {
   });
 
   test('TC-HOME-024: Product card images load', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check product images', async () => {
+    await test.step('Check product images', async () => {
       const productImages = page.locator('[class*="product-card"] img, [data-product] img').all();
       const images = await productImages;
       console.log(`Found ${images.length} product images`);
@@ -66,10 +66,10 @@ test.describe('Products & Product Cards', () => {
   });
 
   test('TC-HOME-025: Product card links work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Click product cards', async () => {
+    await test.step('Click product cards', async () => {
       const productCards = page.locator('[class*="product-card"] a, [data-product] a').all();
       const links = await productCards;
 
@@ -77,7 +77,7 @@ test.describe('Products & Product Cards', () => {
         const link = links[i];
         const href = await link.getAttribute('href');
 
-        test.step(`Navigate to product: ${href}`, async () => {
+        await test.step(`Navigate to product: ${href}`, async () => {
           try {
             await link.click({ timeout: 5000 });
             await page.waitForLoadState('domcontentloaded');
@@ -95,10 +95,10 @@ test.describe('Products & Product Cards', () => {
   });
 
   test('TC-HOME-026: Product prices display correctly', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check product pricing', async () => {
+    await test.step('Check product pricing', async () => {
       const prices = page.locator('[class*="price"], .product-price, [data-price]').all();
       const priceElements = await prices;
       console.log(`Found ${priceElements.length} price elements`);
@@ -117,10 +117,10 @@ test.describe('Products & Product Cards', () => {
   });
 
   test('TC-HOME-027: Add to cart functionality', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find add to cart buttons', async () => {
+    await test.step('Find add to cart buttons', async () => {
       const addToCartButtons = page.locator(
         'button:has-text("Add"), button:has-text("Cart"), [class*="add-cart"], [class*="add-to-cart"]'
       ).all();
@@ -131,7 +131,7 @@ test.describe('Products & Product Cards', () => {
         const btn = buttons[i];
         const text = await btn.textContent();
 
-        test.step(`Click add to cart: ${text}`, async () => {
+        await test.step(`Click add to cart: ${text}`, async () => {
           try {
             const btnVisible = await btn.isVisible();
             if (btnVisible) {
@@ -153,10 +153,10 @@ test.describe('Products & Product Cards', () => {
   });
 
   test('TC-HOME-028: Product ratings display', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check product ratings', async () => {
+    await test.step('Check product ratings', async () => {
       const ratings = page.locator('[class*="rating"], [class*="stars"], [aria-label*="star"]').all();
       const ratingElements = await ratings;
       console.log(`Found ${ratingElements.length} rating elements`);
@@ -172,10 +172,10 @@ test.describe('Products & Product Cards', () => {
   });
 
   test('TC-HOME-029: Product filtering works', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find product filters', async () => {
+    await test.step('Find product filters', async () => {
       const filters = page.locator('[class*="filter"], [role="group"]').all();
       const filterElements = await filters;
       console.log(`Found ${filterElements.length} filter groups`);

@@ -7,10 +7,10 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Sliders & Carousels', () => {
   test('TC-HOME-017: Hero carousel loads correctly', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find hero carousel', async () => {
+    await test.step('Find hero carousel', async () => {
       const carousel = page.locator('[class*="carousel"], [class*="slider"], [class*="hero"]').first();
       const exists = await carousel.count().then(c => c > 0);
 
@@ -25,10 +25,10 @@ test.describe('Sliders & Carousels', () => {
   });
 
   test('TC-HOME-018: Carousel navigation buttons work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find carousel navigation', async () => {
+    await test.step('Find carousel navigation', async () => {
       const nextButton = page.locator('[class*="carousel"] button:has-text("Next"), [aria-label*="next"], [class*="next-slide"]').first();
       const prevButton = page.locator('[class*="carousel"] button:has-text("Prev"), [aria-label*="prev"], [class*="prev-slide"]').first();
 
@@ -39,7 +39,7 @@ test.describe('Sliders & Carousels', () => {
       console.log(`Prev button: ${prevExists ? '✓' : '✗'}`);
 
       if (nextExists) {
-        test.step('Click next button', async () => {
+        await test.step('Click next button', async () => {
           try {
             const initialText = await nextButton.textContent();
             await nextButton.click({ timeout: 3000 });
@@ -52,7 +52,7 @@ test.describe('Sliders & Carousels', () => {
       }
 
       if (prevExists) {
-        test.step('Click prev button', async () => {
+        await test.step('Click prev button', async () => {
           try {
             await prevButton.click({ timeout: 3000 });
             await page.waitForTimeout(500);
@@ -66,16 +66,16 @@ test.describe('Sliders & Carousels', () => {
   });
 
   test('TC-HOME-019: Carousel dots/indicators work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find carousel indicators', async () => {
+    await test.step('Find carousel indicators', async () => {
       const indicators = page.locator('[class*="carousel"] button[class*="dot"], [role="tablist"] button').all();
       const dots = await indicators;
       console.log(`Found ${dots.length} carousel indicators`);
 
       if (dots.length > 1) {
-        test.step('Click carousel indicators', async () => {
+        await test.step('Click carousel indicators', async () => {
           for (let i = 0; i < Math.min(3, dots.length); i++) {
             const dot = dots[i];
             try {
@@ -94,10 +94,10 @@ test.describe('Sliders & Carousels', () => {
   });
 
   test('TC-HOME-020: Carousel auto-plays', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Monitor carousel auto-play', async () => {
+    await test.step('Monitor carousel auto-play', async () => {
       const carousel = page.locator('[class*="carousel"], [class*="slider"]').first();
 
       if (await carousel.count().then(c => c > 0)) {
@@ -126,14 +126,14 @@ test.describe('Sliders & Carousels', () => {
   });
 
   test('TC-HOME-021: Product carousel horizontal scroll', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find product carousel/slider', async () => {
+    await test.step('Find product carousel/slider', async () => {
       const productCarousel = page.locator('[class*="product-slider"], [class*="product-carousel"]').first();
 
       if (await productCarousel.count().then(c => c > 0)) {
-        test.step('Scroll carousel horizontally', async () => {
+        await test.step('Scroll carousel horizontally', async () => {
           const visible = await productCarousel.isVisible();
           console.log(`Product carousel visible: ${visible}`);
 
@@ -156,10 +156,10 @@ test.describe('Sliders & Carousels', () => {
   });
 
   test('TC-HOME-022: Slider performance', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Monitor carousel for performance issues', async () => {
+    await test.step('Monitor carousel for performance issues', async () => {
       let errors: string[] = [];
 
       page.on('console', msg => {

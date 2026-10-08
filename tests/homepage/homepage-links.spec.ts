@@ -7,17 +7,17 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Links & Navigation Anchors', () => {
   test('TC-HOME-011: All links are accessible', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Count all links', async () => {
+    await test.step('Count all links', async () => {
       const links = page.locator('a[href]').all();
       const allLinks = await links;
       console.log(`Found ${allLinks.length} links`);
       expect(allLinks.length).toBeGreaterThan(0);
     });
 
-    test.step('Verify link attributes', async () => {
+    await test.step('Verify link attributes', async () => {
       const links = page.locator('a[href]').all();
       const allLinks = await links;
 
@@ -37,10 +37,10 @@ test.describe('Links & Navigation Anchors', () => {
   });
 
   test('TC-HOME-012: Internal links navigate correctly', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find internal links', async () => {
+    await test.step('Find internal links', async () => {
       const internalLinks = page.locator('a[href^="/"]').all();
       const links = await internalLinks;
       console.log(`Found ${links.length} internal links`);
@@ -50,7 +50,7 @@ test.describe('Links & Navigation Anchors', () => {
         const href = await link.getAttribute('href');
         const text = await link.textContent();
 
-        test.step(`Test internal link: ${href}`, async () => {
+        await test.step(`Test internal link: ${href}`, async () => {
           try {
             await link.click({ timeout: 5000 });
             await page.waitForLoadState('domcontentloaded');
@@ -68,10 +68,10 @@ test.describe('Links & Navigation Anchors', () => {
   });
 
   test('TC-HOME-013: External links have correct target', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check external links', async () => {
+    await test.step('Check external links', async () => {
       const externalLinks = page.locator('a[href^="http"]').all();
       const links = await externalLinks;
       console.log(`Found ${links.length} external links`);
@@ -94,10 +94,10 @@ test.describe('Links & Navigation Anchors', () => {
   });
 
   test('TC-HOME-014: Links do not have broken anchors', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Validate anchor links', async () => {
+    await test.step('Validate anchor links', async () => {
       const anchorLinks = page.locator('a[href^="#"]').all();
       const links = await anchorLinks;
       console.log(`Found ${links.length} anchor links`);
@@ -118,10 +118,10 @@ test.describe('Links & Navigation Anchors', () => {
   });
 
   test('TC-HOME-015: Social media links work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find social media links', async () => {
+    await test.step('Find social media links', async () => {
       const socialLinks = page.locator(
         'a[href*="facebook"], a[href*="twitter"], a[href*="instagram"], a[href*="linkedin"], a[aria-label*="social"]'
       ).all();
@@ -143,17 +143,17 @@ test.describe('Links & Navigation Anchors', () => {
   });
 
   test('TC-HOME-016: Footer links are functional', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Navigate to footer', async () => {
+    await test.step('Navigate to footer', async () => {
       await page.evaluate(() => {
         window.scrollTo(0, document.documentElement.scrollHeight);
       });
       await page.waitForTimeout(500);
     });
 
-    test.step('Test footer links', async () => {
+    await test.step('Test footer links', async () => {
       const footer = page.locator('footer').first();
       const footerLinks = footer.locator('a[href]').all();
       const links = await footerLinks;

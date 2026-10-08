@@ -7,17 +7,17 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Buttons & CTAs', () => {
   test('TC-HOME-006: All buttons are clickable', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find all buttons', async () => {
+    await test.step('Find all buttons', async () => {
       const buttons = page.locator('button').all();
       const allButtons = await buttons;
       console.log(`Found ${allButtons.length} buttons`);
       expect(allButtons.length).toBeGreaterThan(0);
     });
 
-    test.step('Test button states', async () => {
+    await test.step('Test button states', async () => {
       const buttons = page.locator('button').all();
       const allButtons = await buttons;
 
@@ -25,7 +25,7 @@ test.describe('Buttons & CTAs', () => {
         const btn = allButtons[i];
         const text = await btn.textContent();
 
-        test.step(`Check button: ${text}`, async () => {
+        await test.step(`Check button: ${text}`, async () => {
           const visible = await btn.isVisible().catch(() => false);
           const enabled = await btn.isEnabled().catch(() => false);
           console.log(`Button "${text}" - Visible: ${visible}, Enabled: ${enabled}`);
@@ -45,16 +45,16 @@ test.describe('Buttons & CTAs', () => {
   });
 
   test('TC-HOME-007: CTA buttons navigate correctly', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find CTA buttons', async () => {
+    await test.step('Find CTA buttons', async () => {
       const ctaButtons = page.locator('a[class*="btn"], button[class*="cta"], [role="button"][onclick]').all();
       const buttons = await ctaButtons;
       console.log(`Found ${buttons.length} CTA buttons`);
     });
 
-    test.step('Test CTA navigation', async () => {
+    await test.step('Test CTA navigation', async () => {
       const ctaButtons = page.locator('a[class*="btn"], button[class*="cta"]').all();
       const buttons = await ctaButtons;
 
@@ -63,7 +63,7 @@ test.describe('Buttons & CTAs', () => {
         const href = await btn.getAttribute('href').catch(() => null);
 
         if (href) {
-          test.step(`Test CTA: ${href}`, async () => {
+          await test.step(`Test CTA: ${href}`, async () => {
             const initialUrl = page.url();
             try {
               await btn.click({ timeout: 3000 });
@@ -81,10 +81,10 @@ test.describe('Buttons & CTAs', () => {
   });
 
   test('TC-HOME-008: Button hover states', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check button hover effects', async () => {
+    await test.step('Check button hover effects', async () => {
       const buttons = page.locator('button').all();
       const allButtons = await buttons;
 
@@ -92,7 +92,7 @@ test.describe('Buttons & CTAs', () => {
         const btn = allButtons[i];
         const text = await btn.textContent();
 
-        test.step(`Hover button: ${text}`, async () => {
+        await test.step(`Hover button: ${text}`, async () => {
           const computedBefore = await btn.evaluate(el =>
             window.getComputedStyle(el).backgroundColor
           );
@@ -112,10 +112,10 @@ test.describe('Buttons & CTAs', () => {
   });
 
   test('TC-HOME-009: Disabled buttons cannot be clicked', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find disabled buttons', async () => {
+    await test.step('Find disabled buttons', async () => {
       const disabledButtons = page.locator('button:disabled').all();
       const buttons = await disabledButtons;
       console.log(`Found ${buttons.length} disabled buttons`);
@@ -130,10 +130,10 @@ test.describe('Buttons & CTAs', () => {
   });
 
   test('TC-HOME-010: Add to cart buttons work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find add to cart buttons', async () => {
+    await test.step('Find add to cart buttons', async () => {
       const addToCartButtons = page.locator(
         'button:has-text("Add"), button:has-text("Cart"), [class*="add-to-cart"]'
       ).all();

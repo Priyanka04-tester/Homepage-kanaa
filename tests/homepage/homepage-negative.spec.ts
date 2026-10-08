@@ -7,7 +7,7 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Negative Tests & Error Handling', () => {
   test('TC-HOME-045: Handle slow network', async ({ page }) => {
-    test.step('Simulate slow 3G network', async () => {
+    await test.step('Simulate slow 3G network', async () => {
       const client = await page.context().newCDPSession(page);
       await client.send('Network.emulateNetworkConditions', {
         offline: false,
@@ -19,7 +19,7 @@ test.describe('Negative Tests & Error Handling', () => {
       console.log('Network throttled to 3G');
     });
 
-    test.step('Load page on slow network', async () => {
+    await test.step('Load page on slow network', async () => {
       const startTime = Date.now();
 
       try {
@@ -33,7 +33,7 @@ test.describe('Negative Tests & Error Handling', () => {
       }
     });
 
-    test.step('Verify page is still functional', async () => {
+    await test.step('Verify page is still functional', async () => {
       const header = page.locator('header').first();
       const visible = await header.isVisible().catch(() => false);
       console.log(`Header visible on slow network: ${visible}`);
@@ -49,8 +49,8 @@ test.describe('Negative Tests & Error Handling', () => {
       }
     });
 
-    test.step('Navigate and collect errors', async () => {
-      await page.goto('/').catch(() => {});
+    await test.step('Navigate and collect errors', async () => {
+      await page.goto('./').catch(() => {});
       await page.waitForLoadState('domcontentloaded').catch(() => {});
 
       if (errorResponses.length > 0) {
@@ -71,8 +71,8 @@ test.describe('Negative Tests & Error Handling', () => {
       }
     });
 
-    test.step('Load page and monitor console', async () => {
-      await page.goto('/');
+    await test.step('Load page and monitor console', async () => {
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
 
       if (consoleErrors.length > 0) {
@@ -85,16 +85,16 @@ test.describe('Negative Tests & Error Handling', () => {
   });
 
   test('TC-HOME-048: Handle missing resources', async ({ page }) => {
-    test.step('Intercept and block images', async () => {
+    await test.step('Intercept and block images', async () => {
       await page.route('**/*.{png,jpg,jpeg,gif}', route => route.abort());
 
-      const response = await page.goto('/');
+      const response = await page.goto('./');
       expect(response?.status()).toBeLessThan(400);
 
       console.log('✓ Page loads without images');
     });
 
-    test.step('Verify page structure intact', async () => {
+    await test.step('Verify page structure intact', async () => {
       const header = page.locator('header').first();
       const main = page.locator('main, [role="main"]').first();
 
@@ -106,7 +106,7 @@ test.describe('Negative Tests & Error Handling', () => {
   });
 
   test('TC-HOME-049: Handle missing navigation elements', async ({ page }) => {
-    test.step('Intercept and block navigation styles/scripts', async () => {
+    await test.step('Intercept and block navigation styles/scripts', async () => {
       await page.route('**/*.css', route => {
         const url = route.request().url();
         if (url.includes('nav') || url.includes('menu')) {
@@ -116,11 +116,11 @@ test.describe('Negative Tests & Error Handling', () => {
         }
       });
 
-      await page.goto('/');
+      await page.goto('./');
       console.log('Navigation styles blocked');
     });
 
-    test.step('Check if page still loads', async () => {
+    await test.step('Check if page still loads', async () => {
       const title = page.title();
       expect(title).toBeTruthy();
       console.log(`✓ Page title still accessible: ${title}`);
@@ -128,10 +128,10 @@ test.describe('Negative Tests & Error Handling', () => {
   });
 
   test('TC-HOME-050: Handle empty/null states', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check for broken product cards', async () => {
+    await test.step('Check for broken product cards', async () => {
       const productCards = page.locator('[class*="product-card"]').all();
       const cards = await productCards;
 
@@ -147,10 +147,10 @@ test.describe('Negative Tests & Error Handling', () => {
   });
 
   test('TC-HOME-051: Offline mode behavior', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Take page content snapshot', async () => {
+    await test.step('Take page content snapshot', async () => {
       const content = await page.evaluate(() => {
         return {
           title: document.title,
@@ -162,7 +162,7 @@ test.describe('Negative Tests & Error Handling', () => {
       console.log(`Page state: ${JSON.stringify(content)}`);
     });
 
-    test.step('Go offline', async () => {
+    await test.step('Go offline', async () => {
       const client = await page.context().newCDPSession(page);
       await client.send('Network.emulateNetworkConditions', {
         offline: true,
@@ -174,17 +174,17 @@ test.describe('Negative Tests & Error Handling', () => {
       console.log('✓ Network set to offline');
     });
 
-    test.step('Verify cached content still visible', async () => {
+    await test.step('Verify cached content still visible', async () => {
       const visible = await page.locator('body').isVisible();
       console.log(`Page still visible offline: ${visible}`);
     });
   });
 
   test('TC-HOME-052: Rapid navigation stress test', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('domcontentloaded');
 
-    test.step('Perform rapid navigation', async () => {
+    await test.step('Perform rapid navigation', async () => {
       const links = page.locator('a[href^="/"]').all();
       const linkElements = await links;
 
@@ -217,8 +217,8 @@ test.describe('Negative Tests & Error Handling', () => {
       }
     });
 
-    test.step('Load and monitor warnings', async () => {
-      await page.goto('/');
+    await test.step('Load and monitor warnings', async () => {
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
 
       if (warnings.length > 0) {

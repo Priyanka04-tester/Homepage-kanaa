@@ -7,15 +7,15 @@ import { test, expect } from '@playwright/test';
 
 test.describe('Navigation - Menu & Navigation Elements', () => {
   test('TC-HOME-001: Header menu items are clickable', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Verify header menu exists', async () => {
+    await test.step('Verify header menu exists', async () => {
       const header = page.locator('header, nav').first();
       await expect(header).toBeVisible();
     });
 
-    test.step('Find and click menu items', async () => {
+    await test.step('Find and click menu items', async () => {
       const menuItems = page.locator('nav a, [role="menuitem"]').all();
       const items = await menuItems;
 
@@ -24,7 +24,7 @@ test.describe('Navigation - Menu & Navigation Elements', () => {
           const item = items[i];
           const text = await item.textContent();
 
-          test.step(`Click menu item: ${text}`, async () => {
+          await test.step(`Click menu item: ${text}`, async () => {
             try {
               await item.click({ timeout: 5000 });
               await page.waitForLoadState('domcontentloaded');
@@ -43,16 +43,16 @@ test.describe('Navigation - Menu & Navigation Elements', () => {
   });
 
   test('TC-HOME-002: Navigation dropdowns work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Hover over menu items to reveal dropdowns', async () => {
+    await test.step('Hover over menu items to reveal dropdowns', async () => {
       const menuButtons = page.locator('nav button, [role="button"]').all();
       const buttons = await menuButtons;
 
       for (let i = 0; i < Math.min(2, buttons.length); i++) {
         const btn = buttons[i];
-        test.step(`Hover over menu button ${i + 1}`, async () => {
+        await test.step(`Hover over menu button ${i + 1}`, async () => {
           await btn.hover({ timeout: 5000 }).catch(() => {});
           await page.waitForTimeout(500);
           const visible = await btn.isVisible();
@@ -63,10 +63,10 @@ test.describe('Navigation - Menu & Navigation Elements', () => {
   });
 
   test('TC-HOME-003: Breadcrumb navigation works', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check for breadcrumb navigation', async () => {
+    await test.step('Check for breadcrumb navigation', async () => {
       const breadcrumb = page.locator('[class*="breadcrumb"], nav[aria-label="breadcrumb"]').first();
       const exists = await breadcrumb.count().then(c => c > 0);
 
@@ -81,10 +81,10 @@ test.describe('Navigation - Menu & Navigation Elements', () => {
   });
 
   test('TC-HOME-004: Logo navigation', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Click logo to navigate home', async () => {
+    await test.step('Click logo to navigate home', async () => {
       const logo = page.locator('a[href="/"], [class*="logo"] a').first();
       const exists = await logo.count().then(c => c > 0);
 
@@ -98,10 +98,10 @@ test.describe('Navigation - Menu & Navigation Elements', () => {
   });
 
   test('TC-HOME-005: Category navigation links work', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Find and test category links', async () => {
+    await test.step('Find and test category links', async () => {
       const categoryLinks = page.locator('a[href*="/category"], [class*="category"] a').all();
       const links = await categoryLinks;
 
@@ -109,7 +109,7 @@ test.describe('Navigation - Menu & Navigation Elements', () => {
         for (let i = 0; i < Math.min(2, links.length); i++) {
           const link = links[i];
           const href = await link.getAttribute('href');
-          test.step(`Test category link: ${href}`, async () => {
+          await test.step(`Test category link: ${href}`, async () => {
             try {
               await link.click({ timeout: 5000 });
               await page.waitForLoadState('domcontentloaded');

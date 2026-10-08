@@ -8,9 +8,9 @@ import { test, expect } from '@playwright/test';
 test.describe('Regression Tests - Critical Features', () => {
   test('TC-HOME-054: Core homepage loads every time', async ({ page }) => {
     for (let attempt = 1; attempt <= 3; attempt++) {
-      test.step(`Load attempt ${attempt}`, async () => {
+      await test.step(`Load attempt ${attempt}`, async () => {
         const startTime = Date.now();
-        const response = await page.goto('/');
+        const response = await page.goto('./');
         const loadTime = Date.now() - startTime;
 
         expect(response?.status()).toBeLessThan(400);
@@ -20,10 +20,10 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-055: Essential header elements always present', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Verify header consistency', async () => {
+    await test.step('Verify header consistency', async () => {
       const header = page.locator('header').first();
       await expect(header).toBeVisible();
 
@@ -55,8 +55,8 @@ test.describe('Regression Tests - Critical Features', () => {
       }
     });
 
-    test.step('Load and monitor errors', async () => {
-      await page.goto('/');
+    await test.step('Load and monitor errors', async () => {
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
 
       if (errors.length > 0) {
@@ -70,10 +70,10 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-057: Navigation works consistently', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Test navigation stability', async () => {
+    await test.step('Test navigation stability', async () => {
       const links = page.locator('a[href^="/"]').all();
       const linkElements = await links;
 
@@ -104,10 +104,10 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-058: Button interactions stable', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Test button stability', async () => {
+    await test.step('Test button stability', async () => {
       const buttons = page.locator('button').all();
       const btnElements = await buttons;
 
@@ -115,7 +115,7 @@ test.describe('Regression Tests - Critical Features', () => {
         const btn = btnElements[i];
         const text = await btn.textContent();
 
-        test.step(`Button ${i + 1}: ${text}`, async () => {
+        await test.step(`Button ${i + 1}: ${text}`, async () => {
           try {
             const enabled = await btn.isEnabled();
 
@@ -137,7 +137,7 @@ test.describe('Regression Tests - Critical Features', () => {
   test('TC-HOME-059: Page performance acceptable', async ({ page }) => {
     const startTime = Date.now();
 
-    test.step('Measure page load metrics', async () => {
+    await test.step('Measure page load metrics', async () => {
       const navigationTiming = await page.evaluate(() => {
         const perf = window.performance.timing;
         return {
@@ -155,17 +155,17 @@ test.describe('Regression Tests - Critical Features', () => {
       expect(totalTime).toBeLessThan(30000);
     });
 
-    test.step('Navigate to homepage', async () => {
-      await page.goto('/');
+    await test.step('Navigate to homepage', async () => {
+      await page.goto('./');
       await page.waitForLoadState('networkidle');
     });
   });
 
   test('TC-HOME-060: Links open correct pages', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Verify navigation targets', async () => {
+    await test.step('Verify navigation targets', async () => {
       const homeLink = page.locator('a[href="/"]').first();
       const exists = await homeLink.count().then(c => c > 0);
 
@@ -180,10 +180,10 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-061: Carousel/Slider reliability', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Test carousel stability', async () => {
+    await test.step('Test carousel stability', async () => {
       const carousel = page.locator('[class*="carousel"], [class*="slider"]').first();
       const exists = await carousel.count().then(c => c > 0);
 
@@ -208,15 +208,15 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-062: Search functionality (if present)', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Test search if available', async () => {
+    await test.step('Test search if available', async () => {
       const searchInput = page.locator('input[type="search"], input[placeholder*="search"]').first();
       const exists = await searchInput.count().then(c => c > 0);
 
       if (exists) {
-        test.step('Search interaction', async () => {
+        await test.step('Search interaction', async () => {
           try {
             await searchInput.click();
             await searchInput.type('test', { delay: 50 });
@@ -236,17 +236,17 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-063: Footer accessibility', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Navigate to footer', async () => {
+    await test.step('Navigate to footer', async () => {
       await page.evaluate(() => {
         window.scrollTo(0, document.documentElement.scrollHeight);
       });
       await page.waitForTimeout(500);
     });
 
-    test.step('Verify footer content', async () => {
+    await test.step('Verify footer content', async () => {
       const footer = page.locator('footer').first();
       const exists = await footer.count().then(c => c > 0);
 
@@ -264,14 +264,14 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-064: Multi-language support check', async ({ page }) => {
-    test.step('Check English version', async () => {
+    await test.step('Check English version', async () => {
       await page.goto('/en-sa/');
       const title = page.title();
       console.log(`EN page title: ${title}`);
       expect(title).toBeTruthy();
     });
 
-    test.step('Check Arabic version', async () => {
+    await test.step('Check Arabic version', async () => {
       await page.goto('/ar-sa/');
       const title = page.title();
       console.log(`AR page title: ${title}`);

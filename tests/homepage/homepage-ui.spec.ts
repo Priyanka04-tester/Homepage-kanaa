@@ -7,10 +7,10 @@ import { test, expect } from '@playwright/test';
 
 test.describe('UI & Visual Design', () => {
   test('TC-HOME-030: Header layout is correct', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Verify header structure', async () => {
+    await test.step('Verify header structure', async () => {
       const header = page.locator('header').first();
       const visible = await header.isVisible();
       expect(visible).toBe(true);
@@ -28,7 +28,7 @@ test.describe('UI & Visual Design', () => {
       expect(hasLogo || hasNav).toBe(true);
     });
 
-    test.step('Check header styling', async () => {
+    await test.step('Check header styling', async () => {
       const header = page.locator('header').first();
       const position = await header.evaluate(el => {
         const style = window.getComputedStyle(el);
@@ -48,10 +48,10 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-031: Page sections are well-spaced', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check section spacing', async () => {
+    await test.step('Check section spacing', async () => {
       const sections = page.locator('section, div[class*="section"]').all();
       const sectionElements = await sections;
       console.log(`Found ${sectionElements.length} sections`);
@@ -75,10 +75,10 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-032: Images have proper dimensions', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check image dimensions', async () => {
+    await test.step('Check image dimensions', async () => {
       const images = page.locator('img').all();
       const imgElements = await images;
       console.log(`Found ${imgElements.length} images`);
@@ -101,10 +101,10 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-033: Text is readable (contrast and size)', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check text readability', async () => {
+    await test.step('Check text readability', async () => {
       const textElements = page.locator('p, h1, h2, h3, span, li').all();
       const elements = await textElements;
       console.log(`Scanning ${Math.min(20, elements.length)} text elements`);
@@ -126,10 +126,10 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-034: Buttons are properly styled and sized', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check button styling', async () => {
+    await test.step('Check button styling', async () => {
       const buttons = page.locator('button').all();
       const btnElements = await buttons;
       console.log(`Checking ${Math.min(10, btnElements.length)} buttons`);
@@ -156,10 +156,10 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-035: Layout responds to content', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Check for layout overflow', async () => {
+    await test.step('Check for layout overflow', async () => {
       const hasOverflow = await page.evaluate(() => {
         const body = document.documentElement;
         return {
@@ -178,10 +178,10 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-036: Color contrast is sufficient', async ({ page }) => {
-    await page.goto('/');
+    await page.goto('./');
     await page.waitForLoadState('networkidle');
 
-    test.step('Sample color checks', async () => {
+    await test.step('Sample color checks', async () => {
       const headings = page.locator('h1, h2, h3').all();
       const headingElements = await headings;
 
