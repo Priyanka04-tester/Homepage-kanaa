@@ -1,0 +1,40 @@
+name: Homepage Firefox (Linux)
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [firefox-linux-ci]
+
+jobs:
+  firefox:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    env:
+      BASE_URL: https://thekanaa.com/en-sa/
+      BASE_URL_AR: https://thekanaa.com/ar-sa/
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - run: npm install
+
+      - run: npx playwright install --with-deps firefox
+
+      - run: mkdir -p evidence/homepage state
+
+      - name: Firefox smoke and discovery
+        run: npx playwright test tests/homepage/smoke-test.spec.ts tests/homepage/homepage-discovery.spec.ts --project=firefox-desktop-1440
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: firefox-report
+          path: |
+            playwright-report/
+            test-results/
+            state/homepage-map.json
+          if-no-files-found: ignore
