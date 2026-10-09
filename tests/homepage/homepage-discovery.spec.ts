@@ -391,7 +391,10 @@ async function discoverElements(page: Page): Promise<Element[]> {
   // Discover CTAs (buttons with specific text patterns)
   const ctas = await page.locator('button, [role="button"]').all();
   for (const cta of ctas) {
-    const text = await cta.textContent().catch(() => '');
+    const text =
+      (await cta.getAttribute('aria-label').catch(() => null)) ||
+      (await cta.textContent().catch(() => '')) ||
+      '';
     const isCta = text &&
       /add|buy|shop|checkout|order|confirm|submit|subscribe|view|more/i.test(
         text

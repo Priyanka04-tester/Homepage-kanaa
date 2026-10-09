@@ -4,6 +4,7 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { HOME_PATH, headerLanguageSwitch, homeLogo, openHomepage } from './helpers';
 
 test.describe('Regression Tests - Critical Features', () => {
   test('TC-HOME-054: Core homepage loads every time', async ({ page }) => {
@@ -20,25 +21,11 @@ test.describe('Regression Tests - Critical Features', () => {
   });
 
   test('TC-HOME-055: Essential header elements always present', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+    await openHomepage(page);
 
-    await test.step('Verify header consistency', async () => {
-      const header = page.locator('header').first();
-      await expect(header).toBeVisible();
-
-      // Logo
-      const logo = header.locator('a[href="/"], [class*="logo"]').first();
-      const hasLogo = await logo.count().then(c => c > 0);
-      console.log(`Logo present: ${hasLogo}`);
-
-      // Navigation
-      const nav = header.locator('nav').first();
-      const hasNav = await nav.count().then(c => c > 0);
-      console.log(`Navigation present: ${hasNav}`);
-
-      // Either logo or nav should be present
-      expect(hasLogo || hasNav).toBe(true);
+    await test.step('Logo and language switch are visible in the header', async () => {
+      await expect(homeLogo(page)).toBeVisible();
+      await expect(headerLanguageSwitch(page)).toBeVisible();
     });
   });
 
@@ -69,38 +56,13 @@ test.describe('Regression Tests - Critical Features', () => {
     });
   });
 
-  test('TC-HOME-057: Navigation works consistently', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Test navigation stability', async () => {
-      const links = page.locator('a[href^="/"]').all();
-      const linkElements = await links;
-
-      let working = 0;
-      let broken = 0;
-
-      for (let i = 0; i < Math.min(3, linkElements.length); i++) {
-        const link = linkElements[i];
-        const href = await link.getAttribute('href');
-
-        try {
-          await link.click({ timeout: 5000 });
-          await page.waitForLoadState('domcontentloaded');
-          working++;
-          console.log(`✓ Link ${i + 1} works: ${href}`);
-        } catch (e) {
-          broken++;
-          console.log(`✗ Link ${i + 1} broken: ${href}`);
-        }
-
-        await page.goBack().catch(() => {});
-        await page.waitForTimeout(200);
-      }
-
-      console.log(`Navigation: ${working} working, ${broken} broken`);
-      expect(broken).toBe(0);
-    });
+  test('TC-HOME-057: Homepage header is consistent across repeated loads', async ({ page }) => {
+    for (let i = 1; i <= 3; i++) {
+      await test.step(`Load ${i}`, async () => {
+        await openHomepage(page);
+        await expect(headerLanguageSwitch(page)).toBeVisible();
+      });
+    }
   });
 
   test('TC-HOME-058: Button interactions stable', async ({ page }) => {
@@ -161,21 +123,16 @@ test.describe('Regression Tests - Critical Features', () => {
     });
   });
 
-  test('TC-HOME-060: Links open correct pages', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+  test('TC-HOME-060: No link drops the locale or points to another locale', async ({ page }) => {
+    await openHomepage(page);
 
-    await test.step('Verify navigation targets', async () => {
-      const homeLink = page.locator('a[href="/"]').first();
-      const exists = await homeLink.count().then(c => c > 0);
+    await test.step('No root link that drops the locale prefix', async () => {
+      await expect(page.locator('a[href="/"]')).toHaveCount(0);
+    });
 
-      if (exists) {
-        const href = await homeLink.getAttribute('href');
-        console.log(`Home link href: ${href}`);
-        expect(href).toBe('/');
-      } else {
-        console.log('✓ No duplicate home link (expected)');
-      }
+    await test.step('No links to the other locale on the English page', async () => {
+      const otherLocale = HOME_PATH.startsWith('/en-') ? '/ar-' : '/en-';
+      await expect(page.locator(`a[href^="${otherLocale}"]`)).toHaveCount(0);
     });
   });
 

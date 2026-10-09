@@ -4,32 +4,23 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { openHomepage, productCards } from './helpers';
 
 test.describe('Products & Product Cards', () => {
-  test('TC-HOME-023: Product cards are displayed', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+  test('TC-HOME-023: Product cards are displayed with name and price', async ({ page }) => {
+    await openHomepage(page);
+    const cards = productCards(page);
+    await cards.first().waitFor({ state: 'attached', timeout: 30000 });
+    const count = await cards.count();
+    expect(count, 'no product cards found').toBeGreaterThan(0);
 
-    await test.step('Find product cards', async () => {
-      const productCards = page.locator('[class*="product-card"], [data-product], [class*="product-item"]').all();
-      const cards = await productCards;
-      console.log(`Found ${cards.length} product cards`);
-      expect(cards.length).toBeGreaterThan(0);
-    });
-
-    await test.step('Verify product card content', async () => {
-      const productCards = page.locator('[class*="product-card"], [data-product]').all();
-      const cards = await productCards;
-
-      for (let i = 0; i < Math.min(5, cards.length); i++) {
-        const card = cards[i];
-        const visible = await card.isVisible();
-        const productName = await card.locator('h2, h3, .product-name').textContent().catch(() => 'Unknown');
-        const price = await card.locator('[class*="price"], .product-price').textContent().catch(() => 'No price');
-
-        console.log(`Product ${i + 1}: "${productName?.trim()}" - ${price?.trim()}`);
-      }
-    });
+    for (let i = 0; i < Math.min(5, count); i++) {
+      const card = cards.nth(i);
+      await expect(card).toBeVisible();
+      const text = (await card.innerText()).replace(/\s+/g, ' ').trim();
+      expect(text, `product card ${i + 1} has no name or price`).toMatch(/[A-Za-z].*\d/);
+      console.log(`Product ${i + 1}: ${text.slice(0, 80)}`);
+    }
   });
 
   test('TC-HOME-024: Product card images load', async ({ page }) => {

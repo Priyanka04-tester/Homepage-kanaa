@@ -4,6 +4,7 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { openHomepage } from './helpers';
 
 test.describe('Sliders & Carousels', () => {
   test('TC-HOME-017: Hero carousel loads correctly', async ({ page }) => {
@@ -155,41 +156,23 @@ test.describe('Sliders & Carousels', () => {
     });
   });
 
-  test('TC-HOME-022: Slider performance', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+  test('TC-HOME-022: Slider advances without uncaught page errors', async ({ page }) => {
+    const pageErrors: string[] = [];
+    page.on('pageerror', (e) => pageErrors.push(e.message));
 
-    await test.step('Monitor carousel for performance issues', async () => {
-      let errors: string[] = [];
+    await openHomepage(page);
 
-      page.on('console', msg => {
-        if (msg.type() === 'error') {
-          errors.push(msg.text());
-        }
-      });
-
-      const carousel = page.locator('[class*="carousel"], [class*="slider"]').first();
-
-      if (await carousel.count().then(c => c > 0)) {
-        // Simulate rapid navigation
-        const nextButton = page.locator('[class*="carousel"] button:has-text("Next")').first();
-
-        for (let i = 0; i < 5; i++) {
-          try {
-            await nextButton.click({ timeout: 2000 }).catch(() => {});
-            await page.waitForTimeout(200);
-          } catch (e) {
-            errors.push(`Click ${i}: ${e}`);
-          }
-        }
+    await test.step('Next control advances the hero five times', async () => {
+      const next = page.locator('.slick-next').filter({ visible: true }).first();
+      await expect(next).toBeVisible({ timeout: 15000 });
+      for (let i = 0; i < 5; i++) {
+        await next.click();
+        await page.waitForTimeout(300);
       }
+    });
 
-      if (errors.length > 0) {
-        console.log(`⚠ Carousel errors detected: ${errors.length}`);
-        errors.forEach(e => console.log(`  - ${e}`));
-      } else {
-        console.log(`✓ No carousel errors detected`);
-      }
+    await test.step('No uncaught JavaScript errors', async () => {
+      expect(pageErrors, `uncaught page errors:\n${pageErrors.join('\n')}`).toEqual([]);
     });
   });
 });

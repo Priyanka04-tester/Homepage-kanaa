@@ -4,6 +4,7 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { headerLanguageSwitch, homeLogo } from './helpers';
 
 test.describe('Responsive Design', () => {
   const viewports = [
@@ -16,7 +17,7 @@ test.describe('Responsive Design', () => {
     test(`TC-HOME-037: Layout on ${viewport.name} (${viewport.width}x${viewport.height})`, async ({ page }) => {
       await page.setViewportSize({ width: viewport.width, height: viewport.height });
       await page.goto('./');
-      await page.waitForLoadState('networkidle');
+      await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
       await test.step('Verify viewport size', async () => {
         const actualSize = page.viewportSize();
@@ -26,10 +27,8 @@ test.describe('Responsive Design', () => {
       });
 
       await test.step('Check header layout', async () => {
-        const header = page.locator('header').first();
-        const visible = await header.isVisible();
-        console.log(`Header visible on ${viewport.name}: ${visible}`);
-        expect(visible).toBe(true);
+        await expect(homeLogo(page)).toBeVisible();
+        await expect(headerLanguageSwitch(page)).toBeVisible();
       });
 
       await test.step('Check for horizontal scroll', async () => {
@@ -59,7 +58,7 @@ test.describe('Responsive Design', () => {
   test('TC-HOME-040: Mobile menu functionality', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('./');
-    await page.waitForLoadState('networkidle');
+    await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
     await test.step('Look for mobile menu button', async () => {
       const menuButton = page.locator('button[aria-label*="menu"], button[class*="hamburger"], .mobile-menu-toggle').first();
@@ -89,7 +88,7 @@ test.describe('Responsive Design', () => {
   test('TC-HOME-041: Tablet layout optimization', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
     await page.goto('./');
-    await page.waitForLoadState('networkidle');
+    await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
     await test.step('Verify tablet layout', async () => {
       const sections = page.locator('section, div[class*="section"]').all();
@@ -110,7 +109,7 @@ test.describe('Responsive Design', () => {
   test('TC-HOME-042: Touch target sizes on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('./');
-    await page.waitForLoadState('networkidle');
+    await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
     await test.step('Check button/link sizes for touch', async () => {
       const buttons = page.locator('button, a[role="button"]').all();
@@ -149,7 +148,7 @@ test.describe('Responsive Design', () => {
     await test.step('Measure fonts on mobile', async () => {
       await page.setViewportSize(viewport1);
       await page.goto('./');
-      await page.waitForLoadState('networkidle');
+      await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
       fontSizes1 = await page.evaluate(() => {
         const h1 = document.querySelector('h1');
@@ -169,7 +168,7 @@ test.describe('Responsive Design', () => {
     await test.step('Measure fonts on desktop', async () => {
       await page.setViewportSize(viewport2);
       await page.goto('./');
-      await page.waitForLoadState('networkidle');
+      await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
       fontSizes2 = await page.evaluate(() => {
         const h1 = document.querySelector('h1');
@@ -191,7 +190,7 @@ test.describe('Responsive Design', () => {
   test('TC-HOME-044: Images responsive', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('./');
-    await page.waitForLoadState('networkidle');
+    await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
     await test.step('Check image responsive attributes', async () => {
       const images = page.locator('img').all();

@@ -4,46 +4,20 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { headerLanguageSwitch, homeLogo, openHomepage } from './helpers';
 
 test.describe('UI & Visual Design', () => {
-  test('TC-HOME-030: Header layout is correct', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+  test('TC-HOME-030: Header logo and language switch sit on one top line', async ({ page }) => {
+    await openHomepage(page);
 
-    await test.step('Verify header structure', async () => {
-      const header = page.locator('header').first();
-      const visible = await header.isVisible();
-      expect(visible).toBe(true);
-
-      // Check for key header elements
-      const logo = header.locator('a[href="/"], [class*="logo"]').first();
-      const nav = header.locator('nav, [role="navigation"]').first();
-      const cart = header.locator('[class*="cart"], [aria-label*="cart"]').first();
-
-      const hasLogo = await logo.count().then(c => c > 0);
-      const hasNav = await nav.count().then(c => c > 0);
-      const hasCart = await cart.count().then(c => c > 0);
-
-      console.log(`Header has Logo: ${hasLogo}, Nav: ${hasNav}, Cart: ${hasCart}`);
-      expect(hasLogo || hasNav).toBe(true);
-    });
-
-    await test.step('Check header styling', async () => {
-      const header = page.locator('header').first();
-      const position = await header.evaluate(el => {
-        const style = window.getComputedStyle(el);
-        return {
-          position: style.position,
-          display: style.display,
-          backgroundColor: style.backgroundColor
-        };
-      });
-
-      console.log(`Header position: ${position.position}`);
-      console.log(`Header display: ${position.display}`);
-      console.log(`Header background: ${position.backgroundColor}`);
-
-      expect(['fixed', 'sticky', 'absolute', 'relative', 'static']).toContain(position.position);
+    await test.step('Logo and language switch are visible in the header band', async () => {
+      const logo = await homeLogo(page).boundingBox();
+      const lang = await headerLanguageSwitch(page).boundingBox();
+      expect(logo, 'logo has no bounding box').not.toBeNull();
+      expect(lang, 'language switch has no bounding box').not.toBeNull();
+      expect(logo!.y).toBeLessThan(150);
+      expect(lang!.y).toBeLessThan(150);
+      expect(Math.abs(logo!.y + logo!.height / 2 - (lang!.y + lang!.height / 2))).toBeLessThan(40);
     });
   });
 

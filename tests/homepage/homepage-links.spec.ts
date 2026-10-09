@@ -4,6 +4,7 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { internalLinks, openHomepage } from './helpers';
 
 test.describe('Links & Navigation Anchors', () => {
   test('TC-HOME-011: All links are accessible', async ({ page }) => {
@@ -36,35 +37,17 @@ test.describe('Links & Navigation Anchors', () => {
     });
   });
 
-  test('TC-HOME-012: Internal links navigate correctly', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+  test('TC-HOME-012: Internal links return a working page', async ({ page }) => {
+    await openHomepage(page);
+    const hrefs = await internalLinks(page, 10);
+    expect(hrefs.length, 'no internal links found on the homepage').toBeGreaterThan(0);
 
-    await test.step('Find internal links', async () => {
-      const internalLinks = page.locator('a[href^="/"]').all();
-      const links = await internalLinks;
-      console.log(`Found ${links.length} internal links`);
-
-      for (let i = 0; i < Math.min(3, links.length); i++) {
-        const link = links[i];
-        const href = await link.getAttribute('href');
-        const text = await link.textContent();
-
-        await test.step(`Test internal link: ${href}`, async () => {
-          try {
-            await link.click({ timeout: 5000 });
-            await page.waitForLoadState('domcontentloaded');
-            const newUrl = page.url();
-            console.log(`✓ Navigation successful to ${newUrl}`);
-          } catch (e) {
-            console.log(`✗ Navigation failed for ${href}`);
-          }
-        });
-
-        await page.goBack().catch(() => {});
-        await page.waitForLoadState('domcontentloaded');
-      }
-    });
+    const broken: string[] = [];
+    for (const href of hrefs) {
+      const res = await page.request.get(new URL(href, page.url()).toString(), { failOnStatusCode: false });
+      if (res.status() >= 400) broken.push(`${res.status()} ${href}`);
+    }
+    expect(broken, `broken internal links:\n${broken.join('\n')}`).toEqual([]);
   });
 
   test('TC-HOME-013: External links have correct target', async ({ page }) => {

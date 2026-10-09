@@ -4,41 +4,24 @@
  */
 
 import { test, expect } from '@playwright/test';
+import { HOME_PATH, headerLanguageSwitch, homeLogo, openHomepage, productCards } from './helpers';
 
 test.describe('Navigation - Menu & Navigation Elements', () => {
-  test('TC-HOME-001: Header menu items are clickable', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
+  test('TC-HOME-001: Header controls are visible and the logo returns home', async ({ page }) => {
+    await openHomepage(page);
 
-    await test.step('Verify header menu exists', async () => {
-      const header = page.locator('header, nav').first();
-      await expect(header).toBeVisible();
+    await test.step('Logo and language switch are visible', async () => {
+      await expect(homeLogo(page)).toBeVisible();
+      await expect(headerLanguageSwitch(page)).toBeVisible();
     });
 
-    await test.step('Find and click menu items', async () => {
-      const menuItems = page.locator('nav a, [role="menuitem"]').all();
-      const items = await menuItems;
-
-      if (items.length > 0) {
-        for (let i = 0; i < Math.min(3, items.length); i++) {
-          const item = items[i];
-          const text = await item.textContent();
-
-          await test.step(`Click menu item: ${text}`, async () => {
-            try {
-              await item.click({ timeout: 5000 });
-              await page.waitForLoadState('domcontentloaded');
-              console.log(`✓ Clicked menu item: ${text}`);
-            } catch (e) {
-              console.log(`✗ Could not click: ${text} - ${e}`);
-            }
-          });
-
-          // Navigate back
-          await page.goBack().catch(() => {});
-          await page.waitForLoadState('domcontentloaded');
-        }
-      }
+    await test.step('Logo returns to the locale homepage from a product page', async () => {
+      const cards = productCards(page);
+      await cards.first().waitFor({ state: 'attached', timeout: 30000 });
+      await cards.first().click();
+      await expect(page).not.toHaveURL(new RegExp(`${HOME_PATH.replace(/\//g, '\\/')}$`));
+      await homeLogo(page).click();
+      await expect(page).toHaveURL(new RegExp(`${HOME_PATH.replace(/\//g, '\\/')}$`));
     });
   });
 
