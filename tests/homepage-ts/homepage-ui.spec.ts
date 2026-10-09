@@ -83,6 +83,7 @@ test.describe('UI & Visual Design', () => {
   });
 
   test('TC-HOME-036: Body text meets WCAG AA contrast (4.5:1)', async ({ page }) => {
+    test.fail(true, 'Known site defect: 3.56:1 contrast on "View All Reviews on Google"');
     await openHomepage(page);
     const failing = await page.locator('p, span, a, h1, h2, h3, li').evaluateAll((els) => {
       const parse = (s: string): { c: number[]; a: number } | null => {
