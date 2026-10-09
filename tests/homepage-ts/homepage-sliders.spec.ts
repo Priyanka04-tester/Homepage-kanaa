@@ -58,8 +58,8 @@ test.describe('Sliders & Carousels', () => {
     expect(scrolled, 'no horizontally scrollable product row found').toBe(true);
   });
 
-  test('TC-HOME-022: Slider advances without uncaught page errors', async ({ page }) => {
-    test.fail(true, 'Known site defect: React hydration error #418 on load');
+  test('TC-HOME-022: Slider advances without uncaught page errors', async ({ page }, testInfo) => {
+    test.fail(testInfo.project.name.startsWith('chromium-desktop'), 'Known site defect: React hydration error #418 on load');
     const pageErrors: string[] = [];
     page.on('pageerror', (e) => pageErrors.push(e.message));
 
