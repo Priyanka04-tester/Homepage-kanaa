@@ -1,0 +1,53 @@
+name: Homepage QA bot (TypeScript, daily)
+
+on:
+  schedule:
+    - cron: '0 4 * * *'
+  workflow_dispatch: {}
+
+concurrency:
+  group: homepage-ts
+  cancel-in-progress: false
+
+jobs:
+  homepage:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - browser: chromium
+            project: chromium-desktop-1440
+          - browser: firefox
+            project: firefox-desktop-1440
+    env:
+      BASE_URL: https://thekanaa.com/en-sa/
+      BASE_URL_AR: https://thekanaa.com/ar-sa/
+      CI: "true"
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - run: npm ci
+
+      - run: npx playwright install --with-deps ${{ matrix.browser }}
+
+      - run: mkdir -p evidence/homepage state
+
+      - name: Homepage suite (${{ matrix.browser }})
+        run: npx playwright test --config=playwright.homepage-ts.config.ts --project=${{ matrix.project }}
+
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: homepage-ts-report-${{ matrix.browser }}
+          path: |
+            playwright-report/
+            test-results/
+            state/homepage-map.json
+          if-no-files-found: ignore
