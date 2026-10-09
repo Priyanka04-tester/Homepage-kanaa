@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Negative Tests - Edge Cases and Error Handling
  * Tests behavior under adverse conditions
  */
@@ -27,7 +27,7 @@ test.describe('Negative Tests & Error Handling', () => {
   });
 
   test('TC-HOME-047: Homepage has no uncaught JavaScript errors on load', async ({ page }) => {
-    test.fail(true, 'Known site defect: React hydration error #418 on load');
+    test.fail((page.viewportSize()?.width ?? 0) >= 1024, 'Known site defect: React hydration error #418 on load');
     const pageErrors: string[] = [];
     page.on('pageerror', (e) => pageErrors.push(e.message));
     await openHomepage(page);

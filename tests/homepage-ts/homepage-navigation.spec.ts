@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Navigation Tests - Homepage Menu & Navigation Elements
  * Tests header navigation, menu items, and navigation flows
  */
