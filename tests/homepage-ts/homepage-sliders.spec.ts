@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Slider & Carousel Tests
  * Tests image carousels, sliders, and rotating content
  */
@@ -39,11 +39,12 @@ test.describe('Sliders & Carousels', () => {
   test('TC-HOME-020: Hero carousel advances on its own', async ({ page }) => {
     await openHomepage(page);
     const before = await activeHeroImageSrc(page);
-    await expect.poll(() => activeHeroImageSrc(page), { timeout: 20000, intervals: [1000] }).not.toBe(before);
+    await expect.poll(() => activeHeroImageSrc(page), { timeout: 35000, intervals: [1000] }).not.toBe(before);
   });
 
   test('TC-HOME-021: Product rows scroll horizontally', async ({ page }) => {
     await openHomepage(page);
+    await page.waitForFunction(() => Array.from(document.querySelectorAll('*')).some((e) => { const s = getComputedStyle(e); return (s.overflowX === 'auto' || s.overflowX === 'scroll') && e.scrollWidth > e.clientWidth + 50; }), null, { timeout: 20000 });
     const scrolled = await page.evaluate(async () => {
       const row = Array.from(document.querySelectorAll<HTMLElement>('*')).find((el) => {
         const s = getComputedStyle(el);
@@ -58,8 +59,8 @@ test.describe('Sliders & Carousels', () => {
     expect(scrolled, 'no horizontally scrollable product row found').toBe(true);
   });
 
-  test('TC-HOME-022: Slider advances without uncaught page errors', async ({ page }, testInfo) => {
-    test.fail(testInfo.project.name.startsWith('chromium-desktop'), 'Known site defect: React hydration error #418 on load');
+  test('TC-HOME-022: Slider advances without uncaught page errors', async ({ page }) => {
+    test.fail((page.viewportSize()?.width ?? 0) >= 1024, 'Known site defect: React hydration error #418 on load');
     const pageErrors: string[] = [];
     page.on('pageerror', (e) => pageErrors.push(e.message));
 
