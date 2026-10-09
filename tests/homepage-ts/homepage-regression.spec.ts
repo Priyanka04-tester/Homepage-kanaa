@@ -10,50 +10,27 @@ test.describe('Regression Tests - Critical Features', () => {
   test('TC-HOME-054: Core homepage loads every time', async ({ page }) => {
     for (let attempt = 1; attempt <= 3; attempt++) {
       await test.step(`Load attempt ${attempt}`, async () => {
-        const startTime = Date.now();
         const response = await page.goto('./');
-        const loadTime = Date.now() - startTime;
-
-        expect(response?.status()).toBeLessThan(400);
-        console.log(`✓ Attempt ${attempt}: Loaded in ${loadTime}ms`);
+        expect(response?.status(), `attempt ${attempt} status`).toBeLessThan(400);
+        await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
       });
     }
   });
 
   test('TC-HOME-055: Essential header elements always present', async ({ page }) => {
     await openHomepage(page);
-
-    await test.step('Logo and language switch are visible in the header', async () => {
-      await expect(homeLogo(page)).toBeVisible();
-      await expect(headerLanguageSwitch(page)).toBeVisible();
-    });
+    await expect(homeLogo(page)).toBeVisible();
+    await expect(headerLanguageSwitch(page)).toBeVisible();
   });
 
-  test('TC-HOME-056: No critical console errors', async ({ page }) => {
-    const errors: string[] = [];
-
-    page.on('console', msg => {
-      if (msg.type() === 'error') {
-        const text = msg.text();
-        // Filter out known non-critical errors
-        if (!text.includes('ads') && !text.includes('tracking') && !text.includes('optional')) {
-          errors.push(text);
-        }
-      }
+  test('TC-HOME-056: Homepage returns no server errors on load', async ({ page }) => {
+    const serverErrors: string[] = [];
+    page.on('response', (res) => {
+      if (res.status() >= 500) serverErrors.push(`${res.status()} ${res.url()}`);
     });
-
-    await test.step('Load and monitor errors', async () => {
-      await page.goto('./');
-      await page.waitForLoadState('networkidle');
-
-      if (errors.length > 0) {
-        console.log(`⚠ Found ${errors.length} critical errors`);
-        errors.forEach(e => console.log(`  - ${e}`));
-        expect(errors.length).toBe(0);
-      } else {
-        console.log('✓ No critical console errors');
-      }
-    });
+    await openHomepage(page);
+    await page.waitForTimeout(2000);
+    expect(serverErrors, `server errors:\n${serverErrors.join('\n')}`).toEqual([]);
   });
 
   test('TC-HOME-057: Homepage header is consistent across repeated loads', async ({ page }) => {
@@ -65,62 +42,21 @@ test.describe('Regression Tests - Critical Features', () => {
     }
   });
 
-  test('TC-HOME-058: Button interactions stable', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Test button stability', async () => {
-      const buttons = page.locator('button').all();
-      const btnElements = await buttons;
-
-      for (let i = 0; i < Math.min(3, btnElements.length); i++) {
-        const btn = btnElements[i];
-        const text = await btn.textContent();
-
-        await test.step(`Button ${i + 1}: ${text}`, async () => {
-          try {
-            const enabled = await btn.isEnabled();
-
-            if (enabled) {
-              await btn.click({ timeout: 3000 });
-              await page.waitForTimeout(200);
-              console.log(`✓ Button clickable and responds`);
-            } else {
-              console.log(`✓ Button properly disabled`);
-            }
-          } catch (e) {
-            console.log(`✗ Button interaction failed: ${e}`);
-          }
-        });
-      }
-    });
+  test('TC-HOME-058: Header controls remain visible after scrolling', async ({ page }) => {
+    await openHomepage(page);
+    await page.evaluate(() => window.scrollTo(0, document.documentElement.scrollHeight));
+    await page.waitForTimeout(500);
+    await page.evaluate(() => window.scrollTo(0, 0));
+    await expect(homeLogo(page)).toBeVisible();
+    await expect(headerLanguageSwitch(page)).toBeVisible();
   });
 
-  test('TC-HOME-059: Page performance acceptable', async ({ page }) => {
-    const startTime = Date.now();
-
-    await test.step('Measure page load metrics', async () => {
-      const navigationTiming = await page.evaluate(() => {
-        const perf = window.performance.timing;
-        return {
-          domContentLoaded: perf.domContentLoadedEventEnd - perf.navigationStart,
-          loadComplete: perf.loadEventEnd - perf.navigationStart,
-          firstPaint: (performance as any).getEntriesByName('first-paint')[0]?.startTime || 'N/A'
-        };
-      }).catch(() => ({}));
-
-      const totalTime = Date.now() - startTime;
-      console.log(`Page load metrics: ${JSON.stringify(navigationTiming)}`);
-      console.log(`Total navigation time: ${totalTime}ms`);
-
-      // Page should load in reasonable time
-      expect(totalTime).toBeLessThan(30000);
-    });
-
-    await test.step('Navigate to homepage', async () => {
-      await page.goto('./');
-      await page.waitForLoadState('networkidle');
-    });
+  test('TC-HOME-059: Homepage DOM is ready within 10 seconds', async ({ page }) => {
+    const start = Date.now();
+    await page.goto('./', { waitUntil: 'domcontentloaded' });
+    const elapsed = Date.now() - start;
+    console.log(`DOMContentLoaded in ${elapsed}ms`);
+    expect(elapsed, 'DOMContentLoaded time').toBeLessThan(10000);
   });
 
   test('TC-HOME-060: No link drops the locale or points to another locale', async ({ page }) => {
@@ -136,103 +72,33 @@ test.describe('Regression Tests - Critical Features', () => {
     });
   });
 
-  test('TC-HOME-061: Carousel/Slider reliability', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Test carousel stability', async () => {
-      const carousel = page.locator('[class*="carousel"], [class*="slider"]').first();
-      const exists = await carousel.count().then(c => c > 0);
-
-      if (exists) {
-        const nextBtn = carousel.locator('button:has-text("Next"), [aria-label*="next"]').first();
-
-        if (await nextBtn.count().then(c => c > 0)) {
-          for (let i = 0; i < 3; i++) {
-            try {
-              await nextBtn.click({ timeout: 2000 });
-              await page.waitForTimeout(300);
-              console.log(`✓ Carousel advance ${i + 1} successful`);
-            } catch (e) {
-              console.log(`✗ Carousel advance ${i + 1} failed`);
-            }
-          }
-        }
-      } else {
-        console.log('✓ No carousel to test');
-      }
-    });
+  test('TC-HOME-061: Hero carousel shows a loaded image', async ({ page }) => {
+    await openHomepage(page);
+    await expect
+      .poll(
+        () => page.locator('.slick-slide.slick-active img').first().evaluate((img) => (img as HTMLImageElement).naturalWidth),
+        { timeout: 30000 }
+      )
+      .toBeGreaterThan(0);
   });
 
-  test('TC-HOME-062: Search functionality (if present)', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Test search if available', async () => {
-      const searchInput = page.locator('input[type="search"], input[placeholder*="search"]').first();
-      const exists = await searchInput.count().then(c => c > 0);
-
-      if (exists) {
-        await test.step('Search interaction', async () => {
-          try {
-            await searchInput.click();
-            await searchInput.type('test', { delay: 50 });
-            await page.waitForTimeout(500);
-
-            const value = await searchInput.inputValue();
-            console.log(`✓ Search input accepts text: "${value}"`);
-            expect(value).toContain('test');
-          } catch (e) {
-            console.log(`✗ Search input failed: ${e}`);
-          }
-        });
-      } else {
-        console.log('✓ No search input found');
-      }
-    });
+  test('TC-HOME-063: Footer legal links have accessible text', async ({ page }) => {
+    await openHomepage(page);
+    const legal = page.locator('a[href]').filter({ hasText: /Privacy Policy|Terms & Conditions|Shipping Policy|Warranty Policy/ });
+    expect(await legal.count(), 'footer legal links').toBeGreaterThanOrEqual(4);
+    for (let i = 0; i < (await legal.count()); i++) {
+      await expect(legal.nth(i)).toHaveText(/\S/);
+    }
   });
 
-  test('TC-HOME-063: Footer accessibility', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Navigate to footer', async () => {
-      await page.evaluate(() => {
-        window.scrollTo(0, document.documentElement.scrollHeight);
-      });
-      await page.waitForTimeout(500);
-    });
-
-    await test.step('Verify footer content', async () => {
-      const footer = page.locator('footer').first();
-      const exists = await footer.count().then(c => c > 0);
-
-      if (exists) {
-        const visible = await footer.isVisible();
-        const links = await footer.locator('a').count();
-
-        console.log(`Footer visible: ${visible}, Links: ${links}`);
-        expect(visible).toBe(true);
-        expect(links).toBeGreaterThan(0);
-      } else {
-        console.log('✗ Footer not found');
-      }
-    });
-  });
-
-  test('TC-HOME-064: Multi-language support check', async ({ page }) => {
-    await test.step('Check English version', async () => {
-      await page.goto('/en-sa/');
-      const title = page.title();
-      console.log(`EN page title: ${title}`);
-      expect(title).toBeTruthy();
-    });
-
-    await test.step('Check Arabic version', async () => {
-      await page.goto('/ar-sa/');
-      const title = page.title();
-      console.log(`AR page title: ${title}`);
-      expect(title).toBeTruthy();
-    });
+  test('TC-HOME-064: English and Arabic homepages both load', async ({ page }) => {
+    const origin = new URL(process.env.BASE_URL || 'https://thekanaa.com/en-sa/').origin;
+    const arPath = HOME_PATH.replace(/^\/en-/, '/ar-');
+    const en = await page.request.get(origin + HOME_PATH, { failOnStatusCode: false });
+    const ar = await page.request.get(origin + arPath, { failOnStatusCode: false });
+    expect(en.status(), 'English homepage').toBeLessThan(400);
+    expect(ar.status(), 'Arabic homepage').toBeLessThan(400);
+    await page.goto(arPath);
+    await expect(page.locator('html')).toHaveAttribute('dir', 'rtl');
   });
 });

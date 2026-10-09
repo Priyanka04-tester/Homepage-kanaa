@@ -4,7 +4,7 @@
  */
 
 import { test, expect } from '@playwright/test';
-import { headerLanguageSwitch, homeLogo } from './helpers';
+import { headerLanguageSwitch, homeLogo, productCards } from './helpers';
 
 test.describe('Responsive Design', () => {
   const viewports = [
@@ -19,197 +19,97 @@ test.describe('Responsive Design', () => {
       await page.goto('./');
       await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
-      await test.step('Verify viewport size', async () => {
-        const actualSize = page.viewportSize();
-        console.log(`Set viewport: ${viewport.width}x${viewport.height}`);
-        console.log(`Actual viewport: ${actualSize?.width}x${actualSize?.height}`);
-        expect(actualSize?.width).toBe(viewport.width);
-      });
-
-      await test.step('Check header layout', async () => {
+      await test.step('Logo and language switch are visible', async () => {
         await expect(homeLogo(page)).toBeVisible();
         await expect(headerLanguageSwitch(page)).toBeVisible();
       });
 
-      await test.step('Check for horizontal scroll', async () => {
-        const overflow = await page.evaluate(() => {
-          return document.documentElement.scrollWidth > document.documentElement.clientWidth;
-        });
-        console.log(`Horizontal scroll on ${viewport.name}: ${overflow ? '✗ Present' : '✓ None'}`);
-        expect(overflow).toBe(false);
-      });
-
-      await test.step('Check main content area', async () => {
-        const mainContent = page.locator('main, [role="main"]').first();
-        const exists = await mainContent.count().then(c => c > 0);
-        if (exists) {
-          const box = await mainContent.boundingBox();
-          console.log(`Main content box: ${box?.width}x${box?.height} on ${viewport.name}`);
-        }
-      });
-
-      await test.step(`Take ${viewport.name} screenshot`, async () => {
-        const screenshotPath = `evidence/homepage/responsive-${viewport.name.toLowerCase()}.png`;
-        await page.screenshot({ path: screenshotPath, fullPage: true }).catch(() => {});
+      await test.step('No horizontal page scroll', async () => {
+        const overflow = await page.evaluate(() => document.documentElement.scrollWidth - document.documentElement.clientWidth);
+        expect(overflow, `horizontal overflow at ${viewport.width}px`).toBeLessThanOrEqual(0);
       });
     });
   }
 
-  test('TC-HOME-040: Mobile menu functionality', async ({ page }) => {
+  test('TC-HOME-040: Mobile header menu button opens category navigation', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('./');
     await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
-    await test.step('Look for mobile menu button', async () => {
-      const menuButton = page.locator('button[aria-label*="menu"], button[class*="hamburger"], .mobile-menu-toggle').first();
-      const exists = await menuButton.count().then(c => c > 0);
+    await page.waitForLoadState('networkidle');
+    const visibleLinks = () => page.locator('a[href]').filter({ visible: true }).count();
+    const before = await visibleLinks();
 
-      console.log(`Mobile menu button found: ${exists}`);
-
-      if (exists) {
-        await test.step('Click mobile menu', async () => {
-          try {
-            await menuButton.click();
-            await page.waitForTimeout(500);
-            console.log(`✓ Mobile menu opened`);
-
-            // Check if menu is now visible
-            const mobileMenu = page.locator('[class*="mobile-menu"], nav[class*="mobile"]').first();
-            const visible = await mobileMenu.isVisible();
-            console.log(`Mobile menu visible: ${visible}`);
-          } catch (e) {
-            console.log(`✗ Mobile menu click failed: ${e}`);
-          }
-        });
-      }
+    const center = await page.locator('button').filter({ visible: true }).evaluateAll((els) => {
+      const hit = els
+        .map((el) => el.getBoundingClientRect())
+        .find((r) => r.left < 60 && r.top < 60 && r.width > 0);
+      return hit ? { x: hit.left + hit.width / 2, y: hit.top + hit.height / 2 } : null;
     });
+    expect(center, 'no menu button in the top-left corner').not.toBeNull();
+    await page.mouse.click(center!.x, center!.y);
+
+    await expect
+      .poll(visibleLinks, { message: 'menu did not reveal category links', timeout: 10000 })
+      .toBeGreaterThan(before + 5);
   });
 
-  test('TC-HOME-041: Tablet layout optimization', async ({ page }) => {
+  test('TC-HOME-041: Section headings fit the tablet viewport', async ({ page }) => {
     await page.setViewportSize({ width: 768, height: 1024 });
     await page.goto('./');
     await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
-    await test.step('Verify tablet layout', async () => {
-      const sections = page.locator('section, div[class*="section"]').all();
-      const sectionElements = await sections;
-
-      for (let i = 0; i < Math.min(3, sectionElements.length); i++) {
-        const section = sectionElements[i];
-        const box = await section.boundingBox();
-
-        if (box) {
-          const fullWidth = box.width >= 700; // Tablet width
-          console.log(`Section ${i + 1}: ${box.width}px wide on tablet ${fullWidth ? '✓' : '✗'}`);
-        }
-      }
-    });
+    const overflowing = await page.locator('h2').evaluateAll((els) =>
+      els
+        .filter((e) => (e as HTMLElement).offsetParent !== null)
+        .filter((e) => e.getBoundingClientRect().right > window.innerWidth)
+        .map((e) => (e.textContent || '').trim().slice(0, 40))
+    );
+    expect(overflowing, `headings wider than the viewport:\n${overflowing.join('\n')}`).toEqual([]);
   });
 
-  test('TC-HOME-042: Touch target sizes on mobile', async ({ page }) => {
+  test('TC-HOME-042: Product card buttons meet the 24px minimum target size on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('./');
     await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
-    await test.step('Check button/link sizes for touch', async () => {
-      const buttons = page.locator('button, a[role="button"]').all();
-      const btnElements = await buttons;
-      const MIN_TOUCH_TARGET = 44; // WCAG recommended
-
-      let smallTargets = 0;
-
-      for (let i = 0; i < Math.min(10, btnElements.length); i++) {
-        const btn = btnElements[i];
-        const box = await btn.boundingBox();
-
-        if (box) {
-          if (box.width < MIN_TOUCH_TARGET || box.height < MIN_TOUCH_TARGET) {
-            smallTargets++;
-            console.log(`⚠ Small touch target: ${box.width}x${box.height}px (recommended: ${MIN_TOUCH_TARGET}px)`);
-          }
-        }
-      }
-
-      if (smallTargets === 0) {
-        console.log(`✓ All tested touch targets >= ${MIN_TOUCH_TARGET}px`);
-      } else {
-        console.log(`⚠ Found ${smallTargets} small touch targets`);
-      }
-    });
+    const cards = productCards(page);
+    await cards.first().waitFor({ state: 'attached', timeout: 30000 });
+    const buttons = cards.locator('button').filter({ visible: true });
+    const n = Math.min(10, await buttons.count());
+    for (let i = 0; i < n; i++) {
+      const box = await buttons.nth(i).boundingBox();
+      expect(box, `button ${i + 1} has no box`).not.toBeNull();
+      expect(Math.min(box!.width, box!.height), `button ${i + 1} is smaller than 24px`).toBeGreaterThanOrEqual(24);
+    }
   });
 
-  test('TC-HOME-043: Font sizes adapt to viewport', async ({ page }) => {
-    const viewport1 = { width: 390, height: 844 };
-    const viewport2 = { width: 1440, height: 900 };
-
-    let fontSizes1: Record<string, number> = {};
-    let fontSizes2: Record<string, number> = {};
-
-    await test.step('Measure fonts on mobile', async () => {
-      await page.setViewportSize(viewport1);
-      await page.goto('./');
-      await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
-
-      fontSizes1 = await page.evaluate(() => {
-        const h1 = document.querySelector('h1');
-        const h2 = document.querySelector('h2');
-        const p = document.querySelector('p');
-
-        return {
-          h1: parseInt(window.getComputedStyle(h1 || document.body).fontSize || '16'),
-          h2: parseInt(window.getComputedStyle(h2 || document.body).fontSize || '16'),
-          p: parseInt(window.getComputedStyle(p || document.body).fontSize || '16')
-        };
-      });
-
-      console.log(`Mobile font sizes: h1=${fontSizes1.h1}px, h2=${fontSizes1.h2}px, p=${fontSizes1.p}px`);
-    });
-
-    await test.step('Measure fonts on desktop', async () => {
-      await page.setViewportSize(viewport2);
-      await page.goto('./');
-      await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
-
-      fontSizes2 = await page.evaluate(() => {
-        const h1 = document.querySelector('h1');
-        const h2 = document.querySelector('h2');
-        const p = document.querySelector('p');
-
-        return {
-          h1: parseInt(window.getComputedStyle(h1 || document.body).fontSize || '16'),
-          h2: parseInt(window.getComputedStyle(h2 || document.body).fontSize || '16'),
-          p: parseInt(window.getComputedStyle(p || document.body).fontSize || '16')
-        };
-      });
-
-      console.log(`Desktop font sizes: h1=${fontSizes2.h1}px, h2=${fontSizes2.h2}px, p=${fontSizes2.p}px`);
-      console.log(`Font adaptation: h1 ${fontSizes2.h1 > fontSizes1.h1 ? '✓' : '✗'} h2 ${fontSizes2.h2 > fontSizes1.h2 ? '✓' : '✗'}`);
-    });
-  });
-
-  test('TC-HOME-044: Images responsive', async ({ page }) => {
+  test('TC-HOME-043: Body text stays at least 12px on mobile', async ({ page }) => {
     await page.setViewportSize({ width: 390, height: 844 });
     await page.goto('./');
     await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
-    await test.step('Check image responsive attributes', async () => {
-      const images = page.locator('img').all();
-      const imgElements = await images;
+    const small = await page.locator('p, span, a, li').evaluateAll((els) =>
+      els
+        .filter((e) => (e as HTMLElement).offsetParent !== null && (e.textContent || '').trim().length > 20)
+        .map((e) => ({ size: parseFloat(getComputedStyle(e).fontSize), text: (e.textContent || '').trim().slice(0, 40) }))
+        .filter((x) => x.size < 12)
+    );
+    expect(small, `text below 12px on mobile:\n${small.map((s) => `${s.size}px ${s.text}`).join('\n')}`).toEqual([]);
+  });
 
-      let withSrcset = 0;
-      let withSizes = 0;
+  test('TC-HOME-044: Images fit within the mobile viewport', async ({ page }) => {
+    await page.setViewportSize({ width: 390, height: 844 });
+    await page.goto('./');
+    await expect(homeLogo(page)).toBeVisible({ timeout: 30000 });
 
-      for (let i = 0; i < Math.min(10, imgElements.length); i++) {
-        const img = imgElements[i];
-        const srcset = await img.getAttribute('srcset');
-        const sizes = await img.getAttribute('sizes');
-
-        if (srcset) withSrcset++;
-        if (sizes) withSizes++;
-      }
-
-      console.log(`Responsive images - srcset: ${withSrcset}, sizes: ${withSizes}`);
-      console.log(withSrcset > 0 ? '✓ Some images are responsive' : '✗ No responsive image attributes found');
-    });
+    const wide = await page.locator('img').evaluateAll((els) =>
+      els
+        .filter((img) => (img as HTMLElement).offsetParent !== null)
+        .map((img) => ({ w: img.getBoundingClientRect().width, src: (img as HTMLImageElement).src }))
+        .filter((x) => x.w > window.innerWidth + 1)
+        .map((x) => `${Math.round(x.w)}px ${x.src}`)
+    );
+    expect(wide, `images wider than 390px:\n${wide.join('\n')}`).toEqual([]);
   });
 });

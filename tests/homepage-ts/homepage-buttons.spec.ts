@@ -1,155 +1,59 @@
-﻿/**
- * Button Tests - All Buttons & CTA Elements
- * Tests all button clicks, CTAs, and button states
- */
-
-import { test, expect } from '@playwright/test';
+﻿import { test, expect } from '@playwright/test';
+import { openHomepage, productCards } from './helpers';
 
 test.describe('Buttons & CTAs', () => {
-  test('TC-HOME-006: All buttons are clickable', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Find all buttons', async () => {
-      const buttons = page.locator('button').all();
-      const allButtons = await buttons;
-      console.log(`Found ${allButtons.length} buttons`);
-      expect(allButtons.length).toBeGreaterThan(0);
-    });
-
-    await test.step('Test button states', async () => {
-      const buttons = page.locator('button').all();
-      const allButtons = await buttons;
-
-      for (let i = 0; i < Math.min(5, allButtons.length); i++) {
-        const btn = allButtons[i];
-        const text = await btn.textContent();
-
-        await test.step(`Check button: ${text}`, async () => {
-          const visible = await btn.isVisible().catch(() => false);
-          const enabled = await btn.isEnabled().catch(() => false);
-          console.log(`Button "${text}" - Visible: ${visible}, Enabled: ${enabled}`);
-
-          if (enabled) {
-            try {
-              await btn.click({ timeout: 3000 });
-              await page.waitForTimeout(500);
-              console.log(`✓ Button clicked successfully`);
-            } catch (e) {
-              console.log(`✗ Button click failed: ${e}`);
-            }
-          }
-        });
-      }
-    });
+  test('TC-HOME-006: Visible buttons have an accessible name', async ({ page }) => {
+    await openHomepage(page);
+    const unnamed = await page.locator('button').evaluateAll((els) =>
+      els
+        .filter((b) => (b as HTMLElement).offsetParent !== null)
+        .filter((b) => !(b.getAttribute('aria-label') || b.textContent?.trim() || b.getAttribute('title')))
+        .length
+    );
+    expect(unnamed, `${unnamed} visible buttons have no accessible name`).toBe(0);
   });
 
-  test('TC-HOME-007: CTA buttons navigate correctly', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Find CTA buttons', async () => {
-      const ctaButtons = page.locator('a[class*="btn"], button[class*="cta"], [role="button"][onclick]').all();
-      const buttons = await ctaButtons;
-      console.log(`Found ${buttons.length} CTA buttons`);
-    });
-
-    await test.step('Test CTA navigation', async () => {
-      const ctaButtons = page.locator('a[class*="btn"], button[class*="cta"]').all();
-      const buttons = await ctaButtons;
-
-      for (let i = 0; i < Math.min(3, buttons.length); i++) {
-        const btn = buttons[i];
-        const href = await btn.getAttribute('href').catch(() => null);
-
-        if (href) {
-          await test.step(`Test CTA: ${href}`, async () => {
-            const initialUrl = page.url();
-            try {
-              await btn.click({ timeout: 3000 });
-              await page.waitForLoadState('domcontentloaded');
-              const newUrl = page.url();
-              console.log(`✓ Navigation worked: ${initialUrl} → ${newUrl}`);
-            } catch (e) {
-              console.log(`✗ CTA navigation failed`);
-            }
-          });
-          await page.goBack().catch(() => {});
-        }
-      }
-    });
+  test('TC-HOME-007: "View All" CTA navigates to its listing', async ({ page }) => {
+    await openHomepage(page);
+    const cta = page
+      .locator('a[href]')
+      .filter({ has: page.getByText('View All', { exact: true }) })
+      .filter({ visible: true })
+      .first();
+    await expect(cta).toBeVisible();
+    const href = await cta.getAttribute('href');
+    expect(href, 'View All link has no href').toBeTruthy();
+    const path = new URL(href!, page.url()).pathname;
+    await cta.click();
+    await page.waitForURL((u) => u.pathname === path, { timeout: 30000 });
   });
 
-  test('TC-HOME-008: Button hover states', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Check button hover effects', async () => {
-      const buttons = page.locator('button').all();
-      const allButtons = await buttons;
-
-      for (let i = 0; i < Math.min(3, allButtons.length); i++) {
-        const btn = allButtons[i];
-        const text = await btn.textContent();
-
-        await test.step(`Hover button: ${text}`, async () => {
-          const computedBefore = await btn.evaluate(el =>
-            window.getComputedStyle(el).backgroundColor
-          );
-
-          await btn.hover({ timeout: 3000 });
-          await page.waitForTimeout(200);
-
-          const computedAfter = await btn.evaluate(el =>
-            window.getComputedStyle(el).backgroundColor
-          );
-
-          console.log(`Button color before: ${computedBefore}`);
-          console.log(`Button color after: ${computedAfter}`);
-        });
-      }
-    });
+  test('TC-HOME-008: Add to Cart buttons show a pointer cursor', async ({ page }) => {
+    await openHomepage(page);
+    const buttons = page.locator('button[aria-label="Add to Cart"]').filter({ visible: true });
+    await expect(buttons.first()).toBeVisible({ timeout: 30000 });
+    const n = Math.min(5, await buttons.count());
+    for (let i = 0; i < n; i++) {
+      const cursor = await buttons.nth(i).evaluate((el) => getComputedStyle(el).cursor);
+      expect(cursor, `Add to Cart button ${i + 1}`).toBe('pointer');
+    }
   });
 
-  test('TC-HOME-009: Disabled buttons cannot be clicked', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Find disabled buttons', async () => {
-      const disabledButtons = page.locator('button:disabled').all();
-      const buttons = await disabledButtons;
-      console.log(`Found ${buttons.length} disabled buttons`);
-
-      for (let i = 0; i < buttons.length; i++) {
-        const btn = buttons[i];
-        const isDisabled = await btn.isDisabled();
-        expect(isDisabled).toBe(true);
-        console.log(`✓ Button is properly disabled`);
-      }
-    });
+  test('TC-HOME-009: Add to Cart buttons on product cards are enabled', async ({ page }) => {
+    await openHomepage(page);
+    const buttons = productCards(page).locator('button[aria-label="Add to Cart"]');
+    await buttons.first().waitFor({ state: 'attached', timeout: 30000 });
+    const n = Math.min(8, await buttons.count());
+    for (let i = 0; i < n; i++) {
+      await expect(buttons.nth(i), `Add to Cart button ${i + 1}`).toBeEnabled();
+    }
   });
 
-  test('TC-HOME-010: Add to cart buttons work', async ({ page }) => {
-    await page.goto('./');
-    await page.waitForLoadState('networkidle');
-
-    await test.step('Find add to cart buttons', async () => {
-      const addToCartButtons = page.locator(
-        'button:has-text("Add"), button:has-text("Cart"), [class*="add-to-cart"]'
-      ).all();
-      const buttons = await addToCartButtons;
-      console.log(`Found ${buttons.length} add-to-cart style buttons`);
-
-      if (buttons.length > 0) {
-        const btn = buttons[0];
-        try {
-          await btn.click({ timeout: 3000 });
-          await page.waitForTimeout(500);
-          console.log(`✓ Add to cart button clicked`);
-        } catch (e) {
-          console.log(`✗ Add to cart button failed: ${e}`);
-        }
-      }
-    });
+  test('TC-HOME-010: Add to Cart buttons share one accessible name', async ({ page }) => {
+    await openHomepage(page);
+    const buttons = productCards(page).locator('button[aria-label]');
+    await buttons.first().waitFor({ state: 'attached', timeout: 30000 });
+    const names = await buttons.evaluateAll((els) => els.map((e) => e.getAttribute('aria-label')));
+    expect(names.filter((n) => n === 'Add to Cart').length, 'no Add to Cart buttons found').toBeGreaterThan(0);
   });
 });

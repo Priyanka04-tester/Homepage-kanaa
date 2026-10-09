@@ -9,7 +9,9 @@ export const headerCart = (page: Page) =>
   page.locator('a[href*="cart"]').filter({ visible: true }).first();
 
 export const headerLanguageSwitch = (page: Page) =>
-  page.getByRole('button', { name: /عربي|English/ }).filter({ visible: true }).first();
+  page.getByRole('button', { name: /عربي|\bEN\b|English/ }).filter({ visible: true }).first();
+
+export const isThirdPartyError = (message: string) => /webengage|mixpanel/i.test(message);
 
 export const productCards = (page: Page) =>
   page.locator('a[href$=".html"]').filter({ has: page.locator('button[aria-label="Add to Cart"]') });
