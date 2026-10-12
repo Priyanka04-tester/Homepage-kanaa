@@ -1,0 +1,83 @@
+{
+  "locale": "en",
+  "comparedAt": "2026-10-12T05:34:57.141Z",
+  "previous": {
+    "file": "baseline-en-map.json",
+    "capturedAt": "2026-09-14T08:25:04.865Z",
+    "sections": 19
+  },
+  "current": {
+    "file": "homepage-map.json",
+    "capturedAt": "2026-10-12T05:33:13.651Z",
+    "sections": 19
+  },
+  "added": [
+    "Upgrade to iPhone 18",
+    "Your New Phone, Plus More.",
+    "Gaming Headphones"
+  ],
+  "removed": [
+    "SMART TABLET. SMARTER BUNDLE",
+    "BUY 1 GET 1 FREE",
+    "SHOP PS5 BUNDLES"
+  ],
+  "changed": [
+    {
+      "name": "Shop By Brand",
+      "before": {
+        "buttons": 26,
+        "links": 62,
+        "inputs": 2,
+        "images": 70,
+        "sliders": 1,
+        "productCards": 0
+      },
+      "after": {
+        "buttons": 26,
+        "links": 61,
+        "inputs": 2,
+        "images": 69,
+        "sliders": 1,
+        "productCards": 0
+      }
+    },
+    {
+      "name": "A Fragrance Worth Gifting",
+      "before": {
+        "buttons": 16,
+        "links": 9,
+        "inputs": 0,
+        "images": 32,
+        "sliders": 0,
+        "productCards": 8
+      },
+      "after": {
+        "buttons": 16,
+        "links": 10,
+        "inputs": 0,
+        "images": 33,
+        "sliders": 0,
+        "productCards": 8
+      }
+    },
+    {
+      "name": "Shop by Age",
+      "before": {
+        "buttons": 14,
+        "links": 14,
+        "inputs": 0,
+        "images": 35,
+        "sliders": 0,
+        "productCards": 7
+      },
+      "after": {
+        "buttons": 16,
+        "links": 15,
+        "inputs": 0,
+        "images": 39,
+        "sliders": 0,
+        "productCards": 8
+      }
+    }
+  ]
+}
