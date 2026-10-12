@@ -57,3 +57,41 @@ Generated from `state/en/homepage-map.json` (captured 2026-09-14T08:13:14.577Z) 
 
 ## Not yet executed
 This plan has been generated but **no test cases have been executed yet**. Execution, evidence capture, bug filing, retesting, regression and the final QA report are later phases — see `agents/homepage-executor.md` and `agents/homepage-bug-analyzer.md`.
+
+## Changes since the 2026-09-14 baseline (scan 2026-10-12)
+
+Appended without renumbering existing IDs. Source: state/en/plan-changes.json.
+
+### New sections: test cases added
+
+| Test case | Feature | Status |
+|---|---|---|
+| TC-HOME-EN-068 | Upgrade to iPhone 18 — links | NOT_EXECUTED |
+| TC-HOME-EN-069 | Upgrade to iPhone 18 — buttons | NOT_EXECUTED |
+| TC-HOME-EN-070 | Upgrade to iPhone 18 — product cards | NOT_EXECUTED |
+| TC-HOME-EN-071 | Upgrade to iPhone 18 — images | NOT_EXECUTED |
+| TC-HOME-EN-072 | Your New Phone, Plus More. — links | NOT_EXECUTED |
+| TC-HOME-EN-073 | Your New Phone, Plus More. — buttons | NOT_EXECUTED |
+| TC-HOME-EN-074 | Your New Phone, Plus More. — product cards | NOT_EXECUTED |
+| TC-HOME-EN-075 | Your New Phone, Plus More. — images | NOT_EXECUTED |
+| TC-HOME-EN-076 | Gaming Headphones — links | NOT_EXECUTED |
+| TC-HOME-EN-077 | Gaming Headphones — buttons | NOT_EXECUTED |
+| TC-HOME-EN-078 | Gaming Headphones — product cards | NOT_EXECUTED |
+| TC-HOME-EN-079 | Gaming Headphones — images | NOT_EXECUTED |
+
+### Retired sections: cases kept and flagged (confirm removal)
+
+| Test case | Feature | Note |
+|---|---|---|
+| TC-HOME-EN-006 | SMART TABLET. SMARTER BUNDLE — links | Section no longer on the homepage |
+| TC-HOME-EN-007 | SMART TABLET. SMARTER BUNDLE — buttons | Section no longer on the homepage |
+| TC-HOME-EN-008 | SMART TABLET. SMARTER BUNDLE — product cards | Section no longer on the homepage |
+| TC-HOME-EN-009 | SMART TABLET. SMARTER BUNDLE — images | Section no longer on the homepage |
+| TC-HOME-EN-010 | BUY 1 GET 1 FREE — links | Section no longer on the homepage |
+| TC-HOME-EN-011 | BUY 1 GET 1 FREE — buttons | Section no longer on the homepage |
+| TC-HOME-EN-012 | BUY 1 GET 1 FREE — product cards | Section no longer on the homepage |
+| TC-HOME-EN-013 | BUY 1 GET 1 FREE — images | Section no longer on the homepage |
+| TC-HOME-EN-014 | SHOP PS5 BUNDLES — links | Section no longer on the homepage |
+| TC-HOME-EN-015 | SHOP PS5 BUNDLES — buttons | Section no longer on the homepage |
+| TC-HOME-EN-016 | SHOP PS5 BUNDLES — product cards | Section no longer on the homepage |
+| TC-HOME-EN-017 | SHOP PS5 BUNDLES — images | Section no longer on the homepage |

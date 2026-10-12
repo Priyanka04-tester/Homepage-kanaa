@@ -467,5 +467,89 @@
     "sectionId": "HOME-GLOBAL",
     "text": "Measure time-to-first-contentful-paint-equivalent (hero banner visible) and count duplicate network requests to the same endpoint within one page load.",
     "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-068",
+    "requirementId": "REQ-HOME-EN-068",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "For each link in section HOME-SEC-EN-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-069",
+    "requirementId": "REQ-HOME-EN-069",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "For each button in section HOME-SEC-EN-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-070",
+    "requirementId": "REQ-HOME-EN-070",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-071",
+    "requirementId": "REQ-HOME-EN-071",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "Assert every image in section HOME-SEC-EN-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-072",
+    "requirementId": "REQ-HOME-EN-072",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "For each link in section HOME-SEC-EN-003, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-073",
+    "requirementId": "REQ-HOME-EN-073",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "For each button in section HOME-SEC-EN-003, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-074",
+    "requirementId": "REQ-HOME-EN-074",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-075",
+    "requirementId": "REQ-HOME-EN-075",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "Assert every image in section HOME-SEC-EN-003 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-076",
+    "requirementId": "REQ-HOME-EN-076",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "For each link in section HOME-SEC-EN-005, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-077",
+    "requirementId": "REQ-HOME-EN-077",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "For each button in section HOME-SEC-EN-005, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-078",
+    "requirementId": "REQ-HOME-EN-078",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-079",
+    "requirementId": "REQ-HOME-EN-079",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "Assert every image in section HOME-SEC-EN-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
   }
 ]

@@ -1,0 +1,83 @@
+{
+  "locale": "ar",
+  "comparedAt": "2026-10-12T06:28:18.151Z",
+  "previous": {
+    "file": "baseline-ar-map.json",
+    "capturedAt": "2026-09-14T08:14:22.609Z",
+    "sections": 19
+  },
+  "current": {
+    "file": "homepage-map.json",
+    "capturedAt": "2026-10-12T05:56:50.318Z",
+    "sections": 19
+  },
+  "added": [
+    "ارتق إلى آيفون 18",
+    "جوالك الجديد وكل اللي تحتاجه معه.",
+    "سماعات ألعاب"
+  ],
+  "removed": [
+    "تابلتك الجديد مع كل اللي تحتاجه.",
+    "اشتر 1 واحصل على 1 مجانا",
+    "PS5 تسوق باقات"
+  ],
+  "changed": [
+    {
+      "name": "تسوّّق حسب الماركة",
+      "before": {
+        "buttons": 26,
+        "links": 63,
+        "inputs": 2,
+        "images": 71,
+        "sliders": 1,
+        "productCards": 0
+      },
+      "after": {
+        "buttons": 26,
+        "links": 62,
+        "inputs": 2,
+        "images": 70,
+        "sliders": 1,
+        "productCards": 0
+      }
+    },
+    {
+      "name": "اختاروا عطراً يستحق أن يكون هدية.",
+      "before": {
+        "buttons": 16,
+        "links": 9,
+        "inputs": 0,
+        "images": 32,
+        "sliders": 0,
+        "productCards": 8
+      },
+      "after": {
+        "buttons": 16,
+        "links": 10,
+        "inputs": 0,
+        "images": 33,
+        "sliders": 0,
+        "productCards": 8
+      }
+    },
+    {
+      "name": "منتجات مناسبة لكل عمر",
+      "before": {
+        "buttons": 14,
+        "links": 14,
+        "inputs": 0,
+        "images": 35,
+        "sliders": 0,
+        "productCards": 7
+      },
+      "after": {
+        "buttons": 16,
+        "links": 15,
+        "inputs": 0,
+        "images": 39,
+        "sliders": 0,
+        "productCards": 8
+      }
+    }
+  ]
+}

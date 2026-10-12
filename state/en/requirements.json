@@ -400,5 +400,77 @@
     "sectionId": "HOME-GLOBAL",
     "feature": "Performance observation — initial load",
     "text": "The homepage must reach a usable state (hero banner interactive) within a reasonable time on staging, and must not issue duplicate/redundant API calls on a single load."
+  },
+  {
+    "id": "REQ-HOME-EN-068",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "Upgrade to iPhone 18 — links",
+    "text": "Every link in \"Upgrade to iPhone 18\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-069",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "Upgrade to iPhone 18 — buttons",
+    "text": "Every interactive button in \"Upgrade to iPhone 18\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-070",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "Upgrade to iPhone 18 — product cards",
+    "text": "Product cards in \"Upgrade to iPhone 18\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-071",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "Upgrade to iPhone 18 — images",
+    "text": "All images in \"Upgrade to iPhone 18\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-072",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Your New Phone, Plus More. — links",
+    "text": "Every link in \"Your New Phone, Plus More.\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-073",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Your New Phone, Plus More. — buttons",
+    "text": "Every interactive button in \"Your New Phone, Plus More.\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-074",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Your New Phone, Plus More. — product cards",
+    "text": "Product cards in \"Your New Phone, Plus More.\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-075",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Your New Phone, Plus More. — images",
+    "text": "All images in \"Your New Phone, Plus More.\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-076",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "Gaming Headphones — links",
+    "text": "Every link in \"Gaming Headphones\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-077",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "Gaming Headphones — buttons",
+    "text": "Every interactive button in \"Gaming Headphones\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-078",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "Gaming Headphones — product cards",
+    "text": "Product cards in \"Gaming Headphones\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-079",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "Gaming Headphones — images",
+    "text": "All images in \"Gaming Headphones\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
   }
 ]

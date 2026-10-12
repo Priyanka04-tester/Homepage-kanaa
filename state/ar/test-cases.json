@@ -16,12 +16,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 52 unique hrefs. 1 third-party link(s) returned non-2xx/3xx (informational): https://kanaa.go.link/?adj_t=1s8o5dxu&adj_campaign=footer -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-001/"
   },
   {
@@ -41,12 +44,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-002/"
   },
   {
@@ -94,12 +100,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-004/"
   },
   {
@@ -120,13 +129,16 @@
       "Type a very long string (200+ chars) and Unicode/Arabic text; confirm no overflow/crash."
     ],
     "expectedResult": "Inputs handle all cases gracefully with no console errors or broken layout.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No crashes, console errors, or overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-005/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-005/"
   },
   {
     "id": "TC-HOME-AR-006",
@@ -170,12 +182,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-007/"
   },
   {
@@ -225,12 +240,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-009/"
   },
   {
@@ -275,12 +293,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-011/"
   },
   {
@@ -330,12 +351,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-013/"
   },
   {
@@ -380,12 +404,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-015/"
   },
   {
@@ -435,12 +462,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-017/"
   },
   {
@@ -485,12 +515,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-019/"
   },
   {
@@ -540,12 +573,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-021/"
   },
   {
@@ -565,12 +601,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-022/"
   },
   {
@@ -590,12 +629,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-023/"
   },
   {
@@ -620,13 +662,16 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-024/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-024/"
   },
   {
     "id": "TC-HOME-AR-025",
@@ -645,12 +690,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-025/"
   },
   {
@@ -670,12 +718,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 11 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-026/"
   },
   {
@@ -695,13 +746,16 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-027/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-027/"
   },
   {
     "id": "TC-HOME-AR-028",
@@ -725,13 +779,16 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-028/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-028/"
   },
   {
     "id": "TC-HOME-AR-029",
@@ -750,12 +807,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-029/"
   },
   {
@@ -775,12 +835,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-030/"
   },
   {
@@ -800,12 +863,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-031/"
   },
   {
@@ -825,12 +891,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-032/"
   },
   {
@@ -850,13 +919,16 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-033/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-033/"
   },
   {
     "id": "TC-HOME-AR-034",
@@ -880,13 +952,16 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-034/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-034/"
   },
   {
     "id": "TC-HOME-AR-035",
@@ -905,12 +980,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-035/"
   },
   {
@@ -930,12 +1008,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 4 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-036/"
   },
   {
@@ -955,12 +1036,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-037/"
   },
   {
@@ -980,12 +1064,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-038/"
   },
   {
@@ -1005,13 +1092,16 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-039/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-039/"
   },
   {
     "id": "TC-HOME-AR-040",
@@ -1035,13 +1125,16 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-040/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-040/"
   },
   {
     "id": "TC-HOME-AR-041",
@@ -1060,12 +1153,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-041/"
   },
   {
@@ -1085,12 +1181,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 15 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-042/"
   },
   {
@@ -1110,12 +1209,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-043/"
   },
   {
@@ -1140,13 +1242,16 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-044/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-044/"
   },
   {
     "id": "TC-HOME-AR-045",
@@ -1165,12 +1270,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-045/"
   },
   {
@@ -1190,13 +1298,16 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-046/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-046/"
   },
   {
     "id": "TC-HOME-AR-047",
@@ -1215,12 +1326,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-047/"
   },
   {
@@ -1240,12 +1354,15 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-048/"
   },
   {
@@ -1290,12 +1407,15 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-050/"
   },
   {
@@ -1315,12 +1435,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-051/"
   },
   {
@@ -1341,13 +1464,16 @@
       "Type a very long string (200+ chars) and Unicode/Arabic text; confirm no overflow/crash."
     ],
     "expectedResult": "Inputs handle all cases gracefully with no console errors or broken layout.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No crashes, console errors, or overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-052/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-052/"
   },
   {
     "id": "TC-HOME-AR-053",
@@ -1368,13 +1494,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-053/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-053/"
   },
   {
     "id": "TC-HOME-AR-054",
@@ -1395,13 +1524,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-054/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-054/"
   },
   {
     "id": "TC-HOME-AR-055",
@@ -1422,13 +1554,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Horizontal overflow: scrollWidth=1049 > clientWidth=1024",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-055/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-055/"
   },
   {
     "id": "TC-HOME-AR-056",
@@ -1449,13 +1584,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Horizontal overflow: scrollWidth=793 > clientWidth=768",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-056/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-056/"
   },
   {
     "id": "TC-HOME-AR-057",
@@ -1476,13 +1614,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Horizontal overflow: scrollWidth=415 > clientWidth=390",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-057/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-057/"
   },
   {
     "id": "TC-HOME-AR-058",
@@ -1503,13 +1644,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Horizontal overflow: scrollWidth=418 > clientWidth=393",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-058/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-058/"
   },
   {
     "id": "TC-HOME-AR-059",
@@ -1530,13 +1674,16 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Horizontal overflow: scrollWidth=437 > clientWidth=412",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-059/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-059/"
   },
   {
     "id": "TC-HOME-AR-060",
@@ -1637,13 +1784,16 @@
       "Confirm heading structure is hierarchical (no skipped levels) for the section headings captured in homepage-map.json."
     ],
     "expectedResult": "All interactive elements are keyboard-reachable with a visible focus state and a non-empty accessible name.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "14 visible interactive element(s) with no accessible name (sample: HOME-SEC-AR-001 link href=\"/ar-sa/\"; HOME-SEC-AR-001 link href=\"/ar-sa/iphone-18.html\"; HOME-SEC-AR-001 button; HOME-SEC-AR-001 button; HOME-SEC-AR-002 link href=\"/ar-sa/phone-bundles.html\")",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-063/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-063/"
   },
   {
     "id": "TC-HOME-AR-064",
@@ -1663,13 +1813,16 @@
       "Throttle network to slow 3G (or simulate) and confirm skeleton/loading states appear rather than a blank page."
     ],
     "expectedResult": "No crashes, duplicate actions, or stuck UI under any of the above; console stays free of new errors.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No crashes or stuck state under any scenario.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-064/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-064/"
   },
   {
     "id": "TC-HOME-AR-065",
@@ -1688,13 +1841,16 @@
       "For first-party failures only, correlate to the section/element responsible and file as a candidate bug."
     ],
     "expectedResult": "Zero first-party console errors or failed first-party requests on a clean homepage load.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Console: 0, Network: POST https://thekanaa.com/ar-sa/ -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/gaming-consoles.html?_rsc=pm4ao -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/mobile-phones-tablets.html?_rsc=pm4ao -> net::ERR_ABORTED",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-065/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-065/"
   },
   {
     "id": "TC-HOME-AR-066",
@@ -1714,13 +1870,16 @@
       "Confirm no horizontal overflow was introduced by the switch."
     ],
     "expectedResult": "Language switcher reliably navigates to the other locale with the correct text direction and no layout breakage.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "Language switcher control not found by expected accessible name (pattern: /^EN$/)",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-066/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-066/"
   },
   {
     "id": "TC-HOME-AR-067",
@@ -1739,12 +1898,15 @@
       "Group network requests by URL and flag any endpoint called more than once with identical params within the same load."
     ],
     "expectedResult": "No destructive/duplicate-fetch pattern; load reaches an interactive hero within a few seconds on an unthrottled connection. This is an observational check, not a load/stress test.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "heroInteractiveMs=1843, duplicateRequestCount=1",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-067/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-067/"
   }
 ]

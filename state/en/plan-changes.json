@@ -1,0 +1,47 @@
+{
+  "appliedAt": "2026-10-12T06:03:39.393Z",
+  "newFeatures": [
+    "upgrade to iphone 18 — links",
+    "upgrade to iphone 18 — buttons",
+    "upgrade to iphone 18 — product cards",
+    "upgrade to iphone 18 — images",
+    "your new phone, plus more. — links",
+    "your new phone, plus more. — buttons",
+    "your new phone, plus more. — product cards",
+    "your new phone, plus more. — images",
+    "gaming headphones — links",
+    "gaming headphones — buttons",
+    "gaming headphones — product cards",
+    "gaming headphones — images"
+  ],
+  "retiredFeatures": [
+    "smart tablet. smarter bundle — links",
+    "smart tablet. smarter bundle — buttons",
+    "smart tablet. smarter bundle — product cards",
+    "smart tablet. smarter bundle — images",
+    "buy 1 get 1 free — links",
+    "buy 1 get 1 free — buttons",
+    "buy 1 get 1 free — product cards",
+    "buy 1 get 1 free — images",
+    "shop ps5 bundles — links",
+    "shop ps5 bundles — buttons",
+    "shop ps5 bundles — product cards",
+    "shop ps5 bundles — images"
+  ],
+  "appendedTestCases": 12,
+  "retiredTestCasesFlagged": 12,
+  "newIds": {
+    "TC-HOME-EN-006": "TC-HOME-EN-068",
+    "TC-HOME-EN-007": "TC-HOME-EN-069",
+    "TC-HOME-EN-008": "TC-HOME-EN-070",
+    "TC-HOME-EN-009": "TC-HOME-EN-071",
+    "TC-HOME-EN-010": "TC-HOME-EN-072",
+    "TC-HOME-EN-011": "TC-HOME-EN-073",
+    "TC-HOME-EN-012": "TC-HOME-EN-074",
+    "TC-HOME-EN-013": "TC-HOME-EN-075",
+    "TC-HOME-EN-018": "TC-HOME-EN-076",
+    "TC-HOME-EN-019": "TC-HOME-EN-077",
+    "TC-HOME-EN-020": "TC-HOME-EN-078",
+    "TC-HOME-EN-021": "TC-HOME-EN-079"
+  }
+}
