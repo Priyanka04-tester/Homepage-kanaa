@@ -51,7 +51,7 @@ const PATTERNS = {
     addToCart: /إضافة إلى السلة/,
     viewCartConfirmation: /عرض السلة/,
     searchPlaceholder: /ما الذي تبحث عنه/,
-    switchToOtherLocale: /^EN$/,
+    switchToOtherLocale: /\bEN\b|English/,
     otherLocaleUrlHint: /\/en-sa\//,
   },
 };

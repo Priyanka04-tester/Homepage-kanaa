@@ -22,7 +22,7 @@ for (const section of sectionsWithSliders) {
   const sliderIndex = globalSliderIndex;
   globalSliderIndex += 1;
 
-  test(`${tc.id}: ${section.name || section.id} — carousel navigation`, async ({ page }, testInfo) => {
+  test(`${tc.id}: ${section.id} — carousel navigation`, async ({ page }, testInfo) => {
     await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
 
     const prev = page.getByRole('button', { name: PREV_CONTROL_PATTERN }).nth(sliderIndex);

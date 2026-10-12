@@ -87,7 +87,7 @@ for (const section of productSections) {
   if (doSmoke) smokeAddToCartDone = true;
   const ordinalRank = namedProductSections.indexOf(section);
 
-  test(`${tc.id}: ${section.name || section.id} — sampled product cards`, async ({ page, context }, testInfo) => {
+  test(`${tc.id}: ${section.id} — sampled product cards`, async ({ page, context }, testInfo) => {
     await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
     // Trigger native lazy-loading down to this widget before resolving indices.
     for (let i = 1; i <= 12; i++) {

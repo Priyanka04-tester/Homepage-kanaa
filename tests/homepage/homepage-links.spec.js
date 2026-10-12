@@ -33,7 +33,7 @@ const sectionsWithLinks = map.sections.filter((s) => s.elementCounts && s.elemen
 for (const section of sectionsWithLinks) {
   const tc = findTestCase(section.id, 'links');
 
-  test(`${tc.id}: ${section.name || section.id} — every link resolves`, async ({ page, context }, testInfo) => {
+  test(`${tc.id}: ${section.id} — every link resolves`, async ({ page, context }, testInfo) => {
     const uniqueHrefs = [...new Set(section.elements.links.map((l) => l.href).filter(Boolean))];
 
     const placeholders = [];

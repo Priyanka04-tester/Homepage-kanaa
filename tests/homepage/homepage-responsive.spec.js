@@ -27,11 +27,21 @@ for (const vp of VIEWPORTS) {
     const findings = [];
 
     const overflow = await page.evaluate(() => {
-      const el = document.getElementById('main-container') || document.documentElement;
-      return { scrollWidth: el.scrollWidth, clientWidth: el.clientWidth };
+      const vw = document.documentElement.clientWidth;
+      const clipped = (e) => {
+        for (let p = e.parentElement; p; p = p.parentElement) {
+          if (getComputedStyle(p).overflowX !== 'visible') return true;
+        }
+        return false;
+      };
+      const escaping = Array.from(document.body.querySelectorAll('*')).filter((e) => {
+        const r = e.getBoundingClientRect();
+        return r.width > 0 && (r.right > vw + 2 || r.left < -2) && !clipped(e);
+      }).length;
+      return { clientWidth: vw, escaping };
     });
-    if (overflow.scrollWidth > overflow.clientWidth + 2) {
-      findings.push(`Horizontal overflow: scrollWidth=${overflow.scrollWidth} > clientWidth=${overflow.clientWidth}`);
+    if (overflow.escaping > 0) {
+      findings.push(`Horizontal overflow: ${overflow.escaping} element(s) extend past the ${overflow.clientWidth}px viewport`);
     }
 
     await page.screenshot({ path: require('path').join(dir, 'above-fold.png') });
@@ -60,6 +70,6 @@ for (const vp of VIEWPORTS) {
       actualResult: status === 'PASS' ? 'No horizontal overflow.' : findings.join(' | '),
     });
 
-    expect(overflow.scrollWidth, `Horizontal overflow at ${vp.name}`).toBeLessThanOrEqual(overflow.clientWidth + 2);
+    expect(overflow.escaping, `Horizontal overflow at ${vp.name}`).toBe(0);
   });
 }

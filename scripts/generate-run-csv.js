@@ -20,6 +20,12 @@ if (!resultsPath || !outPath) {
 const report = JSON.parse(fs.readFileSync(resultsPath, 'utf8'));
 const rows = [];
 
+const planPath = path.join(__dirname, '..', 'state', locale, 'test-cases.json');
+const featureById = {};
+if (fs.existsSync(planPath)) {
+  for (const c of JSON.parse(fs.readFileSync(planPath, 'utf8'))) featureById[c.id] = c.feature;
+}
+
 function walk(suite, trail) {
   const title = suite.title ? [...trail, suite.title] : trail;
   for (const spec of suite.specs || []) {
@@ -27,7 +33,7 @@ function walk(suite, trail) {
       const last = (test.results || [])[test.results.length - 1] || {};
       const idMatch = spec.title.match(/TC-HOME-\d+|SC-\d+/);
       const id = idMatch ? idMatch[0] : spec.title.split(':')[0];
-      const feature = title.filter(Boolean).slice(-1)[0] || '';
+      const feature = featureById[id] || title.filter(Boolean).slice(-1)[0] || '';
       const error = ((last.errors || [])[0] || {}).message || '';
       const firstLine = error.split('\n').find((l) => l.trim()) || '';
       let status = 'NOT RUN';
