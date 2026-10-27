@@ -25,8 +25,8 @@ for (const section of sectionsWithSliders) {
   test(`${tc.id}: ${section.id} — carousel navigation`, async ({ page }, testInfo) => {
     await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
 
-    const prev = page.getByRole('button', { name: PREV_CONTROL_PATTERN }).nth(sliderIndex);
-    const next = page.getByRole('button', { name: NEXT_CONTROL_PATTERN }).nth(sliderIndex);
+    const prev = page.getByRole('button', { name: PREV_CONTROL_PATTERN }).filter({ visible: true }).nth(sliderIndex);
+    const next = page.getByRole('button', { name: NEXT_CONTROL_PATTERN }).filter({ visible: true }).nth(sliderIndex);
     await expect(prev, 'Previous control should be visible').toBeVisible();
     await expect(next, 'Next control should be visible').toBeVisible();
 

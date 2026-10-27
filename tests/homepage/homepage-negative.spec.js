@@ -25,7 +25,7 @@ test(`${negativeTc.id}: Global negative/edge — interaction robustness`, async 
   // partway down first, or "Add to Cart" won't exist in the DOM yet on a cold load.
   await page.evaluate(() => { (document.getElementById('main-container') || document.scrollingElement).scrollTop = 900; });
   await page.waitForTimeout(500);
-  const addToCartBtn = page.getByRole('button', { name: PATTERNS.addToCart }).first();
+  const addToCartBtn = page.getByRole('button', { name: PATTERNS.addToCart }).filter({ visible: true }).first();
   if (await addToCartBtn.count() > 0) {
     const before = consoleErrors.length;
     try {
@@ -46,12 +46,14 @@ test(`${negativeTc.id}: Global negative/edge — interaction robustness`, async 
   await page.goto(LOCALE_PATH, { waitUntil: 'domcontentloaded' });
   await page.evaluate(() => { (document.getElementById('main-container') || document.scrollingElement).scrollTop = 900; });
   await page.waitForTimeout(500);
-  const firstCard = page.getByRole('button', { name: PATTERNS.addToCart }).first().locator('xpath=ancestor::a[1]');
+  const firstCard = page.getByRole('button', { name: PATTERNS.addToCart }).filter({ visible: true }).first().locator('xpath=ancestor::a[1]');
   const pdpHref = await firstCard.getAttribute('href').catch(() => null);
   if (pdpHref) {
+    const homeUrl = page.url();
     await firstCard.click();
+    await page.waitForURL((u) => u.toString() !== homeUrl, { timeout: 20_000 }).catch(() => {});
     await page.waitForLoadState('domcontentloaded');
-    const onPdp = page.url().includes(pdpHref.replace(BASE_URL, '')) || page.url() !== new URL(LOCALE_PATH, BASE_URL).toString();
+    const onPdp = page.url() !== homeUrl;
     if (!onPdp) findings.push(`Clicking a product card did not navigate away from the homepage (still at ${page.url()})`);
     await page.goBack({ waitUntil: 'domcontentloaded' });
     await page.waitForTimeout(500); // let a client-side router finish settling before checking

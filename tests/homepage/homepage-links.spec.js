@@ -34,6 +34,8 @@ for (const section of sectionsWithLinks) {
   const tc = findTestCase(section.id, 'links');
 
   test(`${tc.id}: ${section.id} — every link resolves`, async ({ page, context }, testInfo) => {
+    // Each link is requested with a 20s timeout plus one retry; a section can hold many links.
+    test.setTimeout(180_000);
     const uniqueHrefs = [...new Set(section.elements.links.map((l) => l.href).filter(Boolean))];
 
     const placeholders = [];

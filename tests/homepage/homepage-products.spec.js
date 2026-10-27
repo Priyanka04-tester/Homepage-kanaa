@@ -43,7 +43,7 @@ async function liveProductWidgetBuckets(page) {
       .sort((a, b) => a.top - b.top);
 
     const addToCartBtns = Array.from(document.querySelectorAll('button')).filter(
-      (b) => addToCartRe.test((b.getAttribute('aria-label') || b.textContent || '').trim())
+      (b) => addToCartRe.test((b.getAttribute('aria-label') || b.textContent || '').trim()) && b.getBoundingClientRect().width > 0
     );
 
     function sectionIndexForTop(top) {
@@ -68,9 +68,11 @@ async function liveProductWidgetBuckets(page) {
  * discovery (this site's campaign widgets do that — see specs/homepage-test-plan.md
  * "Known risks"), fall back to the Nth product widget in document order, since a
  * widget's position/rank is more stable than its wording. */
+const normaliseHeading = (s) => (s || '').normalize('NFKC').replace(/[\s ]+/g, ' ').replace(/[.,:;!?'"“”‘’()\-–—]/g, '').trim().toLowerCase();
+
 async function liveCardIndicesForSection(page, headingText, ordinalRank) {
   const buckets = await liveProductWidgetBuckets(page);
-  const exact = buckets.find((b) => b.text === headingText);
+  const exact = buckets.find((b) => normaliseHeading(b.text) === normaliseHeading(headingText));
   if (exact) return { indices: exact.indices, matchedBy: 'text', matchedHeading: exact.text };
   if (ordinalRank != null && buckets[ordinalRank]) {
     return { indices: buckets[ordinalRank].indices, matchedBy: 'ordinal-fallback', matchedHeading: buckets[ordinalRank].text };
@@ -127,7 +129,7 @@ for (const section of productSections) {
     const localCount = liveIndices.length;
     const sampleLocalIdx = [...new Set([0, Math.floor(localCount / 2), localCount - 1])].filter((i) => i >= 0 && i < localCount);
 
-    const addToCartButtons = page.getByRole('button', { name: PATTERNS.addToCart });
+    const addToCartButtons = page.getByRole('button', { name: PATTERNS.addToCart }).filter({ visible: true });
     let smokeAttempted = false;
 
     for (const localIdx of sampleLocalIdx) {
