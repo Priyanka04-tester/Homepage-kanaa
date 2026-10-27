@@ -82,6 +82,66 @@ for (const [device, s] of Object.entries(byDevice)) {
   summary.addRow({ metric: device, value: `PASS ${s.PASS || 0} | FAIL ${s.FAIL || 0} | FLAKY ${s.FLAKY || 0} | NOT RUN ${s['NOT RUN'] || 0}` });
 }
 
+// Test case report in the team layout: one block per feature, steps numbered inside the cell.
+const planCases = (() => {
+  const p = path.join(__dirname, '..', 'state', locale, 'test-cases.json');
+  return fs.existsSync(p) ? JSON.parse(fs.readFileSync(p, 'utf8')) : [];
+})();
+const recordById = new Map(records.map((r) => [r.test_case_id, r]));
+const runDate = new Date().toISOString().slice(0, 10);
+const tcSheet = wb.addWorksheet('Test Cases');
+tcSheet.columns = [
+  { header: 'Test Case ID', key: 'id', width: 16 },
+  { header: 'Test Case Description', key: 'desc', width: 44 },
+  { header: 'Preconditions', key: 'pre', width: 34 },
+  { header: 'Test Steps', key: 'steps', width: 60 },
+  { header: 'Test Data', key: 'data', width: 30 },
+  { header: 'Expected Result', key: 'expected', width: 44 },
+  { header: 'Actual Result', key: 'actual', width: 50 },
+];
+tcSheet.getRow(1).font = { bold: true };
+tcSheet.getRow(1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFBDD7EE' } };
+tcSheet.getRow(1).alignment = { horizontal: 'center', vertical: 'middle', wrapText: true };
+tcSheet.views = [{ state: 'frozen', ySplit: 1 }];
+
+const groups = new Map();
+for (const c of planCases) {
+  if (!recordById.has(c.id)) continue;
+  const group = (c.feature || '').split(' — ')[0].trim() || 'Other';
+  if (!groups.has(group)) groups.set(group, []);
+  groups.get(group).push(c);
+}
+const statusColour = { PASS: 'FFC6EFCE', FAIL: 'FFFFC7CE', FLAKY: 'FFFFEB9C', 'NOT RUN': 'FFD9D9D9' };
+for (const [group, cases] of groups) {
+  const header = tcSheet.addRow([group]);
+  tcSheet.mergeCells(header.number, 1, header.number, 7);
+  header.getCell(1).value = `${group}\nNote: Web (Chromium desktop), locale ${locale.toUpperCase()}, run ${runDate}`;
+  header.getCell(1).font = { bold: true, size: 12 };
+  header.getCell(1).fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: 'FFD9D2E9' } };
+  header.getCell(1).alignment = { vertical: 'middle', wrapText: true };
+  header.height = 34;
+  for (const c of cases) {
+    const rec = recordById.get(c.id);
+    const steps = (c.steps || []).map((s, i) => `${i + 1}. ${s}`).join('\n');
+    const actual = rec.status === 'PASS'
+      ? `PASS: ${rec.note ? `${rec.note}; ` : ''}matches expected`
+      : `${rec.status}: ${(rec.error || 'see report').replace(/\s+/g, ' ').slice(0, 300)}`;
+    const row = tcSheet.addRow({
+      id: c.id,
+      desc: c.scenario || c.feature,
+      pre: c.preconditions || '',
+      steps,
+      data: c.testData || 'N/A',
+      expected: c.expectedResult || '',
+      actual,
+    });
+    row.alignment = { vertical: 'top', wrapText: true };
+    row.getCell('actual').fill = { type: 'pattern', pattern: 'solid', fgColor: { argb: statusColour[rec.status] || 'FFFFFFFF' } };
+    const lines = Math.max(steps.split('\n').length, Math.ceil((c.scenario || '').length / 40), Math.ceil(actual.length / 45), 2);
+    row.height = Math.min(409, 15 * lines);
+  }
+}
+
 const columns = [
   { header: 'Test case ID', key: 'test_case_id', width: 16 },
   { header: 'Feature', key: 'feature', width: 40 },
