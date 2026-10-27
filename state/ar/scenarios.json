@@ -338,28 +338,28 @@
   {
     "id": "SC-HOME-AR-049",
     "requirementId": "REQ-HOME-AR-049",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "text": "For each link in section HOME-SEC-AR-019, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
     "priority": "P2"
   },
   {
     "id": "SC-HOME-AR-050",
     "requirementId": "REQ-HOME-AR-050",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "text": "For each button in section HOME-SEC-AR-019, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
     "priority": "P2"
   },
   {
     "id": "SC-HOME-AR-051",
     "requirementId": "REQ-HOME-AR-051",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "text": "Assert every image in section HOME-SEC-AR-019 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
     "priority": "P3"
   },
   {
     "id": "SC-HOME-AR-052",
     "requirementId": "REQ-HOME-AR-052",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "text": "Enter typical, empty, very long, and special-character values; confirm no crash, no console error, and reasonable UI feedback.",
     "priority": "P2"
   },
@@ -467,5 +467,124 @@
     "sectionId": "HOME-GLOBAL",
     "text": "Measure time-to-first-contentful-paint-equivalent (hero banner visible) and count duplicate network requests to the same endpoint within one page load.",
     "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-AR-068",
+    "requirementId": "REQ-HOME-AR-068",
+    "sectionId": "HOME-SEC-AR-002",
+    "text": "For each link in section HOME-SEC-AR-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-AR-069",
+    "requirementId": "REQ-HOME-AR-069",
+    "sectionId": "HOME-SEC-AR-002",
+    "text": "For each button in section HOME-SEC-AR-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-070",
+    "requirementId": "REQ-HOME-AR-070",
+    "sectionId": "HOME-SEC-AR-002",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-AR-071",
+    "requirementId": "REQ-HOME-AR-071",
+    "sectionId": "HOME-SEC-AR-002",
+    "text": "Assert every image in section HOME-SEC-AR-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-AR-072",
+    "requirementId": "REQ-HOME-AR-072",
+    "sectionId": "HOME-SEC-AR-003",
+    "text": "For each link in section HOME-SEC-AR-003, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-073",
+    "requirementId": "REQ-HOME-AR-073",
+    "sectionId": "HOME-SEC-AR-003",
+    "text": "For each button in section HOME-SEC-AR-003, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-074",
+    "requirementId": "REQ-HOME-AR-074",
+    "sectionId": "HOME-SEC-AR-003",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-AR-075",
+    "requirementId": "REQ-HOME-AR-075",
+    "sectionId": "HOME-SEC-AR-003",
+    "text": "Assert every image in section HOME-SEC-AR-003 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-AR-076",
+    "requirementId": "REQ-HOME-AR-076",
+    "sectionId": "HOME-SEC-AR-004",
+    "text": "For each link in section HOME-SEC-AR-004, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-077",
+    "requirementId": "REQ-HOME-AR-077",
+    "sectionId": "HOME-SEC-AR-004",
+    "text": "For each button in section HOME-SEC-AR-004, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-078",
+    "requirementId": "REQ-HOME-AR-078",
+    "sectionId": "HOME-SEC-AR-004",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-AR-079",
+    "requirementId": "REQ-HOME-AR-079",
+    "sectionId": "HOME-SEC-AR-004",
+    "text": "Assert every image in section HOME-SEC-AR-004 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-AR-080",
+    "requirementId": "REQ-HOME-AR-080",
+    "sectionId": "HOME-SEC-AR-005",
+    "text": "For each link in section HOME-SEC-AR-005, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-081",
+    "requirementId": "REQ-HOME-AR-081",
+    "sectionId": "HOME-SEC-AR-005",
+    "text": "For each button in section HOME-SEC-AR-005, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-AR-082",
+    "requirementId": "REQ-HOME-AR-082",
+    "sectionId": "HOME-SEC-AR-005",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-AR-083",
+    "requirementId": "REQ-HOME-AR-083",
+    "sectionId": "HOME-SEC-AR-005",
+    "text": "Assert every image in section HOME-SEC-AR-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-AR-084",
+    "requirementId": "REQ-HOME-AR-084",
+    "sectionId": "HOME-SEC-AR-016",
+    "text": "For each button in section HOME-SEC-AR-016, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
   }
 ]

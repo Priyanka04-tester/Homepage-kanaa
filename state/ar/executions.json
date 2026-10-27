@@ -754,5 +754,3463 @@
     "finishedAt": "2026-10-12T06:05:26.059Z",
     "evidencePath": "evidence/homepage/TC-HOME-AR-052/",
     "notes": "1 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-002",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:30:51.184Z",
+    "finishedAt": "2026-10-12T06:30:51.184Z",
+    "evidencePath": null,
+    "notes": "Tested 2/2 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-007",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:30:52.828Z",
+    "finishedAt": "2026-10-12T06:30:52.828Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-011",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:30:54.556Z",
+    "finishedAt": "2026-10-12T06:30:54.556Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-015",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:30:56.304Z",
+    "finishedAt": "2026-10-12T06:30:56.304Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-019",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:30:57.907Z",
+    "finishedAt": "2026-10-12T06:30:57.907Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-023",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:30:59.480Z",
+    "finishedAt": "2026-10-12T06:30:59.480Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-027",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:01.919Z",
+    "finishedAt": "2026-10-12T06:31:01.919Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-027/",
+    "notes": "Tested 0/7 eligible buttons (0 disabled, correctly skipped, 7 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-033",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:04.036Z",
+    "finishedAt": "2026-10-12T06:31:04.036Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-033/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-039",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:06.350Z",
+    "finishedAt": "2026-10-12T06:31:06.350Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-039/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-043",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:07.785Z",
+    "finishedAt": "2026-10-12T06:31:07.785Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-046",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:10.464Z",
+    "finishedAt": "2026-10-12T06:31:10.464Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-046/",
+    "notes": "Tested 0/6 eligible buttons (0 disabled, correctly skipped, 6 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-050",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:13.290Z",
+    "finishedAt": "2026-10-12T06:31:13.290Z",
+    "evidencePath": null,
+    "notes": "Tested 1/1 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-001",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:45.534Z",
+    "finishedAt": "2026-10-12T06:31:45.534Z",
+    "evidencePath": null,
+    "notes": "Checked 52 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-006",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:31:55.203Z",
+    "finishedAt": "2026-10-12T06:31:55.203Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-010",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:07.706Z",
+    "finishedAt": "2026-10-12T06:32:07.706Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-014",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:20.954Z",
+    "finishedAt": "2026-10-12T06:32:20.954Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-018",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:39.566Z",
+    "finishedAt": "2026-10-12T06:32:39.566Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-022",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:42.367Z",
+    "finishedAt": "2026-10-12T06:32:42.367Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-026",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:43.723Z",
+    "finishedAt": "2026-10-12T06:32:43.723Z",
+    "evidencePath": null,
+    "notes": "Checked 11 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-030",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:44.269Z",
+    "finishedAt": "2026-10-12T06:32:44.269Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-032",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:45.836Z",
+    "finishedAt": "2026-10-12T06:32:45.836Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-036",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:46.807Z",
+    "finishedAt": "2026-10-12T06:32:46.807Z",
+    "evidencePath": null,
+    "notes": "Checked 4 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-038",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:49.282Z",
+    "finishedAt": "2026-10-12T06:32:49.282Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-042",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:51.708Z",
+    "finishedAt": "2026-10-12T06:32:51.708Z",
+    "evidencePath": null,
+    "notes": "Checked 15 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-048",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:32:53.941Z",
+    "finishedAt": "2026-10-12T06:32:53.941Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-049",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:34:09.838Z",
+    "finishedAt": "2026-10-12T06:34:09.838Z",
+    "evidencePath": null,
+    "notes": "Checked 22 unique hrefs. 3 third-party link(s) returned non-2xx/3xx (informational): https://www.facebook.com/thekanaaofficial/ -> 400; https://www.tiktok.com/@kanaa.sa -> request error after retry: apiRequestContext.get: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://www.tiktok.com/@kanaa.sa\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Wind; https://eauthenticate.saudibusiness.gov.sa/certificate-details/0000171112 -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-064",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:34:24.021Z",
+    "finishedAt": "2026-10-12T06:34:24.021Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-064/",
+    "notes": "Rapid double-click Add to Cart, back/forward through a PDP, and reload-shortly-after-navigation were exercised, each from an independent fresh navigation."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-067",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:34:35.130Z",
+    "finishedAt": "2026-10-12T06:34:35.130Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-067/",
+    "notes": "Hero interactive in 7353ms; 1 URL(s) fetched more than once in one load."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-008",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:35:03.788Z",
+    "finishedAt": "2026-10-12T06:35:03.788Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-008/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. Included end-to-end Add to Cart smoke. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-012",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:35:43.265Z",
+    "finishedAt": "2026-10-12T06:35:43.265Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-012/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-016",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:36:08.304Z",
+    "finishedAt": "2026-10-12T06:36:08.304Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-016/",
+    "notes": "Live-resolved 8 card(s) (matched by ordinal-fallback); sampled local indices [0,4,7]. Widget title rotated: was \"اختاروا عطراً يستحق أن يكون هدية.\" at discovery, now \"سماعات ألعاب\" in the same position — matched by position, not text. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-020",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:36:36.142Z",
+    "finishedAt": "2026-10-12T06:36:36.142Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-020/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-024",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:36:59.927Z",
+    "finishedAt": "2026-10-12T06:36:59.927Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-024/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-028",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:37:23.486Z",
+    "finishedAt": "2026-10-12T06:37:23.486Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-028/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-034",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:37:46.885Z",
+    "finishedAt": "2026-10-12T06:37:46.885Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-034/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-040",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:38:12.058Z",
+    "finishedAt": "2026-10-12T06:38:12.058Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-040/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-044",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:38:34.024Z",
+    "finishedAt": "2026-10-12T06:38:34.024Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-044/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-053",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "startedAt": "2026-10-12T06:38:40.520Z",
+    "finishedAt": "2026-10-12T06:38:40.520Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-053/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-054",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "startedAt": "2026-10-12T06:38:45.647Z",
+    "finishedAt": "2026-10-12T06:38:45.647Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-054/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-055",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "startedAt": "2026-10-12T06:38:51.641Z",
+    "finishedAt": "2026-10-12T06:38:51.641Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-055/",
+    "notes": "Horizontal overflow: scrollWidth=1049 > clientWidth=1024"
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-056",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "startedAt": "2026-10-12T06:39:01.931Z",
+    "finishedAt": "2026-10-12T06:39:01.931Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-056/",
+    "notes": "Horizontal overflow: scrollWidth=793 > clientWidth=768"
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-057",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "startedAt": "2026-10-12T06:39:10.982Z",
+    "finishedAt": "2026-10-12T06:39:10.982Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-057/",
+    "notes": "Horizontal overflow: scrollWidth=415 > clientWidth=390"
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-058",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "startedAt": "2026-10-12T06:39:19.738Z",
+    "finishedAt": "2026-10-12T06:39:19.738Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-058/",
+    "notes": "Horizontal overflow: scrollWidth=418 > clientWidth=393"
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-059",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "startedAt": "2026-10-12T06:39:28.631Z",
+    "finishedAt": "2026-10-12T06:39:28.631Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-059/",
+    "notes": "Horizontal overflow: scrollWidth=437 > clientWidth=412"
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-004",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.770Z",
+    "finishedAt": "2026-10-12T06:40:20.770Z",
+    "evidencePath": null,
+    "notes": "70 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-009",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.779Z",
+    "finishedAt": "2026-10-12T06:40:20.779Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-013",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.788Z",
+    "finishedAt": "2026-10-12T06:40:20.788Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-017",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.800Z",
+    "finishedAt": "2026-10-12T06:40:20.800Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-021",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.815Z",
+    "finishedAt": "2026-10-12T06:40:20.815Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-025",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.826Z",
+    "finishedAt": "2026-10-12T06:40:20.826Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-029",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.835Z",
+    "finishedAt": "2026-10-12T06:40:20.835Z",
+    "evidencePath": null,
+    "notes": "34 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-031",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.845Z",
+    "finishedAt": "2026-10-12T06:40:20.845Z",
+    "evidencePath": null,
+    "notes": "1 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-035",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.855Z",
+    "finishedAt": "2026-10-12T06:40:20.855Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-037",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.867Z",
+    "finishedAt": "2026-10-12T06:40:20.867Z",
+    "evidencePath": null,
+    "notes": "4 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-041",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.878Z",
+    "finishedAt": "2026-10-12T06:40:20.878Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-045",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.904Z",
+    "finishedAt": "2026-10-12T06:40:20.904Z",
+    "evidencePath": null,
+    "notes": "39 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-047",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.929Z",
+    "finishedAt": "2026-10-12T06:40:20.929Z",
+    "evidencePath": null,
+    "notes": "6 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-051",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:20.957Z",
+    "finishedAt": "2026-10-12T06:40:20.957Z",
+    "evidencePath": null,
+    "notes": "10 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-063",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:27.393Z",
+    "finishedAt": "2026-10-12T06:40:27.393Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-063/",
+    "notes": "15 Tab stops checked for visible focus; homepage-map.json cross-checked for blank accessible names."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-066",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:33.307Z",
+    "finishedAt": "2026-10-12T06:40:33.307Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-066/",
+    "notes": "Clicked header language switcher toward English and checked URL + dir attribute + horizontal overflow."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-065",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:39.959Z",
+    "finishedAt": "2026-10-12T06:40:39.959Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-065/",
+    "notes": "Fresh homepage load; console + network listeners attached before navigation; classified by host."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-005",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:51.276Z",
+    "finishedAt": "2026-10-12T06:40:51.276Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-005/",
+    "notes": "2 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-052",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:40:53.595Z",
+    "finishedAt": "2026-10-12T06:40:53.595Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-052/",
+    "notes": "1 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-002",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:04.516Z",
+    "finishedAt": "2026-10-12T06:44:04.516Z",
+    "evidencePath": null,
+    "notes": "Tested 2/2 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-007",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:06.560Z",
+    "finishedAt": "2026-10-12T06:44:06.560Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-011",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:07.942Z",
+    "finishedAt": "2026-10-12T06:44:07.942Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-015",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:09.230Z",
+    "finishedAt": "2026-10-12T06:44:09.230Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-019",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:10.532Z",
+    "finishedAt": "2026-10-12T06:44:10.532Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-023",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:11.995Z",
+    "finishedAt": "2026-10-12T06:44:11.995Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-027",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:13.944Z",
+    "finishedAt": "2026-10-12T06:44:13.944Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-027/",
+    "notes": "Tested 0/7 eligible buttons (0 disabled, correctly skipped, 7 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-033",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:15.878Z",
+    "finishedAt": "2026-10-12T06:44:15.878Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-033/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-039",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:17.539Z",
+    "finishedAt": "2026-10-12T06:44:17.539Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-039/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-043",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:18.940Z",
+    "finishedAt": "2026-10-12T06:44:18.940Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-046",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:20.818Z",
+    "finishedAt": "2026-10-12T06:44:20.818Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-046/",
+    "notes": "Tested 0/6 eligible buttons (0 disabled, correctly skipped, 6 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-050",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:23.296Z",
+    "finishedAt": "2026-10-12T06:44:23.296Z",
+    "evidencePath": null,
+    "notes": "Tested 1/1 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-001",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:51.413Z",
+    "finishedAt": "2026-10-12T06:44:51.413Z",
+    "evidencePath": null,
+    "notes": "Checked 52 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-006",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:54.335Z",
+    "finishedAt": "2026-10-12T06:44:54.335Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-010",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:55.844Z",
+    "finishedAt": "2026-10-12T06:44:55.844Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-014",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:57.309Z",
+    "finishedAt": "2026-10-12T06:44:57.309Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-018",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:58.777Z",
+    "finishedAt": "2026-10-12T06:44:58.777Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-022",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:44:59.957Z",
+    "finishedAt": "2026-10-12T06:44:59.957Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-026",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:01.786Z",
+    "finishedAt": "2026-10-12T06:45:01.786Z",
+    "evidencePath": null,
+    "notes": "Checked 11 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-030",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:02.423Z",
+    "finishedAt": "2026-10-12T06:45:02.423Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-032",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:05.026Z",
+    "finishedAt": "2026-10-12T06:45:05.026Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-036",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:06.374Z",
+    "finishedAt": "2026-10-12T06:45:06.374Z",
+    "evidencePath": null,
+    "notes": "Checked 4 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-038",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:12.466Z",
+    "finishedAt": "2026-10-12T06:45:12.466Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-042",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:15.097Z",
+    "finishedAt": "2026-10-12T06:45:15.097Z",
+    "evidencePath": null,
+    "notes": "Checked 15 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-048",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:45:17.231Z",
+    "finishedAt": "2026-10-12T06:45:17.231Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-064",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:46:33.349Z",
+    "finishedAt": "2026-10-12T06:46:33.349Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-064/",
+    "notes": "Rapid double-click Add to Cart, back/forward through a PDP, and reload-shortly-after-navigation were exercised, each from an independent fresh navigation."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-067",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:46:42.164Z",
+    "finishedAt": "2026-10-12T06:46:42.164Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-067/",
+    "notes": "Hero interactive in 3598ms; 3 URL(s) fetched more than once in one load."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-008",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:47:09.596Z",
+    "finishedAt": "2026-10-12T06:47:09.596Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-008/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. Included end-to-end Add to Cart smoke. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-012",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:47:43.239Z",
+    "finishedAt": "2026-10-12T06:47:43.239Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-012/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-016",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:48:07.352Z",
+    "finishedAt": "2026-10-12T06:48:07.352Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-016/",
+    "notes": "Live-resolved 8 card(s) (matched by ordinal-fallback); sampled local indices [0,4,7]. Widget title rotated: was \"اختاروا عطراً يستحق أن يكون هدية.\" at discovery, now \"منتجات على ذوقك\" in the same position — matched by position, not text. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-020",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:48:29.958Z",
+    "finishedAt": "2026-10-12T06:48:29.958Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-020/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-024",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:48:50.095Z",
+    "finishedAt": "2026-10-12T06:48:50.095Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-024/",
+    "notes": "Live-resolved 8 card(s) (matched by ordinal-fallback); sampled local indices [0,4,7]. Widget title rotated: was \"عروض الأسبوع\" at discovery, now \"منتجات مناسبة لكل عمر\" in the same position — matched by position, not text. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-028",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:49:13.722Z",
+    "finishedAt": "2026-10-12T06:49:13.722Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-028/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-034",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:49:38.429Z",
+    "finishedAt": "2026-10-12T06:49:38.429Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-034/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-040",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:49:58.191Z",
+    "finishedAt": "2026-10-12T06:49:58.191Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-040/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-044",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:50:19.612Z",
+    "finishedAt": "2026-10-12T06:50:19.612Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-044/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-053",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "startedAt": "2026-10-12T06:50:24.428Z",
+    "finishedAt": "2026-10-12T06:50:24.428Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-053/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-054",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "startedAt": "2026-10-12T06:50:30.680Z",
+    "finishedAt": "2026-10-12T06:50:30.680Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-054/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-055",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "startedAt": "2026-10-12T06:50:35.417Z",
+    "finishedAt": "2026-10-12T06:50:35.417Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-055/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-056",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "startedAt": "2026-10-12T06:50:40.279Z",
+    "finishedAt": "2026-10-12T06:50:40.279Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-056/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-057",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "startedAt": "2026-10-12T06:50:44.592Z",
+    "finishedAt": "2026-10-12T06:50:44.592Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-057/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-058",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "startedAt": "2026-10-12T06:50:48.284Z",
+    "finishedAt": "2026-10-12T06:50:48.284Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-058/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-059",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "startedAt": "2026-10-12T06:50:53.640Z",
+    "finishedAt": "2026-10-12T06:50:53.640Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-059/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-004",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.605Z",
+    "finishedAt": "2026-10-12T06:51:40.605Z",
+    "evidencePath": null,
+    "notes": "70 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-009",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.615Z",
+    "finishedAt": "2026-10-12T06:51:40.615Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-013",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.625Z",
+    "finishedAt": "2026-10-12T06:51:40.625Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-017",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.634Z",
+    "finishedAt": "2026-10-12T06:51:40.634Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-021",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.644Z",
+    "finishedAt": "2026-10-12T06:51:40.644Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-025",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.654Z",
+    "finishedAt": "2026-10-12T06:51:40.654Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-029",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.664Z",
+    "finishedAt": "2026-10-12T06:51:40.664Z",
+    "evidencePath": null,
+    "notes": "34 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-031",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.673Z",
+    "finishedAt": "2026-10-12T06:51:40.673Z",
+    "evidencePath": null,
+    "notes": "1 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-035",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.683Z",
+    "finishedAt": "2026-10-12T06:51:40.683Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-037",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.693Z",
+    "finishedAt": "2026-10-12T06:51:40.693Z",
+    "evidencePath": null,
+    "notes": "4 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-041",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.703Z",
+    "finishedAt": "2026-10-12T06:51:40.703Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-045",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.714Z",
+    "finishedAt": "2026-10-12T06:51:40.714Z",
+    "evidencePath": null,
+    "notes": "39 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-047",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.726Z",
+    "finishedAt": "2026-10-12T06:51:40.726Z",
+    "evidencePath": null,
+    "notes": "6 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-051",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:40.737Z",
+    "finishedAt": "2026-10-12T06:51:40.737Z",
+    "evidencePath": null,
+    "notes": "10 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-063",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:45.588Z",
+    "finishedAt": "2026-10-12T06:51:45.588Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-063/",
+    "notes": "15 Tab stops checked for visible focus; homepage-map.json cross-checked for blank accessible names."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-066",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:50.087Z",
+    "finishedAt": "2026-10-12T06:51:50.087Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-066/",
+    "notes": "Clicked header language switcher toward English and checked URL + dir attribute + horizontal overflow."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-065",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:51:58.288Z",
+    "finishedAt": "2026-10-12T06:51:58.288Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-065/",
+    "notes": "Fresh homepage load; console + network listeners attached before navigation; classified by host."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-005",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:52:08.980Z",
+    "finishedAt": "2026-10-12T06:52:08.980Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-005/",
+    "notes": "2 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-052",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-12T06:52:10.914Z",
+    "finishedAt": "2026-10-12T06:52:10.914Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-052/",
+    "notes": "1 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-002",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:35:46.752Z",
+    "finishedAt": "2026-10-27T04:35:46.752Z",
+    "evidencePath": null,
+    "notes": "Tested 3/3 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-007",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:35:49.355Z",
+    "finishedAt": "2026-10-27T04:35:49.355Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-011",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:35:52.946Z",
+    "finishedAt": "2026-10-27T04:35:52.946Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-015",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:35:55.485Z",
+    "finishedAt": "2026-10-27T04:35:55.485Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-019",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:35:58.192Z",
+    "finishedAt": "2026-10-27T04:35:58.192Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-023",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:00.697Z",
+    "finishedAt": "2026-10-27T04:36:00.697Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-027",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:04.837Z",
+    "finishedAt": "2026-10-27T04:36:04.837Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-027/",
+    "notes": "Tested 0/7 eligible buttons (0 disabled, correctly skipped, 7 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-033",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:08.229Z",
+    "finishedAt": "2026-10-27T04:36:08.229Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-033/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-039",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:13.015Z",
+    "finishedAt": "2026-10-27T04:36:13.015Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-039/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-043",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:16.042Z",
+    "finishedAt": "2026-10-27T04:36:16.042Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-046",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:20.657Z",
+    "finishedAt": "2026-10-27T04:36:20.657Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-046/",
+    "notes": "Tested 0/6 eligible buttons (0 disabled, correctly skipped, 6 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-084",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:24.289Z",
+    "finishedAt": "2026-10-27T04:36:24.289Z",
+    "evidencePath": null,
+    "notes": "Tested 1/1 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-050",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:36:28.368Z",
+    "finishedAt": "2026-10-27T04:36:28.368Z",
+    "evidencePath": null,
+    "notes": "Tested 1/1 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-006",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:15.104Z",
+    "finishedAt": "2026-10-27T04:38:15.104Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-010",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:19.189Z",
+    "finishedAt": "2026-10-27T04:38:19.189Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-014",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:26.467Z",
+    "finishedAt": "2026-10-27T04:38:26.467Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-018",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:42.795Z",
+    "finishedAt": "2026-10-27T04:38:42.795Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-022",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:47.676Z",
+    "finishedAt": "2026-10-27T04:38:47.676Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-026",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:52.695Z",
+    "finishedAt": "2026-10-27T04:38:52.695Z",
+    "evidencePath": null,
+    "notes": "Checked 11 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-030",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:54.202Z",
+    "finishedAt": "2026-10-27T04:38:54.202Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-032",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:38:55.703Z",
+    "finishedAt": "2026-10-27T04:38:55.703Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-036",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:39:11.352Z",
+    "finishedAt": "2026-10-27T04:39:11.352Z",
+    "evidencePath": null,
+    "notes": "Checked 4 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-038",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:39:35.849Z",
+    "finishedAt": "2026-10-27T04:39:35.849Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-042",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:40:18.909Z",
+    "finishedAt": "2026-10-27T04:40:18.909Z",
+    "evidencePath": null,
+    "notes": "Checked 15 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-048",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:40:19.957Z",
+    "finishedAt": "2026-10-27T04:40:19.957Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-064",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:41:37.633Z",
+    "finishedAt": "2026-10-27T04:41:37.633Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-064/",
+    "notes": "Rapid double-click Add to Cart, back/forward through a PDP, and reload-shortly-after-navigation were exercised, each from an independent fresh navigation."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-067",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:41:43.680Z",
+    "finishedAt": "2026-10-27T04:41:43.680Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-067/",
+    "notes": "Hero interactive in 1860ms; 1 URL(s) fetched more than once in one load."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-008",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:42:12.523Z",
+    "finishedAt": "2026-10-27T04:42:12.523Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-008/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. Included end-to-end Add to Cart smoke. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-012",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:42:54.657Z",
+    "finishedAt": "2026-10-27T04:42:54.657Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-012/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-016",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:43:21.565Z",
+    "finishedAt": "2026-10-27T04:43:21.565Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-016/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-020",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:43:46.020Z",
+    "finishedAt": "2026-10-27T04:43:46.020Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-020/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-024",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:43:52.215Z",
+    "finishedAt": "2026-10-27T04:43:52.215Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-024/",
+    "notes": "Live-resolved 0 card(s) (matched by none); sampled local indices []. "
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-028",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:44:18.918Z",
+    "finishedAt": "2026-10-27T04:44:18.918Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-028/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-040",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:44:24.636Z",
+    "finishedAt": "2026-10-27T04:44:24.636Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-040/",
+    "notes": "Live-resolved 0 card(s) (matched by none); sampled local indices []. "
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-044",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:44:49.645Z",
+    "finishedAt": "2026-10-27T04:44:49.645Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-044/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-053",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "startedAt": "2026-10-27T04:44:54.635Z",
+    "finishedAt": "2026-10-27T04:44:54.635Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-053/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-054",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "startedAt": "2026-10-27T04:44:59.719Z",
+    "finishedAt": "2026-10-27T04:44:59.719Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-054/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-055",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "startedAt": "2026-10-27T04:45:05.619Z",
+    "finishedAt": "2026-10-27T04:45:05.619Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-055/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-056",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "startedAt": "2026-10-27T04:45:09.482Z",
+    "finishedAt": "2026-10-27T04:45:09.482Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-056/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-057",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "startedAt": "2026-10-27T04:45:13.348Z",
+    "finishedAt": "2026-10-27T04:45:13.348Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-057/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-058",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "startedAt": "2026-10-27T04:45:18.255Z",
+    "finishedAt": "2026-10-27T04:45:18.255Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-058/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-059",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "startedAt": "2026-10-27T04:45:22.103Z",
+    "finishedAt": "2026-10-27T04:45:22.103Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-059/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-004",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.679Z",
+    "finishedAt": "2026-10-27T04:46:09.679Z",
+    "evidencePath": null,
+    "notes": "70 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-009",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.697Z",
+    "finishedAt": "2026-10-27T04:46:09.697Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-013",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.712Z",
+    "finishedAt": "2026-10-27T04:46:09.712Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-017",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.727Z",
+    "finishedAt": "2026-10-27T04:46:09.727Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-021",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.742Z",
+    "finishedAt": "2026-10-27T04:46:09.742Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-025",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.755Z",
+    "finishedAt": "2026-10-27T04:46:09.755Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-029",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.768Z",
+    "finishedAt": "2026-10-27T04:46:09.768Z",
+    "evidencePath": null,
+    "notes": "34 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-031",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.781Z",
+    "finishedAt": "2026-10-27T04:46:09.781Z",
+    "evidencePath": null,
+    "notes": "1 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-037",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.792Z",
+    "finishedAt": "2026-10-27T04:46:09.792Z",
+    "evidencePath": null,
+    "notes": "4 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-041",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.805Z",
+    "finishedAt": "2026-10-27T04:46:09.805Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-045",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.815Z",
+    "finishedAt": "2026-10-27T04:46:09.815Z",
+    "evidencePath": null,
+    "notes": "39 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-047",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.828Z",
+    "finishedAt": "2026-10-27T04:46:09.828Z",
+    "evidencePath": null,
+    "notes": "6 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-051",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:09.839Z",
+    "finishedAt": "2026-10-27T04:46:09.839Z",
+    "evidencePath": null,
+    "notes": "10 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-063",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:14.923Z",
+    "finishedAt": "2026-10-27T04:46:14.923Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-063/",
+    "notes": "15 Tab stops checked for visible focus; homepage-map.json cross-checked for blank accessible names."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-066",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:21.205Z",
+    "finishedAt": "2026-10-27T04:46:21.205Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-066/",
+    "notes": "Clicked header language switcher toward English and checked URL + dir attribute + horizontal overflow."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-065",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:30.211Z",
+    "finishedAt": "2026-10-27T04:46:30.211Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-065/",
+    "notes": "Fresh homepage load; console + network listeners attached before navigation; classified by host."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-005",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:40.612Z",
+    "finishedAt": "2026-10-27T04:46:40.612Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-005/",
+    "notes": "2 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-052",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T04:46:42.679Z",
+    "finishedAt": "2026-10-27T04:46:42.679Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-052/",
+    "notes": "1 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-002",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:10:50.120Z",
+    "finishedAt": "2026-10-27T05:10:50.120Z",
+    "evidencePath": null,
+    "notes": "Tested 3/3 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-069",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:10:52.024Z",
+    "finishedAt": "2026-10-27T05:10:52.024Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-073",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:10:53.849Z",
+    "finishedAt": "2026-10-27T05:10:53.849Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-077",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:10:55.978Z",
+    "finishedAt": "2026-10-27T05:10:55.978Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-081",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:10:58.357Z",
+    "finishedAt": "2026-10-27T05:10:58.357Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-023",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:00.459Z",
+    "finishedAt": "2026-10-27T05:11:00.459Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-027",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:03.697Z",
+    "finishedAt": "2026-10-27T05:11:03.697Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-027/",
+    "notes": "Tested 0/7 eligible buttons (0 disabled, correctly skipped, 7 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-033",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:07.302Z",
+    "finishedAt": "2026-10-27T05:11:07.302Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-033/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-039",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:10.560Z",
+    "finishedAt": "2026-10-27T05:11:10.560Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-039/",
+    "notes": "Tested 0/5 eligible buttons (0 disabled, correctly skipped, 5 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-043",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:12.705Z",
+    "finishedAt": "2026-10-27T05:11:12.705Z",
+    "evidencePath": null,
+    "notes": "Tested 0/0 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-046",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:15.226Z",
+    "finishedAt": "2026-10-27T05:11:15.226Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-046/",
+    "notes": "Tested 0/6 eligible buttons (0 disabled, correctly skipped, 6 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-084",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:19.710Z",
+    "finishedAt": "2026-10-27T05:11:19.710Z",
+    "evidencePath": null,
+    "notes": "Tested 1/1 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-050",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:11:24.954Z",
+    "finishedAt": "2026-10-27T05:11:24.954Z",
+    "evidencePath": null,
+    "notes": "Tested 1/1 eligible buttons (0 disabled, correctly skipped, 0 not found on this load — see button-check.json)."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-001",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:13:08.312Z",
+    "finishedAt": "2026-10-27T05:13:08.312Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-001/",
+    "notes": "Checked 53 unique hrefs. 1 third-party link(s) returned non-2xx/3xx (informational): https://kanaa.go.link/?adj_t=1s8o5dxu&adj_campaign=footer -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-068",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:13:48.177Z",
+    "finishedAt": "2026-10-27T05:13:48.177Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-072",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:14:07.478Z",
+    "finishedAt": "2026-10-27T05:14:07.478Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-076",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:14:41.131Z",
+    "finishedAt": "2026-10-27T05:14:41.131Z",
+    "evidencePath": null,
+    "notes": "Checked 10 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-080",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:15:02.196Z",
+    "finishedAt": "2026-10-27T05:15:02.196Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-022",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:15:20.641Z",
+    "finishedAt": "2026-10-27T05:15:20.641Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-026",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:15:38.610Z",
+    "finishedAt": "2026-10-27T05:15:38.610Z",
+    "evidencePath": null,
+    "notes": "Checked 11 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-030",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:15:42.800Z",
+    "finishedAt": "2026-10-27T05:15:42.800Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-032",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:15:44.077Z",
+    "finishedAt": "2026-10-27T05:15:44.077Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-036",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:15:50.762Z",
+    "finishedAt": "2026-10-27T05:15:50.762Z",
+    "evidencePath": null,
+    "notes": "Checked 4 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-038",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:16:12.654Z",
+    "finishedAt": "2026-10-27T05:16:12.654Z",
+    "evidencePath": null,
+    "notes": "Checked 9 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-042",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:16:57.974Z",
+    "finishedAt": "2026-10-27T05:16:57.974Z",
+    "evidencePath": null,
+    "notes": "Checked 15 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-048",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:17:07.668Z",
+    "finishedAt": "2026-10-27T05:17:07.668Z",
+    "evidencePath": null,
+    "notes": "Checked 1 unique hrefs."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-049",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:18:11.203Z",
+    "finishedAt": "2026-10-27T05:18:11.203Z",
+    "evidencePath": null,
+    "notes": "Checked 24 unique hrefs. 3 third-party link(s) returned non-2xx/3xx (informational): https://www.facebook.com/thekanaaofficial/ -> 400; https://www.tiktok.com/@kanaa.sa -> request error after retry: apiRequestContext.get: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://www.tiktok.com/@kanaa.sa\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Wind; https://eauthenticate.saudibusiness.gov.sa/certificate-details/0000171112 -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-064",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:18:29.639Z",
+    "finishedAt": "2026-10-27T05:18:29.639Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-064/",
+    "notes": "Rapid double-click Add to Cart, back/forward through a PDP, and reload-shortly-after-navigation were exercised, each from an independent fresh navigation."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-067",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:18:38.025Z",
+    "finishedAt": "2026-10-27T05:18:38.025Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-067/",
+    "notes": "Hero interactive in 3350ms; 1 URL(s) fetched more than once in one load."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-070",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:19:04.285Z",
+    "finishedAt": "2026-10-27T05:19:04.285Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-070/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. Included end-to-end Add to Cart smoke. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-074",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:19:38.094Z",
+    "finishedAt": "2026-10-27T05:19:38.094Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-074/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-078",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:20:01.262Z",
+    "finishedAt": "2026-10-27T05:20:01.262Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-078/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-082",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:20:09.547Z",
+    "finishedAt": "2026-10-27T05:20:09.547Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-082/",
+    "notes": "Live-resolved 0 card(s) (matched by none); sampled local indices []. "
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-024",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:20:39.183Z",
+    "finishedAt": "2026-10-27T05:20:39.183Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-024/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-028",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:21:02.398Z",
+    "finishedAt": "2026-10-27T05:21:02.398Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-028/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-040",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:21:09.212Z",
+    "finishedAt": "2026-10-27T05:21:09.212Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-040/",
+    "notes": "Live-resolved 0 card(s) (matched by none); sampled local indices []. "
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-044",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:21:36.053Z",
+    "finishedAt": "2026-10-27T05:21:36.053Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-044/",
+    "notes": "Live-resolved 8 card(s) (matched by text); sampled local indices [0,4,7]. sample #4: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure. sample #7: wishlist button needed a forced click (likely a hover-reveal overlay covering it briefly) — worth a manual look, not treated as a hard failure."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-053",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1440,
+      "height": 900
+    },
+    "startedAt": "2026-10-27T05:21:42.106Z",
+    "finishedAt": "2026-10-27T05:21:42.106Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-053/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-054",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1920,
+      "height": 1080
+    },
+    "startedAt": "2026-10-27T05:21:49.105Z",
+    "finishedAt": "2026-10-27T05:21:49.105Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-054/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-055",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1024,
+      "height": 768
+    },
+    "startedAt": "2026-10-27T05:21:56.913Z",
+    "finishedAt": "2026-10-27T05:21:56.913Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-055/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-056",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 768,
+      "height": 1024
+    },
+    "startedAt": "2026-10-27T05:22:04.006Z",
+    "finishedAt": "2026-10-27T05:22:04.006Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-056/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-057",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "startedAt": "2026-10-27T05:22:10.598Z",
+    "finishedAt": "2026-10-27T05:22:10.598Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-057/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-058",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 393,
+      "height": 852
+    },
+    "startedAt": "2026-10-27T05:22:16.663Z",
+    "finishedAt": "2026-10-27T05:22:16.663Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-058/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-059",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 412,
+      "height": 915
+    },
+    "startedAt": "2026-10-27T05:22:21.668Z",
+    "finishedAt": "2026-10-27T05:22:21.668Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-059/",
+    "notes": "No layout issues detected."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-004",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.424Z",
+    "finishedAt": "2026-10-27T05:23:19.424Z",
+    "evidencePath": null,
+    "notes": "70 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-071",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.441Z",
+    "finishedAt": "2026-10-27T05:23:19.441Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-075",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.456Z",
+    "finishedAt": "2026-10-27T05:23:19.456Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-079",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.471Z",
+    "finishedAt": "2026-10-27T05:23:19.471Z",
+    "evidencePath": null,
+    "notes": "33 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-083",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.490Z",
+    "finishedAt": "2026-10-27T05:23:19.490Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-025",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.516Z",
+    "finishedAt": "2026-10-27T05:23:19.516Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-029",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.538Z",
+    "finishedAt": "2026-10-27T05:23:19.538Z",
+    "evidencePath": null,
+    "notes": "34 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-031",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.553Z",
+    "finishedAt": "2026-10-27T05:23:19.553Z",
+    "evidencePath": null,
+    "notes": "1 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-037",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.568Z",
+    "finishedAt": "2026-10-27T05:23:19.568Z",
+    "evidencePath": null,
+    "notes": "4 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-041",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.583Z",
+    "finishedAt": "2026-10-27T05:23:19.583Z",
+    "evidencePath": null,
+    "notes": "32 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-045",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.597Z",
+    "finishedAt": "2026-10-27T05:23:19.597Z",
+    "evidencePath": null,
+    "notes": "39 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-047",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.612Z",
+    "finishedAt": "2026-10-27T05:23:19.612Z",
+    "evidencePath": null,
+    "notes": "6 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-051",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:19.628Z",
+    "finishedAt": "2026-10-27T05:23:19.628Z",
+    "evidencePath": null,
+    "notes": "10 images checked after full-page scroll."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-063",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:26.524Z",
+    "finishedAt": "2026-10-27T05:23:26.524Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-063/",
+    "notes": "15 Tab stops checked for visible focus; homepage-map.json cross-checked for blank accessible names."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-066",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:23:43.398Z",
+    "finishedAt": "2026-10-27T05:23:43.398Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-066/",
+    "notes": "Clicked header language switcher toward English and checked URL + dir attribute + horizontal overflow."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-065",
+    "status": "FAIL",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:24:00.996Z",
+    "finishedAt": "2026-10-27T05:24:00.996Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-065/",
+    "notes": "Fresh homepage load; console + network listeners attached before navigation; classified by host."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-005",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:24:14.184Z",
+    "finishedAt": "2026-10-27T05:24:14.184Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-005/",
+    "notes": "2 input(s) checked with typical/empty/long/Unicode values."
+  },
+  {
+    "id": "EXEC-AR-0001",
+    "testCaseId": "TC-HOME-AR-052",
+    "status": "PASS",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "startedAt": "2026-10-27T05:24:16.732Z",
+    "finishedAt": "2026-10-27T05:24:16.732Z",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-052/",
+    "notes": "1 input(s) checked with typical/empty/long/Unicode values."
   }
 ]

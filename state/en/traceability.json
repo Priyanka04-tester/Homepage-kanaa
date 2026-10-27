@@ -385,7 +385,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-049",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-049",
     "testCaseId": "TC-HOME-EN-049",
@@ -393,7 +393,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-050",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-050",
     "testCaseId": "TC-HOME-EN-050",
@@ -401,7 +401,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-051",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-051",
     "testCaseId": "TC-HOME-EN-051",
@@ -409,7 +409,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-052",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-052",
     "testCaseId": "TC-HOME-EN-052",
@@ -537,7 +537,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-068",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-068",
     "testCaseId": "TC-HOME-EN-068",
@@ -545,7 +545,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-069",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-069",
     "testCaseId": "TC-HOME-EN-069",
@@ -553,7 +553,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-070",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-070",
     "testCaseId": "TC-HOME-EN-070",
@@ -561,7 +561,7 @@
   },
   {
     "requirementId": "REQ-HOME-EN-071",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-071",
     "testCaseId": "TC-HOME-EN-071",
@@ -629,6 +629,110 @@
     "elementId": null,
     "scenarioId": "SC-HOME-EN-079",
     "testCaseId": "TC-HOME-EN-079",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-080",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-080",
+    "testCaseId": "TC-HOME-EN-080",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-081",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-081",
+    "testCaseId": "TC-HOME-EN-081",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-082",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-082",
+    "testCaseId": "TC-HOME-EN-082",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-083",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-083",
+    "testCaseId": "TC-HOME-EN-083",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-084",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-084",
+    "testCaseId": "TC-HOME-EN-084",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-085",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-085",
+    "testCaseId": "TC-HOME-EN-085",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-086",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-086",
+    "testCaseId": "TC-HOME-EN-086",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-087",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-087",
+    "testCaseId": "TC-HOME-EN-087",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-088",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-088",
+    "testCaseId": "TC-HOME-EN-088",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-089",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-089",
+    "testCaseId": "TC-HOME-EN-089",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-090",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-090",
+    "testCaseId": "TC-HOME-EN-090",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-091",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-091",
+    "testCaseId": "TC-HOME-EN-091",
+    "bugIds": []
+  },
+  {
+    "requirementId": "REQ-HOME-EN-092",
+    "sectionId": "HOME-SEC-EN-016",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-092",
+    "testCaseId": "TC-HOME-EN-092",
     "bugIds": []
   }
 ]

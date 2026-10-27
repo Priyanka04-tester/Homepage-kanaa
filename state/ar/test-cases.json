@@ -16,8 +16,8 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": "All first-party links resolved. Checked 52 unique hrefs. 1 third-party link(s) returned non-2xx/3xx (informational): https://kanaa.go.link/?adj_t=1s8o5dxu&adj_campaign=footer -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.",
-    "status": "PASS",
+    "actualResult": "First-party link failures: https://thekanaa.com/ar-sa/brand/sony.html -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.; https://thekanaa.com/ar-sa/brand/bumbumz.html -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.; https://thekanaa.com/ar-sa/brand/compound_kings.html -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -25,7 +25,7 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-001/"
+    "evidencePath": "evidence/homepage/TC-HOME-AR-001/"
   },
   {
     "id": "TC-HOME-AR-002",
@@ -157,13 +157,17 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-006/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-006/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-007",
@@ -191,7 +195,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-007/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-007/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-008",
@@ -215,13 +220,17 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "smoke Add to Cart (sample #0) failed: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /إضافة إلى السلة/ }).first()\u001b[22m\n\u001b[2m    - locator  — see README \"Known site quirks\" re: throttling before filing as a bug",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-008/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-008/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-009",
@@ -249,7 +258,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-009/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-009/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-010",
@@ -268,13 +278,17 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-010/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-010/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-011",
@@ -302,7 +316,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-011/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-011/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-012",
@@ -326,13 +341,17 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-012/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-012/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-013",
@@ -360,7 +379,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-013/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-013/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-014",
@@ -379,13 +399,17 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-014/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-014/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-015",
@@ -413,7 +437,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-015/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-015/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-016",
@@ -437,13 +462,17 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-016/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-016/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-017",
@@ -471,7 +500,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-017/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-017/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-018",
@@ -490,13 +520,17 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-018/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-018/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-019",
@@ -524,7 +558,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-019/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-019/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-020",
@@ -548,13 +583,17 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-020/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-020/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-021",
@@ -582,7 +621,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-021/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-021/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-022",
@@ -891,7 +931,7 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
@@ -961,7 +1001,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/TC-HOME-AR-034/"
+    "evidencePath": "evidence/homepage/TC-HOME-AR-034/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-035",
@@ -989,7 +1030,8 @@
       "height": 800
     },
     "executionId": "EXEC-AR-0001",
-    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-035/"
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-035/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-AR-036",
@@ -1125,8 +1167,8 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
-    "status": "PASS",
+    "actualResult": "No product cards found live for widget originally titled \"منتجات على ذوقك\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1368,7 +1410,7 @@
   {
     "id": "TC-HOME-AR-049",
     "requirementId": "REQ-HOME-AR-049",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "elementId": null,
     "scenarioId": "SC-HOME-AR-049",
     "feature": "تسوق حسب الفئة — links",
@@ -1382,18 +1424,21 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 24 unique hrefs. 3 third-party link(s) returned non-2xx/3xx (informational): https://www.facebook.com/thekanaaofficial/ -> 400; https://www.tiktok.com/@kanaa.sa -> request error after retry: apiRequestContext.get: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://www.tiktok.com/@kanaa.sa\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Wind; https://eauthenticate.saudibusiness.gov.sa/certificate-details/0000171112 -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/ar/TC-HOME-AR-049/"
   },
   {
     "id": "TC-HOME-AR-050",
     "requirementId": "REQ-HOME-AR-050",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "elementId": null,
     "scenarioId": "SC-HOME-AR-050",
     "feature": "تسوق حسب الفئة — buttons",
@@ -1421,7 +1466,7 @@
   {
     "id": "TC-HOME-AR-051",
     "requirementId": "REQ-HOME-AR-051",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "elementId": null,
     "scenarioId": "SC-HOME-AR-051",
     "feature": "تسوق حسب الفئة — images",
@@ -1449,7 +1494,7 @@
   {
     "id": "TC-HOME-AR-052",
     "requirementId": "REQ-HOME-AR-052",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "elementId": null,
     "scenarioId": "SC-HOME-AR-052",
     "feature": "تسوق حسب الفئة — inputs",
@@ -1554,8 +1599,8 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=1049 > clientWidth=1024",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1584,8 +1629,8 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=793 > clientWidth=768",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1614,8 +1659,8 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=415 > clientWidth=390",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1644,8 +1689,8 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=418 > clientWidth=393",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1674,8 +1719,8 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=437 > clientWidth=412",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1784,7 +1829,7 @@
       "Confirm heading structure is hierarchical (no skipped levels) for the section headings captured in homepage-map.json."
     ],
     "expectedResult": "All interactive elements are keyboard-reachable with a visible focus state and a non-empty accessible name.",
-    "actualResult": "14 visible interactive element(s) with no accessible name (sample: HOME-SEC-AR-001 link href=\"/ar-sa/\"; HOME-SEC-AR-001 link href=\"/ar-sa/iphone-18.html\"; HOME-SEC-AR-001 button; HOME-SEC-AR-001 button; HOME-SEC-AR-002 link href=\"/ar-sa/phone-bundles.html\")",
+    "actualResult": "14 visible interactive element(s) with no accessible name (sample: HOME-SEC-AR-001 link href=\"/ar-sa/\"; HOME-SEC-AR-001 link href=\"/ar-sa/phone-bundles.html\"; HOME-SEC-AR-001 button; HOME-SEC-AR-001 button; HOME-SEC-AR-002 link href=\"/ar-sa/ps5-bundle.html\")",
     "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
@@ -1813,8 +1858,8 @@
       "Throttle network to slow 3G (or simulate) and confirm skeleton/loading states appear rather than a blank page."
     ],
     "expectedResult": "No crashes, duplicate actions, or stuck UI under any of the above; console stays free of new errors.",
-    "actualResult": "No crashes or stuck state under any scenario.",
-    "status": "PASS",
+    "actualResult": "Clicking a product card did not navigate away from the homepage (still at https://thekanaa.com/ar-sa/) | Back navigation did not return to homepage (at about:blank) — reproduced once; rerun to confirm before filing as a bug",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
     "viewport": {
@@ -1841,7 +1886,7 @@
       "For first-party failures only, correlate to the section/element responsible and file as a candidate bug."
     ],
     "expectedResult": "Zero first-party console errors or failed first-party requests on a clean homepage load.",
-    "actualResult": "Console: 0, Network: POST https://thekanaa.com/ar-sa/ -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/gaming-consoles.html?_rsc=pm4ao -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/mobile-phones-tablets.html?_rsc=pm4ao -> net::ERR_ABORTED",
+    "actualResult": "Console: 0, Network: POST https://thekanaa.com/ar-sa/ -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/backtoschool/?_rsc=P6_Td76J5h7eMe0- -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/toys-games/cars-vehicles.html?_rsc=P6_Td76J5h7eMe0- -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/gaming-consoles.html?_rsc=P6_Td76J5h7eMe0- -> net::ERR_ABORTED | GET https://thekanaa.com/ar-sa/mobile-phones-tablets.ht",
     "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
@@ -1870,7 +1915,7 @@
       "Confirm no horizontal overflow was introduced by the switch."
     ],
     "expectedResult": "Language switcher reliably navigates to the other locale with the correct text direction and no layout breakage.",
-    "actualResult": "Language switcher control not found by expected accessible name (pattern: /^EN$/)",
+    "actualResult": "URL did not change to the English locale after clicking the switcher (still at https://thekanaa.com/ar-sa/) | Expected <html dir=\"ltr\"> after switching to English, got dir=\"rtl\"",
     "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
@@ -1898,7 +1943,7 @@
       "Group network requests by URL and flag any endpoint called more than once with identical params within the same load."
     ],
     "expectedResult": "No destructive/duplicate-fetch pattern; load reaches an interactive hero within a few seconds on an unthrottled connection. This is an observational check, not a load/stress test.",
-    "actualResult": "heroInteractiveMs=1843, duplicateRequestCount=1",
+    "actualResult": "heroInteractiveMs=3350, duplicateRequestCount=1",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=ar",
     "browser": "chromium",
@@ -1908,5 +1953,501 @@
     },
     "executionId": "EXEC-AR-0001",
     "evidencePath": "evidence/homepage/TC-HOME-AR-067/"
+  },
+  {
+    "id": "TC-HOME-AR-068",
+    "requirementId": "REQ-HOME-AR-068",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-068",
+    "feature": "أحدث التقنيات، بأفضل قيمة — links",
+    "scenario": "For each link in section HOME-SEC-AR-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-002].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-002 (\"أحدث التقنيات، بأفضل قيمة\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-068/"
+  },
+  {
+    "id": "TC-HOME-AR-069",
+    "requirementId": "REQ-HOME-AR-069",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-069",
+    "feature": "أحدث التقنيات، بأفضل قيمة — buttons",
+    "scenario": "For each button in section HOME-SEC-AR-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-002].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-002 (\"أحدث التقنيات، بأفضل قيمة\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-069/"
+  },
+  {
+    "id": "TC-HOME-AR-070",
+    "requirementId": "REQ-HOME-AR-070",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-070",
+    "feature": "أحدث التقنيات، بأفضل قيمة — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-002].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "smoke Add to Cart (sample #0) failed: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /إضافة إلى السلة/ }).first()\u001b[22m\n\u001b[2m    - locator  — see README \"Known site quirks\" re: throttling before filing as a bug",
+    "status": "FAIL",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-070/"
+  },
+  {
+    "id": "TC-HOME-AR-071",
+    "requirementId": "REQ-HOME-AR-071",
+    "sectionId": "HOME-SEC-AR-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-071",
+    "feature": "أحدث التقنيات، بأفضل قيمة — images",
+    "scenario": "Assert every image in section HOME-SEC-AR-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-002].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-071/"
+  },
+  {
+    "id": "TC-HOME-AR-072",
+    "requirementId": "REQ-HOME-AR-072",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-072",
+    "feature": "أقوى الألعاب، وأفضل العروض — links",
+    "scenario": "For each link in section HOME-SEC-AR-003, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-003].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-003 (\"أقوى الألعاب، وأفضل العروض\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-072/"
+  },
+  {
+    "id": "TC-HOME-AR-073",
+    "requirementId": "REQ-HOME-AR-073",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-073",
+    "feature": "أقوى الألعاب، وأفضل العروض — buttons",
+    "scenario": "For each button in section HOME-SEC-AR-003, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-003].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-003 (\"أقوى الألعاب، وأفضل العروض\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-073/"
+  },
+  {
+    "id": "TC-HOME-AR-074",
+    "requirementId": "REQ-HOME-AR-074",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-074",
+    "feature": "أقوى الألعاب، وأفضل العروض — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-003].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-074/"
+  },
+  {
+    "id": "TC-HOME-AR-075",
+    "requirementId": "REQ-HOME-AR-075",
+    "sectionId": "HOME-SEC-AR-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-075",
+    "feature": "أقوى الألعاب، وأفضل العروض — images",
+    "scenario": "Assert every image in section HOME-SEC-AR-003 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-003].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-075/"
+  },
+  {
+    "id": "TC-HOME-AR-076",
+    "requirementId": "REQ-HOME-AR-076",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-076",
+    "feature": "ارتق إلى آيفون 18 — links",
+    "scenario": "For each link in section HOME-SEC-AR-004, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-004].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-004 (\"ارتق إلى آيفون 18\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-076/"
+  },
+  {
+    "id": "TC-HOME-AR-077",
+    "requirementId": "REQ-HOME-AR-077",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-077",
+    "feature": "ارتق إلى آيفون 18 — buttons",
+    "scenario": "For each button in section HOME-SEC-AR-004, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-004].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-004 (\"ارتق إلى آيفون 18\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-077/"
+  },
+  {
+    "id": "TC-HOME-AR-078",
+    "requirementId": "REQ-HOME-AR-078",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-078",
+    "feature": "ارتق إلى آيفون 18 — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-004].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-078/"
+  },
+  {
+    "id": "TC-HOME-AR-079",
+    "requirementId": "REQ-HOME-AR-079",
+    "sectionId": "HOME-SEC-AR-004",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-079",
+    "feature": "ارتق إلى آيفون 18 — images",
+    "scenario": "Assert every image in section HOME-SEC-AR-004 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-004].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-079/"
+  },
+  {
+    "id": "TC-HOME-AR-080",
+    "requirementId": "REQ-HOME-AR-080",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-080",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — links",
+    "scenario": "For each link in section HOME-SEC-AR-005, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-005].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-005 (\"أناقة بسيطة، وسحر لا يقاوم.\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-080/"
+  },
+  {
+    "id": "TC-HOME-AR-081",
+    "requirementId": "REQ-HOME-AR-081",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-081",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — buttons",
+    "scenario": "For each button in section HOME-SEC-AR-005, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-005].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-005 (\"أناقة بسيطة، وسحر لا يقاوم.\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-081/"
+  },
+  {
+    "id": "TC-HOME-AR-082",
+    "requirementId": "REQ-HOME-AR-082",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-082",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-005].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "No product cards found live for widget originally titled \"أناقة بسيطة، وسحر لا يقاوم.\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-AR-082/"
+  },
+  {
+    "id": "TC-HOME-AR-083",
+    "requirementId": "REQ-HOME-AR-083",
+    "sectionId": "HOME-SEC-AR-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-083",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — images",
+    "scenario": "Assert every image in section HOME-SEC-AR-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-005].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-083/"
+  },
+  {
+    "id": "TC-HOME-AR-084",
+    "requirementId": "REQ-HOME-AR-084",
+    "sectionId": "HOME-SEC-AR-016",
+    "elementId": null,
+    "scenarioId": "SC-HOME-AR-084",
+    "feature": "تسوق حسب القسم — buttons",
+    "scenario": "For each button in section HOME-SEC-AR-016, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/ar/homepage-map.json → sections[id=HOME-SEC-AR-016].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-AR-016 (\"تسوق حسب القسم\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=ar",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-AR-0001",
+    "evidencePath": "evidence/homepage/ar/TC-HOME-AR-084/"
   }
 ]

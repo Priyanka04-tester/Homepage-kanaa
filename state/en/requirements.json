@@ -289,25 +289,25 @@
   },
   {
     "id": "REQ-HOME-EN-049",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "feature": "Search By Category — links",
     "text": "Every link in \"Search By Category\" (23 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
   },
   {
     "id": "REQ-HOME-EN-050",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "feature": "Search By Category — buttons",
     "text": "Every interactive button in \"Search By Category\" (1 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
   },
   {
     "id": "REQ-HOME-EN-051",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "feature": "Search By Category — images",
     "text": "All images in \"Search By Category\" (10 discovered) must load successfully (no broken images) and carry meaningful alt text."
   },
   {
     "id": "REQ-HOME-EN-052",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "feature": "Search By Category — inputs",
     "text": "Form inputs in \"Search By Category\" must accept valid input and behave predictably for empty/boundary/invalid values."
   },
@@ -403,25 +403,25 @@
   },
   {
     "id": "REQ-HOME-EN-068",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "feature": "Upgrade to iPhone 18 — links",
     "text": "Every link in \"Upgrade to iPhone 18\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
   },
   {
     "id": "REQ-HOME-EN-069",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "feature": "Upgrade to iPhone 18 — buttons",
     "text": "Every interactive button in \"Upgrade to iPhone 18\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
   },
   {
     "id": "REQ-HOME-EN-070",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "feature": "Upgrade to iPhone 18 — product cards",
     "text": "Product cards in \"Upgrade to iPhone 18\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
   },
   {
     "id": "REQ-HOME-EN-071",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "feature": "Upgrade to iPhone 18 — images",
     "text": "All images in \"Upgrade to iPhone 18\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
   },
@@ -472,5 +472,83 @@
     "sectionId": "HOME-SEC-EN-005",
     "feature": "Gaming Headphones — images",
     "text": "All images in \"Gaming Headphones\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-080",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "More Tech. More Value — links",
+    "text": "Every link in \"More Tech. More Value\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-081",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "More Tech. More Value — buttons",
+    "text": "Every interactive button in \"More Tech. More Value\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-082",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "More Tech. More Value — product cards",
+    "text": "Product cards in \"More Tech. More Value\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-083",
+    "sectionId": "HOME-SEC-EN-002",
+    "feature": "More Tech. More Value — images",
+    "text": "All images in \"More Tech. More Value\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-084",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Big Games. Better Bundles. — links",
+    "text": "Every link in \"Big Games. Better Bundles.\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-085",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Big Games. Better Bundles. — buttons",
+    "text": "Every interactive button in \"Big Games. Better Bundles.\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-086",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Big Games. Better Bundles. — product cards",
+    "text": "Product cards in \"Big Games. Better Bundles.\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-087",
+    "sectionId": "HOME-SEC-EN-003",
+    "feature": "Big Games. Better Bundles. — images",
+    "text": "All images in \"Big Games. Better Bundles.\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-088",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A Little Dress-Up. A Lot of Magic. — links",
+    "text": "Every link in \"A Little Dress-Up. A Lot of Magic.\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-EN-089",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A Little Dress-Up. A Lot of Magic. — buttons",
+    "text": "Every interactive button in \"A Little Dress-Up. A Lot of Magic.\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-EN-090",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A Little Dress-Up. A Lot of Magic. — product cards",
+    "text": "Product cards in \"A Little Dress-Up. A Lot of Magic.\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-EN-091",
+    "sectionId": "HOME-SEC-EN-005",
+    "feature": "A Little Dress-Up. A Lot of Magic. — images",
+    "text": "All images in \"A Little Dress-Up. A Lot of Magic.\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-EN-092",
+    "sectionId": "HOME-SEC-EN-016",
+    "feature": "Shop by Category — buttons",
+    "text": "Every interactive button in \"Shop by Category\" (1 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
   }
 ]

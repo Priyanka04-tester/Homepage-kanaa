@@ -1,40 +1,47 @@
 {
   "locale": "en",
-  "comparedAt": "2026-10-12T05:34:57.141Z",
+  "comparedAt": "2026-10-27T04:21:33.189Z",
   "previous": {
-    "file": "baseline-en-map.json",
-    "capturedAt": "2026-09-14T08:25:04.865Z",
+    "file": "base-en-oct12.json",
+    "capturedAt": "2026-10-12T06:06:39.851Z",
     "sections": 19
   },
   "current": {
-    "file": "homepage-map.json",
-    "capturedAt": "2026-10-12T05:33:13.651Z",
-    "sections": 19
+    "file": "map-en-oct27.json",
+    "capturedAt": "2026-10-27T04:17:24.441Z",
+    "sections": 20
   },
   "added": [
-    "Upgrade to iPhone 18",
-    "Your New Phone, Plus More.",
-    "Gaming Headphones"
+    "More Tech. More Value",
+    "Big Games. Better Bundles.",
+    "A Little Dress-Up. A Lot of Magic.",
+    "Kanaa: Online Shopping in KSA for Lifestyle Products",
+    "Shop by Category",
+    "Why Shop at Kanaa Store",
+    "A Trusted Saudi Online Store"
   ],
   "removed": [
-    "SMART TABLET. SMARTER BUNDLE",
-    "BUY 1 GET 1 FREE",
-    "SHOP PS5 BUNDLES"
+    "Your New Phone, Plus More.",
+    "A Fragrance Worth Gifting",
+    "Gaming Headphones",
+    "Kanaa: Online Toy Store in Saudi Arabia",
+    "Explore Our Wide Range of Toys in KSA",
+    "Why Shop From Kanaa in Saudi Arabia"
   ],
   "changed": [
     {
       "name": "Shop By Brand",
       "before": {
         "buttons": 26,
-        "links": 62,
+        "links": 61,
         "inputs": 2,
-        "images": 70,
+        "images": 69,
         "sliders": 1,
         "productCards": 0
       },
       "after": {
-        "buttons": 26,
-        "links": 61,
+        "buttons": 28,
+        "links": 63,
         "inputs": 2,
         "images": 69,
         "sliders": 1,
@@ -42,9 +49,9 @@
       }
     },
     {
-      "name": "A Fragrance Worth Gifting",
+      "name": "New to our Collection",
       "before": {
-        "buttons": 16,
+        "buttons": 21,
         "links": 9,
         "inputs": 0,
         "images": 32,
@@ -52,31 +59,31 @@
         "productCards": 8
       },
       "after": {
-        "buttons": 16,
-        "links": 10,
+        "buttons": 5,
+        "links": 1,
         "inputs": 0,
-        "images": 33,
+        "images": 0,
         "sliders": 0,
-        "productCards": 8
+        "productCards": 0
       }
     },
     {
-      "name": "Shop by Age",
+      "name": "Search By Category",
       "before": {
-        "buttons": 14,
-        "links": 14,
-        "inputs": 0,
-        "images": 35,
+        "buttons": 1,
+        "links": 23,
+        "inputs": 1,
+        "images": 10,
         "sliders": 0,
-        "productCards": 7
+        "productCards": 0
       },
       "after": {
-        "buttons": 16,
-        "links": 15,
-        "inputs": 0,
-        "images": 39,
+        "buttons": 1,
+        "links": 27,
+        "inputs": 1,
+        "images": 10,
         "sliders": 0,
-        "productCards": 8
+        "productCards": 0
       }
     }
   ]

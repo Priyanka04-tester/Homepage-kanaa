@@ -47,7 +47,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -100,10 +100,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Fsa-flag.png&w=48&q=100, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Ffrontend%2Fen.webp&w=48&q=100, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Ffrontend%2Fen.webp&w=48&q=100, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fherobannern%2Fw%2Fe%2Fweb_en_91.webp&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fherobannern%2Fw%2Fe%2Fweb_en_91.webp&w=1920&q=75",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -132,7 +132,7 @@
     "actualResult": "No crashes, console errors, or overflow.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -160,7 +160,7 @@
     "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -189,7 +189,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -223,7 +223,7 @@
     "actualResult": "smoke Add to Cart (sample #0) failed: locator.click: Timeout 5000ms exceeded.\nCall log:\n\u001b[2m  - waiting for getByRole('button', { name: /add to cart/i }).first()\u001b[22m\n\u001b[2m    - locator res — see README \"Known site quirks\" re: throttling before filing as a bug",
     "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -249,10 +249,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -281,7 +281,7 @@
     "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -310,7 +310,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -344,7 +344,7 @@
     "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -370,10 +370,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -402,7 +402,7 @@
     "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -431,7 +431,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -465,7 +465,7 @@
     "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -491,10 +491,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -523,13 +523,14 @@
     "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
     },
     "executionId": "EXEC-EN-0001",
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-018/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-018/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-019",
@@ -551,13 +552,14 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
     },
     "executionId": "EXEC-EN-0001",
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-019/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-019/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-020",
@@ -584,13 +586,14 @@
     "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
     },
     "executionId": "EXEC-EN-0001",
-    "evidencePath": "evidence/homepage/TC-HOME-EN-020/"
+    "evidencePath": "evidence/homepage/TC-HOME-EN-020/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-021",
@@ -609,16 +612,17 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
     },
     "executionId": "EXEC-EN-0001",
-    "evidencePath": "evidence/homepage/TC-HOME-EN-021/"
+    "evidencePath": "evidence/homepage/TC-HOME-EN-021/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-022",
@@ -640,7 +644,7 @@
     "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -668,7 +672,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -701,7 +705,7 @@
     "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -726,10 +730,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -757,7 +761,7 @@
     "actualResult": "All first-party links resolved. Checked 11 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -785,7 +789,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -815,10 +819,10 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
-    "status": "PASS",
+    "actualResult": "No product cards found live for widget originally titled \"Most Popular Products\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -843,10 +847,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fsecondlevelbannern%2F800x300_En_5.webp&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fsecondlevelbannern%2F800x300_En_6.webp&w=1920&q=75",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -874,7 +878,7 @@
     "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -899,10 +903,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fthirdlevelbanner%2Fe%2Fn%2Fen_3_.webp&w=1920&q=75",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -927,10 +931,10 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -958,7 +962,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -997,7 +1001,8 @@
       "height": 800
     },
     "executionId": "EXEC-EN-0001",
-    "evidencePath": "evidence/homepage/TC-HOME-EN-034/"
+    "evidencePath": "evidence/homepage/TC-HOME-EN-034/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-035",
@@ -1025,7 +1030,8 @@
       "height": 800
     },
     "executionId": "EXEC-EN-0001",
-    "evidencePath": "evidence/homepage/TC-HOME-EN-035/"
+    "evidencePath": "evidence/homepage/TC-HOME-EN-035/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-036",
@@ -1047,7 +1053,7 @@
     "actualResult": "All first-party links resolved. Checked 4 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1072,10 +1078,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Funbeatabledeals%2FStarMarz_copy_2.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Funbeatabledeals%2FBamboo_6.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Funbeatabledeals%2Fhydrobrew_6.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Funbeatabledeals%2FStarMarz_5.jpg&w=1920&q=75",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1103,7 +1109,7 @@
     "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1131,7 +1137,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1164,7 +1170,7 @@
     "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1189,10 +1195,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1220,7 +1226,7 @@
     "actualResult": "All first-party links resolved. Checked 15 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1248,7 +1254,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1278,10 +1284,10 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
-    "status": "PASS",
+    "actualResult": "No product cards found live for widget originally titled \"Shop by Age\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1306,10 +1312,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fshopbyevent%2F1_24.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fshopbyevent%2F2_36.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fshopbyevent%2F3_17.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fshopbyevent%2F4_21.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fshopbyevent%2F5_18.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2FmageINIC%2Fproduct_attachments%2FWeb_1.jpg&w=1920&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2FmageINIC%2Fproduct_attachments%2F420x460.png&w=1920&q=75, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=1920&q=85, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=1920&q=85",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1337,7 +1343,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1362,10 +1368,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fhomepagenuemonics%2Fd%2Fe%2Fdelivery_2.png&w=256&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fhomepagenuemonics%2Fs%2Fe%2Fsec-payment_2.png&w=256&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fhomepagenuemonics%2Fe%2Fa%2Feasy_payment_2.png&w=256&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fhomepagenuemonics%2Fq%2Fu%2Fquality_check_2.png&w=256&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fhomepagenuemonics%2Fb%2Fo%2Fborn-in-ksa_2.png&w=256&q=75, /_next/image/?url=https%3A%2F%2Fmedia.thekanaa.com%2Fcloud%2Fmedia%2Fsamaco%2Fhomepagenuemonics%2Fh%2Fe%2Fhelp_2.png&w=256&q=75",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1393,7 +1399,7 @@
     "actualResult": "All first-party links resolved. Checked 1 unique hrefs.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1404,7 +1410,7 @@
   {
     "id": "TC-HOME-EN-049",
     "requirementId": "REQ-HOME-EN-049",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-049",
     "feature": "Search By Category — links",
@@ -1418,18 +1424,21 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 24 unique hrefs. 3 third-party link(s) returned non-2xx/3xx (informational): https://www.facebook.com/thekanaaofficial/ -> 400; https://www.tiktok.com/@kanaa.sa -> request error after retry: apiRequestContext.get: Timeout 20000ms exceeded.\nCall log:\n\u001b[2m  - → GET https://www.tiktok.com/@kanaa.sa\u001b[22m\n\u001b[2m    - user-agent: Mozilla/5.0 (Wind; https://eauthenticate.saudibusiness.gov.sa/certificate-details/0000171112 -> request error after retry: apiRequestContext.get: Test timeout of 60000ms exceeded.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
     "evidencePath": "evidence/homepage/en/TC-HOME-EN-049/"
   },
   {
     "id": "TC-HOME-EN-050",
     "requirementId": "REQ-HOME-EN-050",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-050",
     "feature": "Search By Category — buttons",
@@ -1446,7 +1455,7 @@
     "actualResult": "All tested buttons clicked without introducing a console error.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1457,7 +1466,7 @@
   {
     "id": "TC-HOME-EN-051",
     "requirementId": "REQ-HOME-EN-051",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-051",
     "feature": "Search By Category — images",
@@ -1471,10 +1480,10 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": "Broken: /_next/image/?url=%2Fassets%2Fimages%2FSecureSSL.png&w=256&q=75, /_next/image/?url=%2Fassets%2Fimages%2FSBC.png&w=64&q=75, /_next/image/?url=%2Fassets%2Fimages%2Fmaster.png&w=96&q=75, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Fapplepay-footer.png&w=128&q=75, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftabby.png&w=128&q=75, /_next/image/?url=%2Fassets%2Fimages%2Foptimized%2Ftamara.png&w=256&q=75",
-    "status": "FAIL",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1485,7 +1494,7 @@
   {
     "id": "TC-HOME-EN-052",
     "requirementId": "REQ-HOME-EN-052",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-052",
     "feature": "Search By Category — inputs",
@@ -1503,7 +1512,7 @@
     "actualResult": "No crashes, console errors, or overflow.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1533,7 +1542,7 @@
     "actualResult": "No horizontal overflow.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1440,
       "height": 900
@@ -1563,7 +1572,7 @@
     "actualResult": "No horizontal overflow.",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1920,
       "height": 1080
@@ -1590,10 +1599,10 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=1044 > clientWidth=1019",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1024,
       "height": 768
@@ -1620,10 +1629,10 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=788 > clientWidth=763",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 768,
       "height": 1024
@@ -1650,10 +1659,10 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=410 > clientWidth=385",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 390,
       "height": 844
@@ -1680,10 +1689,10 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=413 > clientWidth=388",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 393,
       "height": 852
@@ -1710,10 +1719,10 @@
       "Confirm no element overlap or CTA clipping."
     ],
     "expectedResult": "No horizontal overflow; all key sections are usable and visually intact at this viewport.",
-    "actualResult": "Horizontal overflow: scrollWidth=432 > clientWidth=407",
-    "status": "FAIL",
+    "actualResult": "No horizontal overflow.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 412,
       "height": 915
@@ -1823,10 +1832,10 @@
       "Confirm heading structure is hierarchical (no skipped levels) for the section headings captured in homepage-map.json."
     ],
     "expectedResult": "All interactive elements are keyboard-reachable with a visible focus state and a non-empty accessible name.",
-    "actualResult": "Tab stop 4 (<BUTTON> \"Lego\") has no visible focus indicator (no outline/box-shadow) | Tab stop 5 (<BUTTON> \"Barbie\") has no visible focus indicator (no outline/box-shadow) | Tab stop 6 (<BUTTON> \"Hot Wheels\") has no visible focus indicator (no outline/box-shadow) | Tab stop 7 (<BUTTON> \"Plush Toys\") has no visible focus indicator (no outline/box-shadow) | Tab stop 8 (<BUTTON> \"Board Games\") has no visible focus indicator (no outline/box-shadow) | 14 visible interactive element(s) with no accessi",
+    "actualResult": "14 visible interactive element(s) with no accessible name (sample: HOME-SEC-EN-001 link href=\"/en-sa/\"; HOME-SEC-EN-001 link href=\"/en-sa/phone-bundles.html\"; HOME-SEC-EN-001 button; HOME-SEC-EN-001 button; HOME-SEC-EN-002 link href=\"/en-sa/ps5-bundle.html\")",
     "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1852,10 +1861,10 @@
       "Throttle network to slow 3G (or simulate) and confirm skeleton/loading states appear rather than a blank page."
     ],
     "expectedResult": "No crashes, duplicate actions, or stuck UI under any of the above; console stays free of new errors.",
-    "actualResult": "No Add to Cart button found for rapid-click check | Clicking a product card did not navigate away from the homepage (still at https://thekanaa.com/en-sa/) | Back navigation did not return to homepage (at about:blank) — reproduced once; rerun to confirm before filing as a bug",
+    "actualResult": "Clicking a product card did not navigate away from the homepage (still at https://thekanaa.com/en-sa/) | Back navigation did not return to homepage (at about:blank) — reproduced once; rerun to confirm before filing as a bug",
     "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1880,10 +1889,10 @@
       "For first-party failures only, correlate to the section/element responsible and file as a candidate bug."
     ],
     "expectedResult": "Zero first-party console errors or failed first-party requests on a clean homepage load.",
-    "actualResult": "No first-party console errors or failed requests.",
-    "status": "PASS",
+    "actualResult": "Console: 0, Network: GET https://thekanaa.com/en-sa/backtoschool/?_rsc=U2VNSYAmb_SEXxSg -> net::ERR_ABORTED",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1909,10 +1918,10 @@
       "Confirm no horizontal overflow was introduced by the switch."
     ],
     "expectedResult": "Language switcher reliably navigates to the other locale with the correct text direction and no layout breakage.",
-    "actualResult": "Switched to Arabic cleanly with no overflow.",
-    "status": "PASS",
+    "actualResult": "URL did not change to the Arabic locale after clicking the switcher (still at https://thekanaa.com/en-sa/) | Expected <html dir=\"rtl\"> after switching to Arabic, got dir=\"ltr\"",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1937,10 +1946,10 @@
       "Group network requests by URL and flag any endpoint called more than once with identical params within the same load."
     ],
     "expectedResult": "No destructive/duplicate-fetch pattern; load reaches an interactive hero within a few seconds on an unthrottled connection. This is an observational check, not a load/stress test.",
-    "actualResult": "heroInteractiveMs=3120, duplicateRequestCount=4",
+    "actualResult": "heroInteractiveMs=3487, duplicateRequestCount=1",
     "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": "webkit",
+    "browser": "chromium",
     "viewport": {
       "width": 1280,
       "height": 800
@@ -1951,7 +1960,7 @@
   {
     "id": "TC-HOME-EN-068",
     "requirementId": "REQ-HOME-EN-068",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-068",
     "feature": "Upgrade to iPhone 18 — links",
@@ -1965,18 +1974,21 @@
       "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
     ],
     "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
     "evidencePath": "evidence/homepage/en/TC-HOME-EN-068/"
   },
   {
     "id": "TC-HOME-EN-069",
     "requirementId": "REQ-HOME-EN-069",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-069",
     "feature": "Upgrade to iPhone 18 — buttons",
@@ -1990,18 +2002,21 @@
       "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
     ],
     "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
     "evidencePath": "evidence/homepage/en/TC-HOME-EN-069/"
   },
   {
     "id": "TC-HOME-EN-070",
     "requirementId": "REQ-HOME-EN-070",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-070",
     "feature": "Upgrade to iPhone 18 — product cards",
@@ -2020,18 +2035,21 @@
       "Click the card and confirm the destination PDP matches the card's product name."
     ],
     "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No product cards found live for widget originally titled \"Upgrade to iPhone 18\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-070/"
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-EN-070/"
   },
   {
     "id": "TC-HOME-EN-071",
     "requirementId": "REQ-HOME-EN-071",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "elementId": null,
     "scenarioId": "SC-HOME-EN-071",
     "feature": "Upgrade to iPhone 18 — images",
@@ -2045,12 +2063,15 @@
       "Spot-check alt text is non-generic for informational images (product/banner images)."
     ],
     "expectedResult": "Zero broken images after the section has been scrolled into view.",
-    "actualResult": null,
-    "status": "NOT_EXECUTED",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
     "environment": "production (https://thekanaa.com), locale=en",
-    "browser": null,
-    "viewport": null,
-    "executionId": null,
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
     "evidencePath": "evidence/homepage/en/TC-HOME-EN-071/"
   },
   {
@@ -2076,7 +2097,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-072/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-072/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-073",
@@ -2101,7 +2123,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-073/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-073/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-074",
@@ -2131,7 +2154,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-074/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-074/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-075",
@@ -2156,7 +2180,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-075/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-075/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-076",
@@ -2181,7 +2206,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-076/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-076/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-077",
@@ -2206,7 +2232,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-077/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-077/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-078",
@@ -2236,7 +2263,8 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-078/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-078/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
   },
   {
     "id": "TC-HOME-EN-079",
@@ -2261,6 +2289,386 @@
     "browser": null,
     "viewport": null,
     "executionId": null,
-    "evidencePath": "evidence/homepage/en/TC-HOME-EN-079/"
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-079/",
+    "status_note": "Section no longer on the homepage (discovery scan 2026-10-27). Kept for traceability; confirm the removal is intentional before retiring this case."
+  },
+  {
+    "id": "TC-HOME-EN-080",
+    "requirementId": "REQ-HOME-EN-080",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-080",
+    "feature": "More Tech. More Value — links",
+    "scenario": "For each link in section HOME-SEC-EN-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-002].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-002 (\"More Tech. More Value\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-080/"
+  },
+  {
+    "id": "TC-HOME-EN-081",
+    "requirementId": "REQ-HOME-EN-081",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-081",
+    "feature": "More Tech. More Value — buttons",
+    "scenario": "For each button in section HOME-SEC-EN-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-002].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-002 (\"More Tech. More Value\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-081/"
+  },
+  {
+    "id": "TC-HOME-EN-082",
+    "requirementId": "REQ-HOME-EN-082",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-082",
+    "feature": "More Tech. More Value — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-002].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "No product cards found live for widget originally titled \"More Tech. More Value\" — checked exact text match and the widget in the same document position, neither had any Add to Cart button",
+    "status": "FAIL",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-EN-082/"
+  },
+  {
+    "id": "TC-HOME-EN-083",
+    "requirementId": "REQ-HOME-EN-083",
+    "sectionId": "HOME-SEC-EN-002",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-083",
+    "feature": "More Tech. More Value — images",
+    "scenario": "Assert every image in section HOME-SEC-EN-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-002].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-083/"
+  },
+  {
+    "id": "TC-HOME-EN-084",
+    "requirementId": "REQ-HOME-EN-084",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-084",
+    "feature": "Big Games. Better Bundles. — links",
+    "scenario": "For each link in section HOME-SEC-EN-003, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-003].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-003 (\"Big Games. Better Bundles.\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 10 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-084/"
+  },
+  {
+    "id": "TC-HOME-EN-085",
+    "requirementId": "REQ-HOME-EN-085",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-085",
+    "feature": "Big Games. Better Bundles. — buttons",
+    "scenario": "For each button in section HOME-SEC-EN-003, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-003].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-003 (\"Big Games. Better Bundles.\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-085/"
+  },
+  {
+    "id": "TC-HOME-EN-086",
+    "requirementId": "REQ-HOME-EN-086",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-086",
+    "feature": "Big Games. Better Bundles. — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-003].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-EN-086/"
+  },
+  {
+    "id": "TC-HOME-EN-087",
+    "requirementId": "REQ-HOME-EN-087",
+    "sectionId": "HOME-SEC-EN-003",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-087",
+    "feature": "Big Games. Better Bundles. — images",
+    "scenario": "Assert every image in section HOME-SEC-EN-003 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-003].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-087/"
+  },
+  {
+    "id": "TC-HOME-EN-088",
+    "requirementId": "REQ-HOME-EN-088",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-088",
+    "feature": "A Little Dress-Up. A Lot of Magic. — links",
+    "scenario": "For each link in section HOME-SEC-EN-005, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-005].elements.links",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-005 (\"A Little Dress-Up. A Lot of Magic.\").",
+      "For each link: assert visible+enabled, click, assert no 4xx/5xx navigation and no new console error, assert back navigation restores the homepage."
+    ],
+    "expectedResult": "All links resolve to a live page matching their href; no console errors or failed navigation requests are introduced.",
+    "actualResult": "All first-party links resolved. Checked 9 unique hrefs.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-088/"
+  },
+  {
+    "id": "TC-HOME-EN-089",
+    "requirementId": "REQ-HOME-EN-089",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-089",
+    "feature": "A Little Dress-Up. A Lot of Magic. — buttons",
+    "scenario": "For each button in section HOME-SEC-EN-005, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-005].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-005 (\"A Little Dress-Up. A Lot of Magic.\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-089/"
+  },
+  {
+    "id": "TC-HOME-EN-090",
+    "requirementId": "REQ-HOME-EN-090",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-090",
+    "feature": "A Little Dress-Up. A Lot of Magic. — product cards",
+    "scenario": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1",
+    "preconditions": "Homepage loaded; guest session; widget scrolled into view.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-005].elements.productCards",
+    "steps": [
+      "Load the homepage and scroll the widget into view.",
+      "Pick first/middle/last sampled card.",
+      "Assert image is not broken (naturalWidth > 0).",
+      "Assert product name is present and not truncated in a way that hides essential info.",
+      "Assert a price is displayed.",
+      "Click the wishlist control and confirm a visible state change.",
+      "Click Add to Cart and confirm a cart-updated confirmation appears.",
+      "Click the card and confirm the destination PDP matches the card's product name."
+    ],
+    "expectedResult": "Card content is complete and consistent; wishlist/add-to-cart succeed; PDP navigation lands on the matching product.",
+    "actualResult": "All sampled cards complete (image/name/price/wishlist/PDP link).",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-EN-090/"
+  },
+  {
+    "id": "TC-HOME-EN-091",
+    "requirementId": "REQ-HOME-EN-091",
+    "sectionId": "HOME-SEC-EN-005",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-091",
+    "feature": "A Little Dress-Up. A Lot of Magic. — images",
+    "scenario": "Assert every image in section HOME-SEC-EN-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3",
+    "preconditions": "Homepage loaded; section scrolled into view (image loading is native-lazy).",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-005].elements.images",
+    "steps": [
+      "Scroll the section fully into view to trigger native lazy-loading.",
+      "For each image, assert complete=true and naturalWidth > 0.",
+      "Spot-check alt text is non-generic for informational images (product/banner images)."
+    ],
+    "expectedResult": "Zero broken images after the section has been scrolled into view.",
+    "actualResult": "No broken images after lazy-load.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/en/TC-HOME-EN-091/"
+  },
+  {
+    "id": "TC-HOME-EN-092",
+    "requirementId": "REQ-HOME-EN-092",
+    "sectionId": "HOME-SEC-EN-016",
+    "elementId": null,
+    "scenarioId": "SC-HOME-EN-092",
+    "feature": "Shop by Category — buttons",
+    "scenario": "For each button in section HOME-SEC-EN-016, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2",
+    "preconditions": "Homepage loaded at HOMEPAGE_BASE_URL (production) + locale path; guest session.",
+    "testData": "state/en/homepage-map.json → sections[id=HOME-SEC-EN-016].elements.buttons",
+    "steps": [
+      "Load the homepage.",
+      "Locate section HOME-SEC-EN-016 (\"Shop by Category\").",
+      "For each button: assert accessible name is non-empty, assert visible/enabled state matches design intent, click, assert expected state change, assert no new console error."
+    ],
+    "expectedResult": "Every button performs its expected action; disabled buttons stay disabled and are not treated as failures.",
+    "actualResult": "All tested buttons clicked without introducing a console error.",
+    "status": "PASS",
+    "environment": "production (https://thekanaa.com), locale=en",
+    "browser": "chromium",
+    "viewport": {
+      "width": 1280,
+      "height": 800
+    },
+    "executionId": "EXEC-EN-0001",
+    "evidencePath": "evidence/homepage/TC-HOME-EN-092/"
   }
 ]

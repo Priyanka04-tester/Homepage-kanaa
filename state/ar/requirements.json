@@ -289,25 +289,25 @@
   },
   {
     "id": "REQ-HOME-AR-049",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "feature": "تسوق حسب الفئة — links",
     "text": "Every link in \"تسوق حسب الفئة\" (23 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
   },
   {
     "id": "REQ-HOME-AR-050",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "feature": "تسوق حسب الفئة — buttons",
     "text": "Every interactive button in \"تسوق حسب الفئة\" (1 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
   },
   {
     "id": "REQ-HOME-AR-051",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "feature": "تسوق حسب الفئة — images",
     "text": "All images in \"تسوق حسب الفئة\" (10 discovered) must load successfully (no broken images) and carry meaningful alt text."
   },
   {
     "id": "REQ-HOME-AR-052",
-    "sectionId": "HOME-SEC-AR-019",
+    "sectionId": "HOME-SEC-AR-020",
     "feature": "تسوق حسب الفئة — inputs",
     "text": "Form inputs in \"تسوق حسب الفئة\" must accept valid input and behave predictably for empty/boundary/invalid values."
   },
@@ -400,5 +400,107 @@
     "sectionId": "HOME-GLOBAL",
     "feature": "Performance observation — initial load",
     "text": "The homepage must reach a usable state (hero banner interactive) within a reasonable time on staging, and must not issue duplicate/redundant API calls on a single load."
+  },
+  {
+    "id": "REQ-HOME-AR-068",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "أحدث التقنيات، بأفضل قيمة — links",
+    "text": "Every link in \"أحدث التقنيات، بأفضل قيمة\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-069",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "أحدث التقنيات، بأفضل قيمة — buttons",
+    "text": "Every interactive button in \"أحدث التقنيات، بأفضل قيمة\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-070",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "أحدث التقنيات، بأفضل قيمة — product cards",
+    "text": "Product cards in \"أحدث التقنيات، بأفضل قيمة\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-071",
+    "sectionId": "HOME-SEC-AR-002",
+    "feature": "أحدث التقنيات، بأفضل قيمة — images",
+    "text": "All images in \"أحدث التقنيات، بأفضل قيمة\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-072",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "أقوى الألعاب، وأفضل العروض — links",
+    "text": "Every link in \"أقوى الألعاب، وأفضل العروض\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-073",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "أقوى الألعاب، وأفضل العروض — buttons",
+    "text": "Every interactive button in \"أقوى الألعاب، وأفضل العروض\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-074",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "أقوى الألعاب، وأفضل العروض — product cards",
+    "text": "Product cards in \"أقوى الألعاب، وأفضل العروض\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-075",
+    "sectionId": "HOME-SEC-AR-003",
+    "feature": "أقوى الألعاب، وأفضل العروض — images",
+    "text": "All images in \"أقوى الألعاب، وأفضل العروض\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-076",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "ارتق إلى آيفون 18 — links",
+    "text": "Every link in \"ارتق إلى آيفون 18\" (10 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-077",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "ارتق إلى آيفون 18 — buttons",
+    "text": "Every interactive button in \"ارتق إلى آيفون 18\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-078",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "ارتق إلى آيفون 18 — product cards",
+    "text": "Product cards in \"ارتق إلى آيفون 18\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-079",
+    "sectionId": "HOME-SEC-AR-004",
+    "feature": "ارتق إلى آيفون 18 — images",
+    "text": "All images in \"ارتق إلى آيفون 18\" (33 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-080",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — links",
+    "text": "Every link in \"أناقة بسيطة، وسحر لا يقاوم.\" (9 discovered) must navigate to its declared href without a 404, unexpected redirect, or broken destination."
+  },
+  {
+    "id": "REQ-HOME-AR-081",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — buttons",
+    "text": "Every interactive button in \"أناقة بسيطة، وسحر لا يقاوم.\" (16 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
+  },
+  {
+    "id": "REQ-HOME-AR-082",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — product cards",
+    "text": "Product cards in \"أناقة بسيطة، وسحر لا يقاوم.\" (8 sampled) must show a consistent image, name, price, and working wishlist/add-to-cart/navigation controls."
+  },
+  {
+    "id": "REQ-HOME-AR-083",
+    "sectionId": "HOME-SEC-AR-005",
+    "feature": "أناقة بسيطة، وسحر لا يقاوم. — images",
+    "text": "All images in \"أناقة بسيطة، وسحر لا يقاوم.\" (32 discovered) must load successfully (no broken images) and carry meaningful alt text."
+  },
+  {
+    "id": "REQ-HOME-AR-084",
+    "sectionId": "HOME-SEC-AR-016",
+    "feature": "تسوق حسب القسم — buttons",
+    "text": "Every interactive button in \"تسوق حسب القسم\" (1 discovered) must be visible, enabled (unless intentionally disabled), and produce its expected effect when clicked."
   }
 ]

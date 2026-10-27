@@ -338,28 +338,28 @@
   {
     "id": "SC-HOME-EN-049",
     "requirementId": "REQ-HOME-EN-049",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "text": "For each link in section HOME-SEC-EN-019, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
     "priority": "P2"
   },
   {
     "id": "SC-HOME-EN-050",
     "requirementId": "REQ-HOME-EN-050",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "text": "For each button in section HOME-SEC-EN-019, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
     "priority": "P2"
   },
   {
     "id": "SC-HOME-EN-051",
     "requirementId": "REQ-HOME-EN-051",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "text": "Assert every image in section HOME-SEC-EN-019 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
     "priority": "P3"
   },
   {
     "id": "SC-HOME-EN-052",
     "requirementId": "REQ-HOME-EN-052",
-    "sectionId": "HOME-SEC-EN-019",
+    "sectionId": "HOME-SEC-EN-020",
     "text": "Enter typical, empty, very long, and special-character values; confirm no crash, no console error, and reasonable UI feedback.",
     "priority": "P2"
   },
@@ -471,28 +471,28 @@
   {
     "id": "SC-HOME-EN-068",
     "requirementId": "REQ-HOME-EN-068",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "text": "For each link in section HOME-SEC-EN-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
     "priority": "P1"
   },
   {
     "id": "SC-HOME-EN-069",
     "requirementId": "REQ-HOME-EN-069",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "text": "For each button in section HOME-SEC-EN-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
     "priority": "P2"
   },
   {
     "id": "SC-HOME-EN-070",
     "requirementId": "REQ-HOME-EN-070",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
     "priority": "P1"
   },
   {
     "id": "SC-HOME-EN-071",
     "requirementId": "REQ-HOME-EN-071",
-    "sectionId": "HOME-SEC-EN-002",
+    "sectionId": "HOME-SEC-EN-004",
     "text": "Assert every image in section HOME-SEC-EN-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
     "priority": "P3"
   },
@@ -551,5 +551,96 @@
     "sectionId": "HOME-SEC-EN-005",
     "text": "Assert every image in section HOME-SEC-EN-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
     "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-080",
+    "requirementId": "REQ-HOME-EN-080",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "For each link in section HOME-SEC-EN-002, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-081",
+    "requirementId": "REQ-HOME-EN-081",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "For each button in section HOME-SEC-EN-002, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-082",
+    "requirementId": "REQ-HOME-EN-082",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-083",
+    "requirementId": "REQ-HOME-EN-083",
+    "sectionId": "HOME-SEC-EN-002",
+    "text": "Assert every image in section HOME-SEC-EN-002 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-084",
+    "requirementId": "REQ-HOME-EN-084",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "For each link in section HOME-SEC-EN-003, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-085",
+    "requirementId": "REQ-HOME-EN-085",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "For each button in section HOME-SEC-EN-003, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-086",
+    "requirementId": "REQ-HOME-EN-086",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-087",
+    "requirementId": "REQ-HOME-EN-087",
+    "sectionId": "HOME-SEC-EN-003",
+    "text": "Assert every image in section HOME-SEC-EN-003 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-088",
+    "requirementId": "REQ-HOME-EN-088",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "For each link in section HOME-SEC-EN-005, click it, confirm the resulting URL/page matches the href's intent, then navigate back.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-089",
+    "requirementId": "REQ-HOME-EN-089",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "For each button in section HOME-SEC-EN-005, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
+  },
+  {
+    "id": "SC-HOME-EN-090",
+    "requirementId": "REQ-HOME-EN-090",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "Sample 3 representative cards (first, middle, last of the sampled set): verify image loads, name is fully visible (no unexpected clipping), price is present, wishlist toggles, Add to Cart succeeds, and clicking the card navigates to a matching PDP.",
+    "priority": "P1"
+  },
+  {
+    "id": "SC-HOME-EN-091",
+    "requirementId": "REQ-HOME-EN-091",
+    "sectionId": "HOME-SEC-EN-005",
+    "text": "Assert every image in section HOME-SEC-EN-005 has naturalWidth > 0 once loaded, and that decorative-vs-informational alt text follows a consistent pattern.",
+    "priority": "P3"
+  },
+  {
+    "id": "SC-HOME-EN-092",
+    "requirementId": "REQ-HOME-EN-092",
+    "sectionId": "HOME-SEC-EN-016",
+    "text": "For each button in section HOME-SEC-EN-016, verify pre-click state, click, and verify the expected UI/state change with no console or network error.",
+    "priority": "P2"
   }
 ]

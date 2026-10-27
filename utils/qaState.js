@@ -75,7 +75,12 @@ function loadHomepageMap() {
 /** Find the generated test case for a section + feature category (e.g. "links", "carousel"). */
 function findTestCase(sectionId, featureSuffix) {
   const testCases = loadJson('test-cases.json');
-  const tc = testCases.find((t) => t.sectionId === sectionId && t.feature.endsWith(featureSuffix));
+  const section = loadHomepageMap().sections.find((s) => s.id === sectionId);
+  const sectionName = section ? section.name.trim().toLowerCase() : null;
+  const tc = testCases.find((t) => t.sectionId === sectionId
+    && t.feature.endsWith(featureSuffix)
+    && sectionName !== null
+    && t.feature.split(' — ')[0].trim().toLowerCase() === sectionName);
   if (!tc) throw new Error(`No test case found for sectionId=${sectionId} feature ending in "${featureSuffix}" (locale=${LOCALE}) — did state/${LOCALE}/test-cases.json change? Re-run node scripts/generate-test-plan.js.`);
   return tc;
 }

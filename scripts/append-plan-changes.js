@@ -34,6 +34,22 @@ const realTrace = read(stateDir, 'traceability.json');
 const sandTrace = read(sandboxDir, 'traceability.json');
 
 const key = (feature) => feature.trim().toLowerCase();
+// Section IDs are assigned by position in the discovery map, so they shift when sections
+// are added or removed. Re-point existing cases at the section that has the same name today.
+const currentMap = read(stateDir, 'homepage-map.json');
+const idByName = new Map((currentMap.sections || []).map((s) => [key(s.name), s.id]));
+let remapped = 0;
+for (const c of realCases) {
+  const sectionName = key((c.feature || '').split(' — ')[0]);
+  const id = idByName.get(sectionName);
+  if (!id || c.sectionId === id) continue;
+  c.sectionId = id;
+  remapped++;
+  for (const r of realReqs) if (r.id === c.requirementId) r.sectionId = id;
+  for (const s of realScen) if (s.id === c.scenarioId) s.sectionId = id;
+  for (const t of realTrace) if (t.testCaseId === c.id) t.sectionId = id;
+}
+
 const realFeatures = new Set(realCases.map((c) => key(c.feature)));
 const sandFeatures = new Set(sandCases.map((c) => key(c.feature)));
 const newFeatures = [...sandFeatures].filter((f) => !realFeatures.has(f));
@@ -79,7 +95,7 @@ for (const sandCase of sandCases.filter((c) => newFeatures.includes(key(c.featur
 let retired = 0;
 for (const c of realCases) {
   if (retiredFeatures.includes(key(c.feature)) && !c.status_note) {
-    c.status_note = 'Section no longer on the homepage (discovery scan 2026-10-12). Kept for traceability; confirm the removal is intentional before retiring this case.';
+    c.status_note = `Section no longer on the homepage (discovery scan ${new Date().toISOString().slice(0, 10)}). Kept for traceability; confirm the removal is intentional before retiring this case.`;
     retired++;
   }
 }
@@ -92,6 +108,7 @@ fs.writeFileSync(path.join(stateDir, 'plan-changes.json'), JSON.stringify({
   appliedAt: new Date().toISOString(),
   newFeatures,
   retiredFeatures,
+  remappedSectionIds: remapped,
   appendedTestCases: added,
   retiredTestCasesFlagged: retired,
   newIds: idMap.tc,
